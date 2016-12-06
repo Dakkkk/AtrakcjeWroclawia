@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.0.0_c69f8d053ebe4a387024133c05c99fb2f7110fd0.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="cf251baf39f5c5138224b67b4106eb6331abbd13">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.maps.android-android-maps-utils-0.3.4_3e321531398f25690cb386f6ea71dbdaf68cd5eb.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_c21b60ed42f151d2e275a98e8d95b21d1d308b88.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.1.1_44260674f86cbb82e593c4e9e00e61f675848259.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.0.0_dc1597268ab9126ef2b0b0ec25bb62bc4a6b64da.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="04de44f90606c77f3b28cf44861f306290505aac">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.4.0_bb86998d8be4b7cfc64350b7585918e0661bc446.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.0.0_eec14c630840ae5f2acbde221d58e647fe5e539d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Dawid\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.1\86b122e640af09b0723e1fa44083c354ba6d9089\glide-3.6.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\glide-3.6.1_294fdc515a2c1475039d6ff98cad3d02db6049d1.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.0.0_308ddd0535d68c214353a06a56d08a87b672096d.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_1586dd07e1f5757e79e039494f46847a492356a2.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_a811cc8787aa69dacabd764c7934924adb467ce4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Dawid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\support-annotations-24.1.1_1e6bf261f1d58eec7d7ac549c6282c95be4b1c30.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-design-24.0.0_dd900af4058a5897deb882ecb8b42a02bb174c13.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.4.0_eea1711084a0cd4a17a902da138588f55f1f9f65.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v13-24.1.1_c6ee8375a828fda78ada8201d55bd9302410797e.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\android-XYZTouristAttractions-master\Shared\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="88936aa1bb88391835ca6d4b40a61ffed9daa87d">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\android-XYZTouristAttractions-master-Shared-unspecified_22e18eea8c307ed8130f56240fd5879cc806a6e9.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="a8412b654dab86d57bf90683367488211c8a81f1">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.4.0_1df862945ab6ca98ca6c2ed5adaf710759dec761.jar" />
+    </item>
+    <item
+        jar="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\android projects\dyplomowa\android-XYZTouristAttractions-master\Application\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_6a0859d4331d30d7de7efbbefdb0194e6690b6a8.jar" />
+    </item>
+
+</items>

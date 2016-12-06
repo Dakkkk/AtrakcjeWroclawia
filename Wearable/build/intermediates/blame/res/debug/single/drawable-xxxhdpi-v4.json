@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\powered_by_google_light.png",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxxhdpi\\powered_by_google_light.png"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\places_ic_clear.png",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxxhdpi\\places_ic_clear.png"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\places_ic_search.png",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxxhdpi\\places_ic_search.png"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\powered_by_google_dark.png",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xxxhdpi\\powered_by_google_dark.png"
+    }
+]

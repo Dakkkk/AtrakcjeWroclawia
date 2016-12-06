@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_prediction.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\text_bubble.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.3.4\\res\\layout\\text_bubble.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\alert_dialog_wearable.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\layout\\alert_dialog_wearable.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\error_layout.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\layout\\error_layout.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\gridpager_fullscreen_image.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\src\\main\\res\\layout\\gridpager_fullscreen_image.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\gridpager_action.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\src\\main\\res\\layout\\gridpager_action.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\layout\\gridpager_card.xml",
+        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\src\\main\\res\\layout\\gridpager_card.xml"
+    }
+]

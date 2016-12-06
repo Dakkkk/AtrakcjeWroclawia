@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\res\\merged\\debug\\values-sw400dp-v21\\values-sw400dp-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 41,
+                    "endOffset": 92
+                },
+                "from": {
+                    "file": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\src\\main\\res\\values-sw400dp-v21\\dimens.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 662,
+                        "endColumn": 41,
+                        "endOffset": 699
+                    }
+                }
+            }
+        ]
+    }
+]
