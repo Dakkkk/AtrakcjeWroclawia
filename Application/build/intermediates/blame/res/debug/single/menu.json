@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\src\\main\\res\\menu\\main.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\src\\main\\res\\menu\\main.xml"
     }
