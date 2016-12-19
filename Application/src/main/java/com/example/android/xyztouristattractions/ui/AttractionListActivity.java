@@ -36,6 +36,7 @@ import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Utils;
 import com.example.android.xyztouristattractions.service.MyExpandableListAdapter;
 import com.example.android.xyztouristattractions.service.UtilityService;
+//import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import android.widget.SearchView;
 
 import java.util.ArrayList;
@@ -225,26 +226,26 @@ public class AttractionListActivity extends AppCompatActivity implements
         return false;
     }
 
-    private void loadData() {
-        ArrayList<ChildRow> childRows = new ArrayList<ChildRow>();
-        ParentRow parentRow = null;
-
-        childRows.add(new ChildRow(R.mipmap.generic_icon
-                ,"Rynek"));
-        childRows.add(new ChildRow(R.mipmap.generic_icon
-                , "Hala"));
-        parentRow = new ParentRow("First Group", childRows);
-        parentList.add(parentRow);
-
-        childRows = new ArrayList<ChildRow>();
-        childRows.add(new ChildRow(R.mipmap.generic_icon
-                , "Muzeum Narodowe."));
-        childRows.add(new ChildRow(R.mipmap.generic_icon
-                , "Zoo"));
-        parentRow = new ParentRow("Second Group", childRows);
-        parentList.add(parentRow);
-
-    }
+//    private void loadData() {
+//        ArrayList<ChildRow> childRows = new ArrayList<ChildRow>();
+//        ParentRow parentRow = null;
+//
+//        childRows.add(new ChildRow(R.mipmap.generic_icon
+//                ,"Rynek"));
+//        childRows.add(new ChildRow(R.mipmap.generic_icon
+//                , "Hala"));
+//        parentRow = new ParentRow("First Group", childRows);
+//        parentList.add(parentRow);
+//
+//        childRows = new ArrayList<ChildRow>();
+//        childRows.add(new ChildRow(R.mipmap.generic_icon
+//                , "Muzeum Narodowe."));
+//        childRows.add(new ChildRow(R.mipmap.generic_icon
+//                , "Zoo"));
+//        parentRow = new ParentRow("Second Group", childRows);
+//        parentList.add(parentRow);
+//
+//    }
 
     private void expandAll() {
         int count = listAdapter.getGroupCount();
@@ -254,7 +255,7 @@ public class AttractionListActivity extends AppCompatActivity implements
     }
 
     private void displayList() {
-        loadData();
+//        loadData();
 
         myList = (ExpandableListView) findViewById(R.id.expandableListView_search);
         listAdapter = new MyExpandableListAdapter(AttractionListActivity.this, parentList);

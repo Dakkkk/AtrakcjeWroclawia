@@ -1,15 +1,16 @@
 package com.example.android.xyztouristattractions.ui;
 
 import java.util.ArrayList;
+import com.example.android.xyztouristattractions.provider.TouristAttractions;
 
 /**
  * Created by Dawid on 2016-12-19.
  */
 public class ParentRow {
     private String name;
-    private ArrayList<ChildRow> childList;
+    private ArrayList<TouristAttractions> childList;
 
-    public ParentRow(String name, ArrayList<ChildRow> childList) {
+    public ParentRow(String name, ArrayList<TouristAttractions> childList) {
         this.name = name;
         this.childList = childList;
     }
@@ -22,11 +23,11 @@ public class ParentRow {
         this.name = name;
     }
 
-    public ArrayList<ChildRow> getChildList() {
+    public ArrayList<TouristAttractions> getChildList() {
         return childList;
     }
 
-    public void setChildList(ArrayList<ChildRow> childList) {
+    public void setChildList(ArrayList<TouristAttractions> childList) {
         this.childList = childList;
     }
 }

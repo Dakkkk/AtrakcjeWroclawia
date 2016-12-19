@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 
 import com.example.android.xyztouristattractions.R;
+import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import com.example.android.xyztouristattractions.ui.ChildRow;
 import com.example.android.xyztouristattractions.ui.ParentRow;
 
@@ -126,13 +127,13 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
         }
         else {
             for (ParentRow parentRow : originalList) {
-                ArrayList<ChildRow> childList = parentRow.getChildList();
-                ArrayList<ChildRow> newList = new ArrayList<ChildRow>();
+                ArrayList<TouristAttractions> childList = parentRow.getChildList();
+                ArrayList<TouristAttractions> newList = new ArrayList<TouristAttractions>();
 
-                for (ChildRow childRow: childList) {
-                    if (childRow.getText().toLowerCase().contains(query)) {
+                for (TouristAttractions childRow: childList) {
+                    //if (childRow.getText().toLowerCase().contains(query)) {
                         newList.add(childRow);
-                    }
+                    //}
                 } // end for (com.example.user.searchviewexpandablelistview.ChildRow childRow: childList)
                 if (newList.size() > 0) {
                     ParentRow nParentRow = new ParentRow(parentRow.getName(), newList);
