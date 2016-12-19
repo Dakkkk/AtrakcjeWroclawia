@@ -2,5 +2,9 @@
     {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\animator\\circular_image_button_anim.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\animator\\circular_image_button_anim.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\res\\merged\\debug\\animator\\circular_image_button_anim.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\animator\\circular_image_button_anim.xml"
     }
 ]

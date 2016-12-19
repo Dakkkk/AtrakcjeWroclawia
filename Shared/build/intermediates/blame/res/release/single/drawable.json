@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_text_dark.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
@@ -16,8 +24,28 @@
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_dark.xml",
@@ -30,5 +58,9 @@
     {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_icon_light.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\release\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     }
 ]

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\open_on_phone.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\open_on_phone.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\generic_confirmation.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\generic_confirmation.xml"
     },
@@ -8,8 +12,20 @@
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\generic_confirmation_animation.xml"
     },
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\generic_confirmation_animation.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\generic_confirmation_animation.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\open_on_phone_animation.xml",
         "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\open_on_phone_animation.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\open_on_phone_animation.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\open_on_phone_animation.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\generic_confirmation.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Wearable\\build\\intermediates\\exploded-aar\\com.google.android.support\\wearable\\1.4.0\\res\\drawable-v21\\generic_confirmation.xml"
     },
     {
         "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Wearable\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\open_on_phone.xml",

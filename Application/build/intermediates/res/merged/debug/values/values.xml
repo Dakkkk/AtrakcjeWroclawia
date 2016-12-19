@@ -378,6 +378,7 @@ transferred).
 
     </string>
     <string name="action_test_toggle_geofence">Toggle Geofence Trigger</string>
+    <string name="app_label">Szukaj</string>
     <string name="app_name">XYZTouristAttractions</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
@@ -439,6 +440,8 @@ attractions in a GridViewPager UI component.
     <string name="permission_explanation_action">Let\'s do it!</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="search">Szukaj</string>
+    <string name="search_hint">Wyszukaj Atrakcję</string>
     <string name="show_detail_capability_name">show_details</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="ActionBar.Detail" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">

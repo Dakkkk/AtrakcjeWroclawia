@@ -23,4 +23,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/expandableListView_search"></ExpandableListView>
+
 </android.support.design.widget.CoordinatorLayout>
