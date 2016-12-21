@@ -23,13 +23,19 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -60,6 +66,7 @@ public class AttractionListFragment extends Fragment {
     private LatLng mLatestLocation;
     private int mImageSize;
     private boolean mItemClicked;
+    public static boolean sort = false;
 
     public AttractionListFragment() {}
 
@@ -69,12 +76,38 @@ public class AttractionListFragment extends Fragment {
         // Load a larger size image to make the activity transition to the detail screen smooth
         mImageSize = getResources().getDimensionPixelSize(R.dimen.image_size)
                 * Constants.IMAGE_ANIM_MULTIPLIER;
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+
+        ToggleButton toggle = (ToggleButton) view.findViewById(R.id.sort);
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    sort = true;
+                    Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    sort = false;
+                    Toast.makeText(getActivity(), "Sortowanie wg odległości rosnąco",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            // Refresh the view to schow results after toggling button?
+
+
+
+        });
+
+        List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
 
         mLatestLocation = Utils.getLocation(getActivity());
-        List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation);
+       // List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
+        //checkToggleBtn(toggle);
         mAdapter = new AttractionAdapter(getActivity(), attractions);
 
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
         AttractionsRecyclerView recyclerView =
                 (AttractionsRecyclerView) view.findViewById(android.R.id.list);
         recyclerView.setEmptyView(view.findViewById(android.R.id.empty));
@@ -82,6 +115,25 @@ public class AttractionListFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
 
         return view;
+    }
+
+
+
+    public void checkToggleBtn (ToggleButton toggle){
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    sort = true;
+                    Toast.makeText(getActivity(), "Sortowanie rosnące",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    sort = false;
+                    Toast.makeText(getActivity(),"Sortowanie malejące",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     @Override
@@ -105,34 +157,58 @@ public class AttractionListFragment extends Fragment {
                     intent.getParcelableExtra(FusedLocationProviderApi.KEY_LOCATION_CHANGED);
             if (location != null) {
                 mLatestLocation = new LatLng(location.getLatitude(), location.getLongitude());
-                mAdapter.mAttractionList = loadAttractionsFromLocation(mLatestLocation);
+                mAdapter.mAttractionList = loadAttractionsFromLocation(mLatestLocation, sort);
                 mAdapter.notifyDataSetChanged();
             }
         }
     };
 
-    private static List<Attraction> loadAttractionsFromLocation(final LatLng curLatLng) {
-        String closestCity = TouristAttractions.getClosestCity(curLatLng);
-        if (closestCity != null) {
-            List<Attraction> attractions = ATTRACTIONS.get(closestCity);
-            if (curLatLng != null) {
-                Collections.sort(attractions,
-                        new Comparator<Attraction>() {
-                            @Override
-                            public int compare(Attraction lhs, Attraction rhs) {
-                                double lhsDistance = SphericalUtil.computeDistanceBetween(
-                                        lhs.location, curLatLng);
-                                double rhsDistance = SphericalUtil.computeDistanceBetween(
-                                        rhs.location, curLatLng);
-                                return (int) (lhsDistance - rhsDistance);
-                            }
-                        }
+    private static List<Attraction> loadAttractionsFromLocation(final LatLng curLatLng, boolean sort) {
+        //String closestCity = TouristAttractions.getClosestCity(curLatLng);
+        String farestCity = TouristAttractions.getFarestCity(curLatLng);
+        //if (closestCity != null) {
+        if (farestCity != null) {
+            //List<Attraction> attractions = ATTRACTIONS.get(closestCity);
+            List<Attraction> attractions = ATTRACTIONS.get(farestCity);
+
+            if (curLatLng != null && sort == true) {
+                Collections.sort(attractions, Collections.reverseOrder(
+                                new Comparator<Attraction>() {
+                                    @Override
+                                    public int compare(Attraction lhs, Attraction rhs) {
+                                        double lhsDistance = SphericalUtil.computeDistanceBetween(
+                                                lhs.location, curLatLng);
+                                        double rhsDistance = SphericalUtil.computeDistanceBetween(
+                                                rhs.location, curLatLng);
+                                        return (int) (lhsDistance - rhsDistance);
+                                    }
+                                }
+                        )
                 );
+               // Collections.reverseOrder();
             }
+            else if (curLatLng != null && sort == false) {
+                Collections.sort(attractions,
+                                new Comparator<Attraction>() {
+                                    @Override
+                                    public int compare(Attraction lhs, Attraction rhs) {
+                                        double lhsDistance = SphericalUtil.computeDistanceBetween(
+                                                lhs.location, curLatLng);
+                                        double rhsDistance = SphericalUtil.computeDistanceBetween(
+                                                rhs.location, curLatLng);
+                                        return (int) (lhsDistance - rhsDistance);
+                                    }
+                                }
+                );
+
+            }
+
             return attractions;
         }
         return null;
     }
+
+
 
     private class AttractionAdapter extends RecyclerView.Adapter<ViewHolder>
             implements ItemClickListener {
