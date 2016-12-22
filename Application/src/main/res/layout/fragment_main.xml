@@ -21,6 +21,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AttractionListFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <ToggleButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/sort"
+        android:text="@string/Sortuj"
+        android:textOff="Sortuj od najdalszej atrakcji"
+        android:textOn="Sortuj od najbliższej atrakcji"
+        android:background="@color/btncollor"
+        android:layout_gravity="left"
+        />
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        >
+        <RadioButton
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Sortuj wg nazwy - rosnąco"
+            />
+        <RadioButton
+            android:layout_marginTop="5dp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Sortuj wg nazwy - malejąco"
+            />
+    </RadioGroup>
+    </LinearLayout>
 
     <com.example.android.xyztouristattractions.ui.AttractionsRecyclerView
         android:id="@android:id/list"
@@ -38,6 +71,5 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center" />
-
 
 </LinearLayout>
