@@ -16,6 +16,7 @@
 
 package com.example.android.xyztouristattractions.ui;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -33,9 +34,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -67,6 +72,15 @@ public class AttractionListFragment extends Fragment {
     private int mImageSize;
     private boolean mItemClicked;
     public static boolean sort = false;
+    public static boolean sortByName = false;
+    private RadioGroup radioSortByName;
+    private RadioButton radioNameAsc;
+    private RadioButton radioNameDesc;
+    private Button btnDisplay;
+    private Button radioNameBtn;
+
+
+
 
     public AttractionListFragment() {}
 
@@ -79,11 +93,14 @@ public class AttractionListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
 
+
         ToggleButton toggle = (ToggleButton) view.findViewById(R.id.sort);
+
 
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                sortByName = false;
                 if (isChecked) {
                     sort = true;
                     Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
@@ -95,11 +112,40 @@ public class AttractionListFragment extends Fragment {
                 }
             }
 
-            // Refresh the view to schow results after toggling button?
+            // Refresh the view to show results after toggling button????
+        });
+
+        //Defining Functions to show toast after choosing radio button and clicking POKAŻ
+        radioSortByName = (RadioGroup) view.findViewById(R.id.radioSortName);
+        btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
 
+        btnDisplay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                sortByName = true;
+
+                // get selected radio button from radioGroup
+                int selectedId = radioSortByName.getCheckedRadioButtonId();
+
+                // find the radiobutton by returned id
+                radioNameBtn = (RadioButton) getActivity().findViewById(selectedId);
+
+//                if (radioNameBtn == radioNameAsc) {
+//                    sortByName = true;
+//                }
+//                else {
+//                    sortByName = false;
+//                }
+
+                Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
+            }
 
         });
+
+
 
         List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
 
@@ -114,27 +160,57 @@ public class AttractionListFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(mAdapter);
 
+        //addListenerOnButton();
+
+
         return view;
     }
 
+    //Button that triggers sorting by name after choosing radio opotion (acsending/descending)
+    public void addListenerOnButton() {
+        final Activity activity = this.getActivity();
+        radioSortByName = (RadioGroup) activity.findViewById(R.id.radioSortName);
+        btnDisplay = (Button) activity.findViewById(R.id.btnDisplay);
 
 
-    public void checkToggleBtn (ToggleButton toggle){
-        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    sort = true;
-                    Toast.makeText(getActivity(), "Sortowanie rosnące",
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    sort = false;
-                    Toast.makeText(getActivity(),"Sortowanie malejące",
-                            Toast.LENGTH_SHORT).show();
-                }
+        btnDisplay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // get selected radio button from radioGroup
+                int selectedId = radioSortByName.getCheckedRadioButtonId();
+
+                // find the radiobutton by returned id
+                radioNameBtn = (RadioButton) activity.findViewById(selectedId);
+
+                Toast.makeText(activity, radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
+
             }
+
         });
 
     }
+
+
+
+//
+//    public void checkToggleBtn (ToggleButton toggle){
+//        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if (isChecked) {
+//                    sort = true;
+//                    Toast.makeText(getActivity(), "Sortowanie rosnące",
+//                            Toast.LENGTH_SHORT).show();
+//                } else {
+//                    sort = false;
+//                    Toast.makeText(getActivity(),"Sortowanie malejące",
+//                            Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//
+//    }
 
     @Override
     public void onResume() {
@@ -171,7 +247,20 @@ public class AttractionListFragment extends Fragment {
             //List<Attraction> attractions = ATTRACTIONS.get(closestCity);
             List<Attraction> attractions = ATTRACTIONS.get(farestCity);
 
-            if (curLatLng != null && sort == true) {
+            if (sortByName == true) {
+
+                Collections.sort(attractions, new Comparator<Attraction>() {
+                    @Override
+                    public int compare(Attraction name, Attraction name2) {
+                        return name.getName().compareToIgnoreCase(name2.getName());
+                    }
+                });
+
+            }
+
+
+
+           else if (curLatLng != null && sort == true && sortByName == false) {
                 Collections.sort(attractions, Collections.reverseOrder(
                                 new Comparator<Attraction>() {
                                     @Override
@@ -185,9 +274,8 @@ public class AttractionListFragment extends Fragment {
                                 }
                         )
                 );
-               // Collections.reverseOrder();
             }
-            else if (curLatLng != null && sort == false) {
+            else if (curLatLng != null && sort == false && sortByName == false) {
                 Collections.sort(attractions,
                                 new Comparator<Attraction>() {
                                     @Override
