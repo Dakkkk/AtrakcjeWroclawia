@@ -73,6 +73,9 @@ public class AttractionListFragment extends Fragment {
     private boolean mItemClicked;
     public static boolean sort = false;
     public static boolean sortByName = false;
+    public static boolean sortNameDesc = false;
+    public static boolean sortNameAsc = false;
+    public static boolean sortDistanceAsc = false;
     private RadioGroup radioSortByName;
     private RadioButton radioNameAsc;
     private RadioButton radioNameDesc;
@@ -101,12 +104,12 @@ public class AttractionListFragment extends Fragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 sortByName = false;
+                sort = true;
                 if (isChecked) {
-                    sort = true;
                     Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
                             Toast.LENGTH_SHORT).show();
                 } else {
-                    sort = false;
+                    sortDistanceAsc = true;
                     Toast.makeText(getActivity(), "Sortowanie wg odległości rosnąco",
                             Toast.LENGTH_SHORT).show();
                 }
@@ -120,12 +123,14 @@ public class AttractionListFragment extends Fragment {
         btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
 
+        //tringgers sorting by name after choosing option descending/ascending
         btnDisplay.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
                 sortByName = true;
+                sort = false;
 
                 // get selected radio button from radioGroup
                 int selectedId = radioSortByName.getCheckedRadioButtonId();
@@ -133,12 +138,12 @@ public class AttractionListFragment extends Fragment {
                 // find the radiobutton by returned id
                 radioNameBtn = (RadioButton) getActivity().findViewById(selectedId);
 
-//                if (radioNameBtn == radioNameAsc) {
-//                    sortByName = true;
-//                }
-//                else {
-//                    sortByName = false;
-//                }
+                if (radioNameBtn == radioNameAsc) {
+                    sortNameAsc = true;
+                }
+                else {
+                    sortNameDesc = true;
+                }
 
                 Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
             }
@@ -247,49 +252,62 @@ public class AttractionListFragment extends Fragment {
             //List<Attraction> attractions = ATTRACTIONS.get(closestCity);
             List<Attraction> attractions = ATTRACTIONS.get(farestCity);
 
+            //sorting attractions by name
             if (sortByName == true) {
-
-                Collections.sort(attractions, new Comparator<Attraction>() {
-                    @Override
-                    public int compare(Attraction name, Attraction name2) {
-                        return name.getName().compareToIgnoreCase(name2.getName());
-                    }
-                });
-
+                if (sortNameDesc == true) {
+                   // sortNameAsc = false;
+                    Collections.sort(attractions, new Comparator<Attraction>() {
+                        @Override
+                        public int compare(Attraction name, Attraction name2) {
+                            return name.getName().compareToIgnoreCase(name2.getName());
+                        }
+                    });
+                }
+                else {
+                   // sortNameDesc = false;
+                    Collections.sort(attractions, new Comparator<Attraction>() {
+                        @Override
+                        public int compare(Attraction name, Attraction name2) {
+                            return name2.getName().compareToIgnoreCase(name.getName());
+                        }
+                    });
+                }
             }
 
 
-
-           else if (curLatLng != null && sort == true && sortByName == false) {
-                Collections.sort(attractions, Collections.reverseOrder(
-                                new Comparator<Attraction>() {
-                                    @Override
-                                    public int compare(Attraction lhs, Attraction rhs) {
-                                        double lhsDistance = SphericalUtil.computeDistanceBetween(
-                                                lhs.location, curLatLng);
-                                        double rhsDistance = SphericalUtil.computeDistanceBetween(
-                                                rhs.location, curLatLng);
-                                        return (int) (lhsDistance - rhsDistance);
+            if (sort == true && sortByName == false ) {
+                  if (curLatLng != null && sortDistanceAsc == false) {
+                    Collections.sort(attractions, Collections.reverseOrder(
+                                    new Comparator<Attraction>() {
+                                        @Override
+                                        public int compare(Attraction lhs, Attraction rhs) {
+                                            double lhsDistance = SphericalUtil.computeDistanceBetween(
+                                                    lhs.location, curLatLng);
+                                            double rhsDistance = SphericalUtil.computeDistanceBetween(
+                                                    rhs.location, curLatLng);
+                                            return (int) (lhsDistance - rhsDistance);
+                                        }
                                     }
+                            )
+                    );
+                }
+                else if (curLatLng != null) {
+                    Collections.sort(attractions,
+                            new Comparator<Attraction>() {
+                                @Override
+                                public int compare(Attraction lhs, Attraction rhs) {
+                                    double lhsDistance = SphericalUtil.computeDistanceBetween(
+                                            lhs.location, curLatLng);
+                                    double rhsDistance = SphericalUtil.computeDistanceBetween(
+                                            rhs.location, curLatLng);
+                                    return (int) (lhsDistance - rhsDistance);
                                 }
-                        )
-                );
-            }
-            else if (curLatLng != null && sort == false && sortByName == false) {
-                Collections.sort(attractions,
-                                new Comparator<Attraction>() {
-                                    @Override
-                                    public int compare(Attraction lhs, Attraction rhs) {
-                                        double lhsDistance = SphericalUtil.computeDistanceBetween(
-                                                lhs.location, curLatLng);
-                                        double rhsDistance = SphericalUtil.computeDistanceBetween(
-                                                rhs.location, curLatLng);
-                                        return (int) (lhsDistance - rhsDistance);
-                                    }
-                                }
-                );
+                            }
+                    );
 
+                }
             }
+
 
             return attractions;
         }
