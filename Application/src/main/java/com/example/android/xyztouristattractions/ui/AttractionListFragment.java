@@ -106,6 +106,7 @@ public class AttractionListFragment extends Fragment {
                 sortByName = false;
                 sort = true;
                 if (isChecked) {
+                    sortDistanceAsc = false;
                     Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
                             Toast.LENGTH_SHORT).show();
                 } else {
@@ -141,7 +142,7 @@ public class AttractionListFragment extends Fragment {
                 if (radioNameBtn == radioNameAsc) {
                     sortNameAsc = true;
                 }
-                else {
+                else if (radioNameBtn == radioNameDesc) {
                     sortNameDesc = true;
                 }
 
@@ -275,8 +276,8 @@ public class AttractionListFragment extends Fragment {
             }
 
 
-            if (sort == true && sortByName == false ) {
-                  if (curLatLng != null && sortDistanceAsc == false) {
+            if (sort == true && curLatLng != null  ) {
+                  if (sortDistanceAsc == false) {
                     Collections.sort(attractions, Collections.reverseOrder(
                                     new Comparator<Attraction>() {
                                         @Override
@@ -291,7 +292,7 @@ public class AttractionListFragment extends Fragment {
                             )
                     );
                 }
-                else if (curLatLng != null) {
+                else {
                     Collections.sort(attractions,
                             new Comparator<Attraction>() {
                                 @Override
