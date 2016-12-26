@@ -121,6 +121,8 @@ public class AttractionListFragment extends Fragment {
 
         //Defining Functions to show toast after choosing radio button and clicking POKAŻ
         radioSortByName = (RadioGroup) view.findViewById(R.id.radioSortName);
+        radioNameAsc = (RadioButton) view.findViewById(R.id.radioNameAsc);
+
         btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
 
@@ -141,9 +143,11 @@ public class AttractionListFragment extends Fragment {
 
                 if (radioNameBtn == radioNameAsc) {
                     sortNameAsc = true;
+                    sortNameDesc = false;
                 }
-                else if (radioNameBtn == radioNameDesc) {
+                else {
                     sortNameDesc = true;
+                    sortNameAsc = false;
                 }
 
                 Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
@@ -173,30 +177,30 @@ public class AttractionListFragment extends Fragment {
     }
 
     //Button that triggers sorting by name after choosing radio opotion (acsending/descending)
-    public void addListenerOnButton() {
-        final Activity activity = this.getActivity();
-        radioSortByName = (RadioGroup) activity.findViewById(R.id.radioSortName);
-        btnDisplay = (Button) activity.findViewById(R.id.btnDisplay);
-
-
-        btnDisplay.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                // get selected radio button from radioGroup
-                int selectedId = radioSortByName.getCheckedRadioButtonId();
-
-                // find the radiobutton by returned id
-                radioNameBtn = (RadioButton) activity.findViewById(selectedId);
-
-                Toast.makeText(activity, radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
-
-            }
-
-        });
-
-    }
+//    public void addListenerOnButton() {
+//        final Activity activity = this.getActivity();
+//        radioSortByName = (RadioGroup) activity.findViewById(R.id.radioSortName);
+//        btnDisplay = (Button) activity.findViewById(R.id.btnDisplay);
+//
+//
+//        btnDisplay.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//                // get selected radio button from radioGroup
+//                int selectedId = radioSortByName.getCheckedRadioButtonId();
+//
+//                // find the radiobutton by returned id
+//                radioNameBtn = (RadioButton) activity.findViewById(selectedId);
+//
+//                Toast.makeText(activity, radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
+//
+//            }
+//
+//        });
+//
+//    }
 
 
 
@@ -255,8 +259,7 @@ public class AttractionListFragment extends Fragment {
 
             //sorting attractions by name
             if (sortByName == true) {
-                if (sortNameDesc == true) {
-                   // sortNameAsc = false;
+                if (sortNameAsc == true) {
                     Collections.sort(attractions, new Comparator<Attraction>() {
                         @Override
                         public int compare(Attraction name, Attraction name2) {
@@ -264,8 +267,7 @@ public class AttractionListFragment extends Fragment {
                         }
                     });
                 }
-                else {
-                   // sortNameDesc = false;
+                else if (sortNameDesc == true) {
                     Collections.sort(attractions, new Comparator<Attraction>() {
                         @Override
                         public int compare(Attraction name, Attraction name2) {
