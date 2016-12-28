@@ -40,20 +40,30 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:layout_marginLeft="25dp"
+        android:id="@+id/radioSortName"
         >
         <RadioButton
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="Sortuj wg nazwy - rosnąco"
+            android:text="@string/radio_acs"
+            android:id="@+id/radioNameAsc"
             />
         <RadioButton
             android:layout_marginTop="5dp"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="Sortuj wg nazwy - malejąco"
+            android:text="@string/radio_desc"
+            android:id="@+id/radioNameDesc"
             />
     </RadioGroup>
+
     </LinearLayout>
+    <Button
+        android:id="@+id/btnDisplay"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:text="@string/btn_display" />
 
     <com.example.android.xyztouristattractions.ui.AttractionsRecyclerView
         android:id="@android:id/list"

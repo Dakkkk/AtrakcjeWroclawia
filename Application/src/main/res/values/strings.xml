@@ -50,5 +50,9 @@ appear further down your stream
     <string name="app_label">Szukaj</string>
     <string name="search_hint">Wyszukaj Atrakcję</string>
     <string name="search">Szukaj</string>
+    <string name="Sortuj" />
+    <string name="btn_display">Pokaż</string>
+    <string name="radio_acs">Sortuj wg nazwy - rosnąco</string>
+    <string name="radio_desc">Sortuj wg nazwy - malejąco</string>
 
 </resources>
