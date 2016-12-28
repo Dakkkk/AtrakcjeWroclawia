@@ -29,7 +29,7 @@ public final class R {
 		public static final int zOrderOnTop = 0x7f0100e4;
 	}
 	public static final class color {
-		public static final int common_action_bar_splitter = 0x7f0e0016;
+		public static final int common_action_bar_splitter = 0x7f0e0017;
 	}
 	public static final class drawable {
 		public static final int bubble_mask = 0x7f02004c;

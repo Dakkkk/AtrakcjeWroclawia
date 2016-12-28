@@ -160,5 +160,23 @@ public class TouristAttractions {
         return closestCity;
     }
 
+    public static String getFarestCity(LatLng curLatLng) {
+        if (curLatLng == null) {
+            // If location is unknown return test city so some data is shown
+            return TEST_CITY;
+        }
+
+        double maxDistance = 0;
+        String farestCity = null;
+        for (Map.Entry<String, LatLng> entry: CITY_LOCATIONS.entrySet()) {
+            double distance = SphericalUtil.computeDistanceBetween(curLatLng, entry.getValue());
+            if (maxDistance == 0 || distance > maxDistance) {
+                maxDistance = distance;
+                farestCity = entry.getKey();
+            }
+        }
+        return farestCity;
+    }
+
 
 }

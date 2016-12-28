@@ -55,15 +55,22 @@
             android:text="@string/radio_desc"
             android:id="@+id/radioNameDesc"
             />
+        <Button
+            android:id="@+id/btnDisplay"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:text="@string/btn_display" />
     </RadioGroup>
 
     </LinearLayout>
     <Button
-        android:id="@+id/btnDisplay"
+        android:id="@+id/btnDisplayMap"
         android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:layout_gravity="right"
-        android:text="@string/btn_display" />
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="@string/button_map"
+        />
 
     <com.example.android.xyztouristattractions.ui.AttractionsRecyclerView
         android:id="@android:id/list"
@@ -81,5 +88,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center" />
+
+
+
 
 </LinearLayout>

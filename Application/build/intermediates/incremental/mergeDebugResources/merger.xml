@@ -1818,7 +1818,7 @@ attractions in a GridViewPager UI component.
 
         
         
-    </string><string name="app_name">XYZTouristAttractions</string></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\colors.xml" qualifiers=""><color name="lighter_gray">#ddd</color><color name="transparent_actionbar_background">#22000000</color><color name="text_background">#90000000</color></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\dimens.xml" qualifiers=""><item name="keyline3" type="dimen">@dimen/standard_margin</item><item name="keyline1" type="dimen">@dimen/standard_margin</item><dimen name="keyline2">72dp</dimen><dimen name="tiny_margin">4dp</dimen><dimen name="fab_margin">-8dp</dimen><dimen name="standard_margin">16dp</dimen><integer name="list_columns">1</integer><dimen name="small_margin">8dp</dimen><dimen name="image_size">120dp</dimen></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\strings.xml" qualifiers=""><string name="action_test_microapp_dialog">
+    </string><string name="app_name">XYZTouristAttractions</string></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\colors.xml" qualifiers=""><color name="lighter_gray">#ddd</color><color name="transparent_actionbar_background">#22000000</color><color name="btncollor">#fff</color><color name="text_background">#90000000</color></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\dimens.xml" qualifiers=""><item name="keyline3" type="dimen">@dimen/standard_margin</item><item name="keyline1" type="dimen">@dimen/standard_margin</item><dimen name="keyline2">72dp</dimen><dimen name="tiny_margin">4dp</dimen><dimen name="fab_margin">-8dp</dimen><dimen name="standard_margin">16dp</dimen><integer name="list_columns">1</integer><dimen name="small_margin">8dp</dimen><dimen name="image_size">120dp</dimen></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\strings.xml" qualifiers=""><string name="radio_desc">Sortuj wg nazwy - malejąco</string><string name="action_test_microapp_dialog">
 
 This will trigger a notification on Wear that lets you open up the full
 wearable app. A few things to note:\n\n
@@ -1830,7 +1830,7 @@ be triggered after the data was transferred)\n\n
 • The notification priority is set to the recommended default value so it may
 appear further down your stream
 
-    </string><string name="action_test_toggle_geofence">Toggle Geofence Trigger</string><string name="app_label">Szukaj</string><string name="permission_explanation">Allow this app to use your location to show distance to attractions?</string><string name="action_map">Show on Map</string><string name="permission_explanation_action">Let\'s do it!</string><string name="search_hint">Wyszukaj Atrakcję</string><string name="action_test_notification_dialog">
+    </string><string name="action_test_toggle_geofence">Toggle Geofence Trigger</string><string name="btn_display">Pokaż</string><string name="app_label">Szukaj</string><string name="permission_explanation">Allow this app to use your location to show distance to attractions?</string><string name="action_map">Show on Map</string><string name="permission_explanation_action">Let\'s do it!</string><string name="search_hint">Wyszukaj Atrakcję</string><string name="action_test_notification_dialog">
 
 This will trigger a rich notification that is bridged over to the Wear device.
 \n\nNote that the first time this runs it can take 20-30 seconds to transfer
@@ -1838,7 +1838,7 @@ the image data (in practice, users wouldn\'t notice this as the notification
 would be triggered automatically and only show up after the data was
 transferred).
 
-    </string><string name="nearby_attraction">Nearby tourist attraction</string><string name="search">Szukaj</string><string name="action_test_microapp">Test Micro App</string><string name="empty_list">No attractions found nearby!</string><string name="action_test_notification">Test Notification</string></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\styles.xml" qualifiers=""><style name="XYZAppTheme.Detail">
+    </string><string name="nearby_attraction">Nearby tourist attraction</string><string name="radio_acs">Sortuj wg nazwy - rosnąco</string><string name="button_map">Atrakcje na mapie</string><string name="search">Szukaj</string><string name="Sortuj"/><string name="action_test_microapp">Test Micro App</string><string name="empty_list">No attractions found nearby!</string><string name="action_test_notification">Test Notification</string></file><file path="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\res\values\styles.xml" qualifiers=""><style name="XYZAppTheme.Detail">
         <item name="windowActionBarOverlay">true</item>
         <item name="actionBarStyle">@style/ActionBar.Detail</item>
     </style><style name="XYZAppTheme" parent="XYZAppTheme.Base"/><style name="XYZAppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">

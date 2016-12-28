@@ -226,7 +226,7 @@ public class AttractionListActivity extends AppCompatActivity implements
         return false;
     }
 
-//    private void loadData() {
+    private void loadData() {
 //        ArrayList<ChildRow> childRows = new ArrayList<ChildRow>();
 //        ParentRow parentRow = null;
 //
@@ -244,8 +244,8 @@ public class AttractionListActivity extends AppCompatActivity implements
 //                , "Zoo"));
 //        parentRow = new ParentRow("Second Group", childRows);
 //        parentList.add(parentRow);
-//
-//    }
+
+    }
 
     private void expandAll() {
         int count = listAdapter.getGroupCount();
@@ -255,7 +255,7 @@ public class AttractionListActivity extends AppCompatActivity implements
     }
 
     private void displayList() {
-//        loadData();
+        loadData();
 
         myList = (ExpandableListView) findViewById(R.id.expandableListView_search);
         listAdapter = new MyExpandableListAdapter(AttractionListActivity.this, parentList);

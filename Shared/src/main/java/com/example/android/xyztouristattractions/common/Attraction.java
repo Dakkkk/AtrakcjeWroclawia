@@ -40,6 +40,14 @@ public class Attraction {
 
     public Attraction() {}
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Attraction(String name, String description, String longDescription, Uri imageUrl,
                       Uri secondaryImageUrl, LatLng location, String city) {
         this.name = name;

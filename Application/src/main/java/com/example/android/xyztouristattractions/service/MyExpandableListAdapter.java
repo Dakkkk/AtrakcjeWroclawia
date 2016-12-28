@@ -127,13 +127,13 @@ public class MyExpandableListAdapter extends BaseExpandableListAdapter {
         }
         else {
             for (ParentRow parentRow : originalList) {
-                ArrayList<TouristAttractions> childList = parentRow.getChildList();
-                ArrayList<TouristAttractions> newList = new ArrayList<TouristAttractions>();
+                ArrayList<ChildRow> childList = parentRow.getChildList();
+                ArrayList<ChildRow> newList = new ArrayList<ChildRow>();
 
-                for (TouristAttractions childRow: childList) {
-                    //if (childRow.getText().toLowerCase().contains(query)) {
+                for (ChildRow childRow: childList) {
+                    if (childRow.getText().toLowerCase().contains(query)) {
                         newList.add(childRow);
-                    //}
+                    }
                 } // end for (com.example.user.searchviewexpandablelistview.ChildRow childRow: childList)
                 if (newList.size() > 0) {
                     ParentRow nParentRow = new ParentRow(parentRow.getName(), newList);

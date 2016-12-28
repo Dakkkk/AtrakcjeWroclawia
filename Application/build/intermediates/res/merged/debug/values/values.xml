@@ -29,6 +29,7 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <color name="btncollor">#fff</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="colorAccent">#ff7043</color>
@@ -321,6 +322,7 @@
     <integer name="google_play_services_version">8487000</integer>
     <integer name="list_columns">1</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
+    <string name="Sortuj"/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -384,6 +386,8 @@ transferred).
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="btn_display">Pokaż</string>
+    <string name="button_map">Atrakcje na mapie</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
@@ -440,6 +444,8 @@ attractions in a GridViewPager UI component.
     <string name="permission_explanation_action">Let\'s do it!</string>
     <string name="place_autocomplete_clear_button">Clear search</string>
     <string name="place_autocomplete_search_hint">Search</string>
+    <string name="radio_acs">Sortuj wg nazwy - rosnąco</string>
+    <string name="radio_desc">Sortuj wg nazwy - malejąco</string>
     <string name="search">Szukaj</string>
     <string name="search_hint">Wyszukaj Atrakcję</string>
     <string name="show_detail_capability_name">show_details</string>
