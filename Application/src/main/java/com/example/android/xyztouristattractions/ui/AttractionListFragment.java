@@ -52,12 +52,14 @@ import com.example.android.xyztouristattractions.common.Utils;
 import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import com.example.android.xyztouristattractions.service.UtilityService;
 import com.google.android.gms.location.FusedLocationProviderApi;
+import com.google.android.gms.location.Geofence;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.SphericalUtil;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 import static com.example.android.xyztouristattractions.provider.TouristAttractions.ATTRACTIONS;
 
@@ -130,6 +132,7 @@ public class AttractionListFragment extends Fragment {
         //String attractionName = getArguments().getString(EXTRA_ATTRACTION);
         Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
 
+        final List<Geofence> geofences = TouristAttractions.getGeofenceList();
 
         //tringgers sorting by name after choosing option descending/ascending
         btnDisplay.setOnClickListener(new View.OnClickListener() {
@@ -160,14 +163,18 @@ public class AttractionListFragment extends Fragment {
 
         });
 
+        //show map with all attractions
         mapAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(Constants.MAPS_INTENT_URI
-                          //      +
-                        //Uri.encode(mAttraction.name + ", " + mAttraction.city)
+                //for (int i=0; i<attractions.size(); i++) {
+
+                intent.setData(Uri.parse(
+                        Constants.MAPS_INTENT_URI+
+
+                             Uri.encode(getAttraction().name + ", " + getAttraction().city)
                 ));
                 startActivity(intent);
             }
@@ -178,8 +185,7 @@ public class AttractionListFragment extends Fragment {
         List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
 
         mLatestLocation = Utils.getLocation(getActivity());
-       // List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
-        //checkToggleBtn(toggle);
+
         mAdapter = new AttractionAdapter(getActivity(), attractions);
 
         AttractionsRecyclerView recyclerView =
@@ -187,11 +193,18 @@ public class AttractionListFragment extends Fragment {
         recyclerView.setEmptyView(view.findViewById(android.R.id.empty));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(mAdapter);
-
-        //addListenerOnButton();
-
-
+        
         return view;
+    }
+
+    private Attraction getAttraction() {
+        for (Map.Entry<String, List<Attraction>> attractionsList : ATTRACTIONS.entrySet()) {
+            List<Attraction> attractions = attractionsList.getValue();
+            for (Attraction attraction : attractions) {
+                    return attraction;
+            }
+        }
+        return null;
     }
 
     //Button that triggers sorting by name after choosing radio opotion (acsending/descending)
