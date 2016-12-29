@@ -21,6 +21,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
@@ -81,6 +82,7 @@ public class AttractionListFragment extends Fragment {
     private RadioButton radioNameDesc;
     private Button btnDisplay;
     private Button radioNameBtn;
+    private Attraction mAttraction;
 
 
 
@@ -125,6 +127,9 @@ public class AttractionListFragment extends Fragment {
 
         btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
+        //String attractionName = getArguments().getString(EXTRA_ATTRACTION);
+        Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
+
 
         //tringgers sorting by name after choosing option descending/ascending
         btnDisplay.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +158,19 @@ public class AttractionListFragment extends Fragment {
                 Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
             }
 
+        });
+
+        mapAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(Constants.MAPS_INTENT_URI
+                          //      +
+                        //Uri.encode(mAttraction.name + ", " + mAttraction.city)
+                ));
+                startActivity(intent);
+            }
         });
 
 

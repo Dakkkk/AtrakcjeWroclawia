@@ -21,6 +21,7 @@ import android.net.Uri;
 import android.util.Log;
 
 import com.example.android.xyztouristattractions.ui.DetailActivity;
+import com.example.android.xyztouristattractions.ui.MapAllActivity;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.WearableListenerService;
 import com.example.android.xyztouristattractions.common.Constants;
@@ -52,6 +53,12 @@ public class ListenerService extends WearableListenerService {
             String attractionQuery = new String(messageEvent.getData());
             Uri uri = Uri.parse(Constants.MAPS_NAVIGATION_INTENT_URI + Uri.encode(attractionQuery));
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } else if (Constants.START_MAP_PATH.equals(messageEvent.getPath())) {
+            // Request for this device to open the map with all attractions
+            String attractionName = new String(messageEvent.getData());
+            Intent intent = MapAllActivity.getLaunchIntent(this, attractionName);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }

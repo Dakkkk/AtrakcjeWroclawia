@@ -64,6 +64,7 @@ public class Constants {
     public static final String START_PATH = "/start";
     public static final String START_ATTRACTION_PATH = START_PATH + "/attraction";
     public static final String START_NAVIGATION_PATH = START_PATH + "/navigation";
+    public static final String START_MAP_PATH = START_PATH + "/map";
     public static final String CLEAR_NOTIFICATIONS_PATH = "/clear";
 
     // Maps values
