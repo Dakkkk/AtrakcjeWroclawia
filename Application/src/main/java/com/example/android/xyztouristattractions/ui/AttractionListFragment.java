@@ -16,19 +16,15 @@
 
 package com.example.android.xyztouristattractions.ui;
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,8 +36,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-
-
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -175,27 +169,8 @@ public class AttractionListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-
-                intent.putExtra("", Uri.parse(Constants.MAPS_INTENT_URI +
-                        Uri.encode(getAttraction().name + ", " + getAttraction().city)));
-
-
-                intent.setData(Uri.parse(
-                        Constants.MAPS_INTENT_URI
-                                +
-
-                                Uri.encode(getAttraction().name + ", " + getAttraction().city)
-                ));
-
-                //intent.putExtras(Uri.encode(getAttraction().name + ", " + getAttraction().city));
-                startActivity(intent);
-
-//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<51.1109061>,<17.0476092>?q=<51.1126439>,<17.0397772>(Label+Name)"));
-//                intent.putExtra(Intent.ACTION_VIEW, Uri.parse("geo:<51.0109061>,<17.1476092>?q=<51.0126439>,<17.1397772>(Label+Name)"));
-//                startActivity(intent);
-
-
+                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
+                startActivity(i);
             }
         });
 
@@ -225,6 +200,13 @@ public class AttractionListFragment extends Fragment {
         }
         return null;
     }
+
+//    //open the map with all attractions
+//    public void showAllAttractions(View view)
+//    {
+//        Intent intent = new Intent( .ui.MapsMarkerActivity.class);
+//        startActivity(intent);
+//    }
 
 
 
