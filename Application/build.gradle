@@ -25,6 +25,9 @@ dependencies {
     compile 'com.android.support:design:24.0.0'
     compile 'com.google.android.gms:play-services-wearable:8.4.0'
     compile 'com.android.support:support-v13:24.1.1'
+
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+
     compile project(':Shared')
     wearApp project(':Wearable')
 }

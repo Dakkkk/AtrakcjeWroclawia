@@ -86,6 +86,10 @@
             android:name="com.example.android.xyztouristattractions.config.GlideConfiguration"
             android:value="GlideModule"/>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAKUVCJLj9csA0-px1DcVIpN2OofpQ_elI"/>
+
     </application>
 
 </manifest>

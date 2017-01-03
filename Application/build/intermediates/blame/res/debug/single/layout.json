@@ -104,6 +104,14 @@
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\amu_info_window.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.4.4\\res\\layout\\amu_info_window.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\amu_webview.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.4.4\\res\\layout\\amu_webview.xml"
+    },
+    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.0.0\\res\\layout\\design_layout_tab_text.xml"
     },
@@ -394,6 +402,10 @@
     {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\amu_text_bubble.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.4.4\\res\\layout\\amu_text_bubble.xml"
     },
     {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\child_row.xml",

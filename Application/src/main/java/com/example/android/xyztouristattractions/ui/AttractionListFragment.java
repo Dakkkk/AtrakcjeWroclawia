@@ -53,9 +53,12 @@ import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import com.example.android.xyztouristattractions.service.UtilityService;
 import com.google.android.gms.location.FusedLocationProviderApi;
 import com.google.android.gms.location.Geofence;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.SphericalUtil;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -85,6 +88,10 @@ public class AttractionListFragment extends Fragment {
     private Button btnDisplay;
     private Button radioNameBtn;
     private Attraction mAttraction;
+
+    private GoogleMap googleMap;
+    private MarkerOptions options = new MarkerOptions();
+    private ArrayList<LatLng> latlngs = new ArrayList<>();
 
 
 
@@ -169,14 +176,26 @@ public class AttractionListFragment extends Fragment {
             public void onClick(View v) {
                 Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                //for (int i=0; i<attractions.size(); i++) {
+
+                intent.putExtra("", Uri.parse(Constants.MAPS_INTENT_URI +
+                        Uri.encode(getAttraction().name + ", " + getAttraction().city)));
+
 
                 intent.setData(Uri.parse(
-                        Constants.MAPS_INTENT_URI+
+                        Constants.MAPS_INTENT_URI
+                                +
 
-                             Uri.encode(getAttraction().name + ", " + getAttraction().city)
+                                Uri.encode(getAttraction().name + ", " + getAttraction().city)
                 ));
+
+                //intent.putExtras(Uri.encode(getAttraction().name + ", " + getAttraction().city));
                 startActivity(intent);
+
+//                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<51.1109061>,<17.0476092>?q=<51.1126439>,<17.0397772>(Label+Name)"));
+//                intent.putExtra(Intent.ACTION_VIEW, Uri.parse("geo:<51.0109061>,<17.1476092>?q=<51.0126439>,<17.1397772>(Label+Name)"));
+//                startActivity(intent);
+
+
             }
         });
 
@@ -206,6 +225,8 @@ public class AttractionListFragment extends Fragment {
         }
         return null;
     }
+
+
 
     //Button that triggers sorting by name after choosing radio opotion (acsending/descending)
 //    public void addListenerOnButton() {
@@ -252,6 +273,9 @@ public class AttractionListFragment extends Fragment {
 //        });
 //
 //    }
+
+
+
 
     @Override
     public void onResume() {

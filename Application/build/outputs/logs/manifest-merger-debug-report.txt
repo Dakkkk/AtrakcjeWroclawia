@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:1-91:12
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:1-95:12
 	package
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:20:5-56
 	android:versionName
@@ -40,14 +40,14 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Applicat
 	android:name
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:26:22-78
 application
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:28:5-89:19
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:28:5-93:19
 MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:7:5-11:19
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:23:5-20
@@ -71,6 +71,7 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android pro
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:7:5-11:19
 MERGED from [projekt-janusze-programowania2:Shared:unspecified] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\projekt-janusze-programowania2\Shared\unspecified\AndroidManifest.xml:24:5-47
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
@@ -83,7 +84,7 @@ MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomow
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\AndroidManifest.xml:7:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:7:5-11:19
 	android:label
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:31:9-41
 	android:fullBackupContent
@@ -162,10 +163,13 @@ meta-data#com.google.android.gms.version
 ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:82:9-83:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:8:9-10:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:8:9-10:69
 	android:value
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:83:13-66
 	android:name
@@ -176,6 +180,12 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Applicat
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:87:13-40
 	android:name
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:86:13-95
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:89:9-91:70
+	android:value
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:91:13-68
+	android:name
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:90:13-58
 uses-sdk
 INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:18:5-42
@@ -186,7 +196,7 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android project
 MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-vector-drawable:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\AndroidManifest.xml:21:5-43
@@ -213,6 +223,7 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android pro
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:21:5-23:55
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:5:5-43
 MERGED from [projekt-janusze-programowania2:Shared:unspecified] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\projekt-janusze-programowania2\Shared\unspecified\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:21:5-23:55
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
@@ -228,7 +239,7 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android project
 MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
