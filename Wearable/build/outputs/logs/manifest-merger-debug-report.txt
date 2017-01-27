@@ -31,42 +31,19 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:25:22-78
 uses-sdk
 ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:27:5-29:41
-MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:26:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:21:5-23:55
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.support:wearable:1.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.support\wearable\1.4.0\AndroidManifest.xml:4:5-6:41
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:recyclerview-v7:23.0.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [projekt-janusze-programowania2:Shared:unspecified] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\projekt-janusze-programowania2\Shared\unspecified\AndroidManifest.xml:20:5-22:41
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:21:5-23:55
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:26:5-42
 MERGED from [com.google.android.gms:play-services-base:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.3.4\AndroidManifest.xml:5:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:23:9-52
 	android:targetSdkVersion
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:29:9-38
 		INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml
@@ -75,29 +52,11 @@ MERGED from [com.google.maps.android:android-maps-utils:0.3.4] C:\android projec
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:28:9-35
 application
 ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:31:5-63:19
-MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.support:wearable:1.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.support\wearable\1.4.0\AndroidManifest.xml:8:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [projekt-janusze-programowania2:Shared:unspecified] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\projekt-janusze-programowania2\Shared\unspecified\AndroidManifest.xml:24:5-47
 MERGED from [com.android.support:support-v13:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-wearable:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-location:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:27:5-20
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
@@ -151,28 +110,20 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable
 meta-data#com.google.android.gms.version
 ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:60:9-61:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:value
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:61:13-66
 	android:name
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\src\main\AndroidManifest.xml:60:20-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:22-76
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:22-64
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
-MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 	android:glEsVersion
 		ADDED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Wearable\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:23:8-40
 	android:required

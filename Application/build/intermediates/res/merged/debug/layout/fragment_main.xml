@@ -24,50 +24,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-    <ToggleButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/sort"
-        android:text="@string/Sortuj"
-        android:textOff="Sortuj od najdalszej atrakcji"
-        android:textOn="Sortuj od najbliższej atrakcji"
-        android:background="@color/btncollor"
-        android:layout_gravity="left"
-        />
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginLeft="25dp"
-        android:id="@+id/radioSortName"
-        >
-        <RadioButton
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_acs"
-            android:id="@+id/radioNameAsc"
-            />
-        <RadioButton
-            android:layout_marginTop="5dp"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_desc"
-            android:id="@+id/radioNameDesc"
-            />
-        <Button
-            android:id="@+id/btnDisplay"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="left"
-            android:text="@string/btn_display" />
-    </RadioGroup>
 
     </LinearLayout>
     <Button
         android:id="@+id/btnDisplayMap"
-        android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
         android:layout_gravity="center"
         android:text="@string/button_map"
         />

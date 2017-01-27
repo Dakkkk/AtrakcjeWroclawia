@@ -12,31 +12,11 @@
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_fragment.xml"
     },
     {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\place_autocomplete_fragment.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_fragment.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\place_autocomplete_item_prediction.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_prediction.xml"
-    },
-    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\text_bubble.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.3.4\\res\\layout\\text_bubble.xml"
     },
     {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\place_autocomplete_progress.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_progress.xml"
-    },
-    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\place_autocomplete_progress.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_progress.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\text_bubble.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Shared\\build\\intermediates\\exploded-aar\\com.google.maps.android\\android-maps-utils\\0.3.4\\res\\layout\\text_bubble.xml"
     }
 ]

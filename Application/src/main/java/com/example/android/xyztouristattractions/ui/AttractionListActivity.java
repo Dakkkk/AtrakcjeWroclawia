@@ -30,16 +30,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Utils;
 import com.example.android.xyztouristattractions.service.MyExpandableListAdapter;
 import com.example.android.xyztouristattractions.service.UtilityService;
-//import com.example.android.xyztouristattractions.provider.TouristAttractions;
-import android.widget.SearchView;
 
 import java.util.ArrayList;
+
+//import com.example.android.xyztouristattractions.provider.TouristAttractions;
 
 /**
  * The main tourist attraction activity screen which contains a list of
@@ -127,17 +128,17 @@ public class AttractionListActivity extends AppCompatActivity implements
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            case R.id.test_notification:
+            case R.id.sort_by_distance_asc:
                 UtilityService.triggerWearTest(this, false);
                 showDebugDialog(R.string.action_test_notification,
                         R.string.action_test_notification_dialog);
                 return true;
-            case R.id.test_microapp:
+            case R.id.sort_by_distance_desc:
                 UtilityService.triggerWearTest(this, true);
                 showDebugDialog(R.string.action_test_microapp,
                         R.string.action_test_microapp_dialog);
                 return true;
-            case R.id.test_toggle_geofence:
+            case R.id.sort_by_name_asc:
                 boolean geofenceEnabled = Utils.getGeofenceEnabled(this);
                 Utils.storeGeofenceEnabled(this, !geofenceEnabled);
                 Toast.makeText(this, geofenceEnabled ?

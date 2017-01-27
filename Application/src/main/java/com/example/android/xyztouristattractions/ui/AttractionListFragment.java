@@ -29,13 +29,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -68,6 +66,7 @@ import static com.example.android.xyztouristattractions.provider.TouristAttracti
 public class AttractionListFragment extends Fragment {
 
     private AttractionAdapter mAdapter;
+    private AttractionListActivity listActivity;
     private LatLng mLatestLocation;
     private int mImageSize;
     private boolean mItemClicked;
@@ -93,76 +92,85 @@ public class AttractionListFragment extends Fragment {
     public AttractionListFragment() {}
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Load a larger size image to make the activity transition to the detail screen smooth
         mImageSize = getResources().getDimensionPixelSize(R.dimen.image_size)
                 * Constants.IMAGE_ANIM_MULTIPLIER;
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
+        //ToggleButton toggle = (ToggleButton) view.findViewById(R.id.sort);
+
+        List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
+
+        mAdapter = new AttractionAdapter(getActivity(), attractions);
 
 
-        ToggleButton toggle = (ToggleButton) view.findViewById(R.id.sort);
-
-
-        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                sortByName = false;
-                sort = true;
-                if (isChecked) {
-                    sortDistanceAsc = false;
-                    Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    sortDistanceAsc = true;
-                    Toast.makeText(getActivity(), "Sortowanie wg odległości rosnąco",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            // Refresh the view to show results after toggling button????
-        });
+//        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                sortByName = false;
+//                sort = true;
+//                if (isChecked) {
+//                    sortDistanceAsc = false;
+//                    Toast.makeText(getActivity(), "Sortowanie wg odległości malejąco",
+//                            Toast.LENGTH_SHORT).show();
+//                } else {
+//                    sortDistanceAsc = true;
+//                    Toast.makeText(getActivity(), "Sortowanie wg odległości rosnąco",
+//                            Toast.LENGTH_SHORT).show();
+//                }
+//                mAdapter.notifyDataSetChanged();
+//                //listActivity.notifyAll();
+//
+//            }
+//
+//            // Refresh the view to show results after toggling button????
+//        });
 
         //Defining Functions to show toast after choosing radio button and clicking POKAŻ
-        radioSortByName = (RadioGroup) view.findViewById(R.id.radioSortName);
-        radioNameAsc = (RadioButton) view.findViewById(R.id.radioNameAsc);
+//        radioSortByName = (RadioGroup) view.findViewById(R.id.radioSortName);
+//        radioNameAsc = (RadioButton) view.findViewById(R.id.radioNameAsc);
 
-        btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
+//        btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
         //String attractionName = getArguments().getString(EXTRA_ATTRACTION);
-        Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
+        final Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
 
         final List<Geofence> geofences = TouristAttractions.getGeofenceList();
 
         //tringgers sorting by name after choosing option descending/ascending
-        btnDisplay.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                sortByName = true;
-                sort = false;
-
-                // get selected radio button from radioGroup
-                int selectedId = radioSortByName.getCheckedRadioButtonId();
-
-                // find the radiobutton by returned id
-                radioNameBtn = (RadioButton) getActivity().findViewById(selectedId);
-
-                if (radioNameBtn == radioNameAsc) {
-                    sortNameAsc = true;
-                    sortNameDesc = false;
-                }
-                else {
-                    sortNameDesc = true;
-                    sortNameAsc = false;
-                }
-
-                Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
-            }
-
-        });
+//        btnDisplay.setOnClickListener(new View.OnClickListener() {
+//
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//                sortByName = true;
+//                sort = false;
+//
+//                // get selected radio button from radioGroup
+//                int selectedId = radioSortByName.getCheckedRadioButtonId();
+//
+//                // find the radiobutton by returned id
+//                radioNameBtn = (RadioButton) getActivity().findViewById(selectedId);
+//
+//                if (radioNameBtn == radioNameAsc) {
+//                    sortNameAsc = true;
+//                    sortNameDesc = false;
+//                }
+//                else {
+//                    sortNameDesc = true;
+//                    sortNameAsc = false;
+//                }
+//                mAdapter.notifyDataSetChanged();
+//
+//
+//                Toast.makeText(getActivity(), radioNameBtn.getText(), Toast.LENGTH_SHORT).show();
+//                //mAdapter.mAttractionList.notifyAll();
+//            }
+//
+//        });
 
         //show map with all attractions
         mapAll.setOnClickListener(new View.OnClickListener() {
@@ -176,18 +184,16 @@ public class AttractionListFragment extends Fragment {
 
 
 
-        List<Attraction> attractions = loadAttractionsFromLocation(mLatestLocation, sort);
 
         mLatestLocation = Utils.getLocation(getActivity());
 
-        mAdapter = new AttractionAdapter(getActivity(), attractions);
 
         AttractionsRecyclerView recyclerView =
                 (AttractionsRecyclerView) view.findViewById(android.R.id.list);
         recyclerView.setEmptyView(view.findViewById(android.R.id.empty));
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(mAdapter);
-        
+
         return view;
     }
 
@@ -347,7 +353,6 @@ public class AttractionListFragment extends Fragment {
 
                 }
             }
-
 
             return attractions;
         }

@@ -1,21 +1,5 @@
 [
     {
-        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\android projects\\dyplomowa\\android-XYZTouristAttractions-master\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
