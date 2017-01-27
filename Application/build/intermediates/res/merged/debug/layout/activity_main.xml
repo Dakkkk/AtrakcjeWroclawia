@@ -29,4 +29,6 @@
         android:layout_alignParentLeft="true"
         android:id="@+id/expandableListView_search"></ExpandableListView>
 
+    <include layout="@layout/fragment_main" />
+
 </android.support.design.widget.CoordinatorLayout>

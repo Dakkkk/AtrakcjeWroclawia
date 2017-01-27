@@ -88,117 +88,15 @@ public class AttractionListActivity extends AppCompatActivity implements
         }
         searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 
-        // The app will crash if display list is not called here.
-        //displayList();
-
-        // This expands the list.
-       // expandAll();
-
-
-        //database, show list related ------DB
 //        dbHelper = new CRMDbAdapter(this);
 //        dbHelper.open();
 //
-//        // Czyścimy dane
-//        dbHelper.deleteAllClients();
+//        dbHelper.deleteAllAttractions();
 //
-//        // Dodajemy przykladowe dane
 //        dbHelper.insertAttractions();
 //
-//        // Tworzymy listę na podstawie danych w bazie SQLite
-//        displayListView();
-
-
-
+//        dbHelper.fetchAllAttractions();
     }
-
-
-    //Database related------DB
-//    private void displayListView() {
-//        Cursor cursor = dbHelper.fetchAllClients();
-//
-//        // Kolumny do podpięcia
-//        String[] columns = new String[] {
-//                //CRMDbAdapter.Attractions._ID,
-//                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN,
-//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
-//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
-//                CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION,
-//        };
-//
-//        // ID zasobów z pliku list_row.xml
-//        int[] to = new int[] {
-//                R.id.icon,
-//                R.id.overlaytext,
-//               // R.id.text1,
-//                R.id.text2
-//        };
-//
-//        // Tworzymy adapter z kursorem wskazującym na nasze dane
-//        dataAdapter = new SimpleCursorAdapter(
-//                this, R.layout.list_row,
-//                cursor,
-//                columns,
-//                to,
-//                0);
-//
-//        // Podpinamy adapter do listy
-//        ListView listView = (ListView) findViewById(R.id.list);
-//        // Assign adapter to ListView
-//        listView.setAdapter(dataAdapter);
-
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> listView, View view,
-//                                    int position, long id) {
-//                // Pobierz dane z wybranej pozycji
-//                Cursor cursor = (Cursor) listView.getItemAtPosition(position);
-//
-//                // Pobieramy numer ID i wyświetlamy widok kontaktu
-//                Integer userId = cursor.getInt(cursor.getColumnIndex("_id"));
-//
-//                String userPhone = cursor.getString(cursor.getColumnIndex("telefon"));
-//
-//                String userAddress = cursor.getString(cursor.getColumnIndex("adres"));
-//
-//                String userName = cursor.getString(cursor.getColumnIndex("nazwa"));
-//
-//                Toast.makeText(getApplicationContext(),"Szczegóły kontaktu o ID: " + userId.toString() + ", nazwa: " + userName , Toast.LENGTH_LONG).show();
-//
-//                Intent myIntent = new Intent(MainActivity.this, ContactDetailActivity.class);
-//
-//                myIntent.putExtra("idContact", userId);
-//                myIntent.putExtra("phoneContact", userPhone);
-//                myIntent.putExtra("nameContact", userName);
-//
-//                myIntent.putExtra("addressContact", userAddress);
-//
-//                startActivity(myIntent);
-//            }
-//        });
-
-//        EditText myFilter = (EditText) findViewById(R.id.filter);
-//        myFilter.addTextChangedListener(new TextWatcher() {
-//            public void afterTextChanged(Editable s) {
-//            }
-//
-//            public void beforeTextChanged(CharSequence s, int start,
-//                                          int count, int after) {
-//            }
-//
-//            public void onTextChanged(CharSequence s, int start,
-//                                      int before, int count) {
-//                dataAdapter.getFilter().filter(s.toString());
-//            }
-//        });
-
-//        dataAdapter.setFilterQueryProvider(new FilterQueryProvider() {
-//            public Cursor runQuery(CharSequence constraint) {
-//                return dbHelper.fetchClientsByNameOrAdress(constraint.toString());
-//            }
-//        });
-//    }
-
 
 
     @Override

@@ -21,11 +21,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AttractionListFragment">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    </LinearLayout>
     <Button
         android:id="@+id/btnDisplayMap"
         android:layout_width="match_parent"
@@ -37,10 +32,13 @@
     <com.example.android.xyztouristattractions.ui.AttractionsRecyclerView
         android:id="@android:id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:scrollbars="vertical"
         app:layoutManager="GridLayoutManager"
         app:spanCount="@integer/list_columns" />
+
+    <ListView android:id="@+id/attractions_list" android:layout_width="match_parent"
+        android:layout_height="300dp" />
 
     <TextView
         android:id="@android:id/empty"
@@ -50,8 +48,5 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:gravity="center" />
-
-
-
 
 </LinearLayout>
