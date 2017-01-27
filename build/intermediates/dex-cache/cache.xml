@@ -3,21 +3,93 @@
 
     <item
         is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.0.0_353a3ae4a37d48faa121249593201a9b2c7ddd0c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
         <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_d3392bec66425af79f864b9cc8ee26d2bc59b903\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3c2cd5a61f8048d9222aec38e8342631c1cb6357">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bd6f11006053847ed3b12878b7c9fb4c45e04b5a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_dd6a853c27933fa3e583d53e2c3a1bca985a9e67\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_69fe422cdb83ae9352cce7791bf309a0f297d7ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.0.0_738ed8d0079e9383677c30d25b3640321b56cb22\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_7329ee878fe2d93ba70123eca5686c42d8179050\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-8.4.0_a25ca1b618584867af2bc0bb173b04fa61e307da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-24.1.1_fb9bd1f8a4e5aeb4ab9864fd31438ef684e33fc9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Dawid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_1e6bf261f1d58eec7d7ac549c6282c95be4b1c30\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.0.0_353a3ae4a37d48faa121249593201a9b2c7ddd0c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,48 +120,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c9ec9e29ee43f840dc04536a6fd9643f9dfe9b1a">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_bd6f11006053847ed3b12878b7c9fb4c45e04b5a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="ca74722504f90166103d01edcdfdb93192eb1cba">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_dd6a853c27933fa3e583d53e2c3a1bca985a9e67\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Dawid\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.6.1\86b122e640af09b0723e1fa44083c354ba6d9089\glide-3.6.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
         <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.6.1_294fdc515a2c1475039d6ff98cad3d02db6049d1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_69fe422cdb83ae9352cce7791bf309a0f297d7ce\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.0.0_738ed8d0079e9383677c30d25b3640321b56cb22\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,48 +138,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\jars\libs\internal_impl-24.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.1.1_7329ee878fe2d93ba70123eca5686c42d8179050\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="e167a34eaca0b31704212f43f9576ea84e05046f">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-8.4.0_a25ca1b618584867af2bc0bb173b04fa61e307da\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="a8412b654dab86d57bf90683367488211c8a81f1">
         <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-8.4.0_9076220b54fbb6625a6d11ef6bac06c9dd99d676\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v13\24.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="327f68d58bb39fb8b585150596b313541f8fdb87">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-24.1.1_fb9bd1f8a4e5aeb4ab9864fd31438ef684e33fc9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Dawid\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.1\support-annotations-24.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
-        <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.1.1_1e6bf261f1d58eec7d7ac549c6282c95be4b1c30\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="4eebc2342355f39ccb6a62b7f6a9a9a5647237a8">
+        sha1="7cd77eedd13bed29e8b63a3ebe3239377e915b10">
         <dex dex="C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_3ff39c2b261827f67a7333c60517496e3b25be62\classes.dex" />
     </item>
     <item

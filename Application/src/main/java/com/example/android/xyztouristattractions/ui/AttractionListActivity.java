@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -35,10 +36,8 @@ import android.widget.Toast;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Utils;
-import com.example.android.xyztouristattractions.service.MyExpandableListAdapter;
+import com.example.android.xyztouristattractions.provider.CRMDbAdapter;
 import com.example.android.xyztouristattractions.service.UtilityService;
-
-import java.util.ArrayList;
 
 //import com.example.android.xyztouristattractions.provider.TouristAttractions;
 
@@ -47,17 +46,17 @@ import java.util.ArrayList;
  * attractions sorted by distance.
  */
 public class AttractionListActivity extends AppCompatActivity implements
-        ActivityCompat.OnRequestPermissionsResultCallback, SearchView.OnQueryTextListener, SearchView.OnCloseListener {
+        ActivityCompat.OnRequestPermissionsResultCallback  {
 
     private static final int PERMISSION_REQ = 0;
 
     private SearchManager searchManager;
     private android.widget.SearchView searchView;
-    private MyExpandableListAdapter listAdapter;
     private ExpandableListView myList;
-    private ArrayList<ParentRow> parentList = new ArrayList<ParentRow>();
-    private ArrayList<ParentRow> showTheseParentList = new ArrayList<ParentRow>();
     private MenuItem searchItem;
+
+    private CRMDbAdapter dbHelper;
+    private SimpleCursorAdapter dataAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,15 +88,118 @@ public class AttractionListActivity extends AppCompatActivity implements
         }
         searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 
-        parentList = new ArrayList<ParentRow>();
-        showTheseParentList = new ArrayList<ParentRow>();
-
         // The app will crash if display list is not called here.
-        displayList();
+        //displayList();
 
         // This expands the list.
-        expandAll();
+       // expandAll();
+
+
+        //database, show list related ------DB
+//        dbHelper = new CRMDbAdapter(this);
+//        dbHelper.open();
+//
+//        // Czyścimy dane
+//        dbHelper.deleteAllClients();
+//
+//        // Dodajemy przykladowe dane
+//        dbHelper.insertAttractions();
+//
+//        // Tworzymy listę na podstawie danych w bazie SQLite
+//        displayListView();
+
+
+
     }
+
+
+    //Database related------DB
+//    private void displayListView() {
+//        Cursor cursor = dbHelper.fetchAllClients();
+//
+//        // Kolumny do podpięcia
+//        String[] columns = new String[] {
+//                //CRMDbAdapter.Attractions._ID,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION,
+//        };
+//
+//        // ID zasobów z pliku list_row.xml
+//        int[] to = new int[] {
+//                R.id.icon,
+//                R.id.overlaytext,
+//               // R.id.text1,
+//                R.id.text2
+//        };
+//
+//        // Tworzymy adapter z kursorem wskazującym na nasze dane
+//        dataAdapter = new SimpleCursorAdapter(
+//                this, R.layout.list_row,
+//                cursor,
+//                columns,
+//                to,
+//                0);
+//
+//        // Podpinamy adapter do listy
+//        ListView listView = (ListView) findViewById(R.id.list);
+//        // Assign adapter to ListView
+//        listView.setAdapter(dataAdapter);
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> listView, View view,
+//                                    int position, long id) {
+//                // Pobierz dane z wybranej pozycji
+//                Cursor cursor = (Cursor) listView.getItemAtPosition(position);
+//
+//                // Pobieramy numer ID i wyświetlamy widok kontaktu
+//                Integer userId = cursor.getInt(cursor.getColumnIndex("_id"));
+//
+//                String userPhone = cursor.getString(cursor.getColumnIndex("telefon"));
+//
+//                String userAddress = cursor.getString(cursor.getColumnIndex("adres"));
+//
+//                String userName = cursor.getString(cursor.getColumnIndex("nazwa"));
+//
+//                Toast.makeText(getApplicationContext(),"Szczegóły kontaktu o ID: " + userId.toString() + ", nazwa: " + userName , Toast.LENGTH_LONG).show();
+//
+//                Intent myIntent = new Intent(MainActivity.this, ContactDetailActivity.class);
+//
+//                myIntent.putExtra("idContact", userId);
+//                myIntent.putExtra("phoneContact", userPhone);
+//                myIntent.putExtra("nameContact", userName);
+//
+//                myIntent.putExtra("addressContact", userAddress);
+//
+//                startActivity(myIntent);
+//            }
+//        });
+
+//        EditText myFilter = (EditText) findViewById(R.id.filter);
+//        myFilter.addTextChangedListener(new TextWatcher() {
+//            public void afterTextChanged(Editable s) {
+//            }
+//
+//            public void beforeTextChanged(CharSequence s, int start,
+//                                          int count, int after) {
+//            }
+//
+//            public void onTextChanged(CharSequence s, int start,
+//                                      int before, int count) {
+//                dataAdapter.getFilter().filter(s.toString());
+//            }
+//        });
+
+//        dataAdapter.setFilterQueryProvider(new FilterQueryProvider() {
+//            public Cursor runQuery(CharSequence constraint) {
+//                return dbHelper.fetchClientsByNameOrAdress(constraint.toString());
+//            }
+//        });
+//    }
+
+
 
     @Override
     protected void onResume() {
@@ -115,8 +217,8 @@ public class AttractionListActivity extends AppCompatActivity implements
         searchView.setSearchableInfo
                 (searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
-        searchView.setOnQueryTextListener(this);
-        searchView.setOnCloseListener(this);
+       // searchView.setOnQueryTextListener(this);
+       // searchView.setOnCloseListener(this);
         searchView.requestFocus();
         //getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -204,64 +306,6 @@ public class AttractionListActivity extends AppCompatActivity implements
                 .setMessage(bodyResId)
                 .setPositiveButton(android.R.string.ok, null);
         builder.create().show();
-    }
-
-    @Override
-    public boolean onClose() {
-        listAdapter.filterData("");
-        expandAll();
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        listAdapter.filterData(query);
-        expandAll();
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        listAdapter.filterData(newText);
-        expandAll();
-        return false;
-    }
-
-    private void loadData() {
-//        ArrayList<ChildRow> childRows = new ArrayList<ChildRow>();
-//        ParentRow parentRow = null;
-//
-//        childRows.add(new ChildRow(R.mipmap.generic_icon
-//                ,"Rynek"));
-//        childRows.add(new ChildRow(R.mipmap.generic_icon
-//                , "Hala"));
-//        parentRow = new ParentRow("First Group", childRows);
-//        parentList.add(parentRow);
-//
-//        childRows = new ArrayList<ChildRow>();
-//        childRows.add(new ChildRow(R.mipmap.generic_icon
-//                , "Muzeum Narodowe."));
-//        childRows.add(new ChildRow(R.mipmap.generic_icon
-//                , "Zoo"));
-//        parentRow = new ParentRow("Second Group", childRows);
-//        parentList.add(parentRow);
-
-    }
-
-    private void expandAll() {
-        int count = listAdapter.getGroupCount();
-        for (int i = 0; i < count; i++) {
-            myList.expandGroup(i);
-        } //end for (int i = 0; i < count; i++)
-    }
-
-    private void displayList() {
-        loadData();
-
-        myList = (ExpandableListView) findViewById(R.id.expandableListView_search);
-        listAdapter = new MyExpandableListAdapter(AttractionListActivity.this, parentList);
-
-        myList.setAdapter(listAdapter);
     }
 
 }
