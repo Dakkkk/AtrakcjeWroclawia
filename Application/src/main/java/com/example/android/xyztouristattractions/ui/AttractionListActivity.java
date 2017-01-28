@@ -69,6 +69,7 @@ public class AttractionListActivity extends AppCompatActivity implements
                     .commit();
         }
 
+
         // Check fine location permission has been granted
         if (!Utils.checkFineLocationPermission(this)) {
             // See if user has denied permission in the past

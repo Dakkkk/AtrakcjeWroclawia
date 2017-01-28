@@ -159,8 +159,8 @@ public final class R {
 		public static final int place_autocomplete_progress = 0x7f04003a;
 	}
 	public static final class string {
-		public static final int auth_google_play_services_client_facebook_display_name = 0x7f090049;
-		public static final int auth_google_play_services_client_google_display_name = 0x7f09004a;
+		public static final int auth_google_play_services_client_facebook_display_name = 0x7f09004a;
+		public static final int auth_google_play_services_client_google_display_name = 0x7f09004b;
 		public static final int common_google_play_services_api_unavailable_text = 0x7f090013;
 		public static final int common_google_play_services_enable_button = 0x7f090014;
 		public static final int common_google_play_services_enable_text = 0x7f090015;
@@ -192,7 +192,7 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f09002f;
 		public static final int place_autocomplete_clear_button = 0x7f090030;
 		public static final int place_autocomplete_search_hint = 0x7f090031;
-		public static final int show_detail_capability_name = 0x7f090058;
+		public static final int show_detail_capability_name = 0x7f090059;
 	}
 	public static final class style {
 	}

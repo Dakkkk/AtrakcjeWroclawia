@@ -70,8 +70,12 @@ public class DetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         setHasOptionsMenu(true);
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
-        String attractionName = getArguments().getString(EXTRA_ATTRACTION);
-        mAttraction = findAttraction(attractionName);
+
+        //HARDCODE - POPRAWiC
+
+        //String attractionName = getArguments().getString(EXTRA_ATTRACTION);
+        //mAttraction = findAttraction(attractionName);
+        mAttraction = findAttraction("Rynek wrocławski");
 
         if (mAttraction == null) {
             getActivity().finish();
@@ -90,7 +94,12 @@ public class DetailFragment extends Fragment {
             distanceTextView.setVisibility(View.GONE);
         }
 
-        nameTextView.setText(attractionName);
+        //HARDCODE - POPRAWiC
+
+        //nameTextView.setText(attractionName);
+        nameTextView.setText("Rynek wrocławski");
+
+
         distanceTextView.setText(distance);
         descTextView.setText(mAttraction.longDescription);
 

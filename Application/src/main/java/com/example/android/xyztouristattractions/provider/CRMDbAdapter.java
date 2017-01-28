@@ -19,7 +19,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /* Klasa wspomagająca obsługę bazy SQLite */
-public class CRMDbAdapter {
+public class CRMDbAdapter  {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "CRM.db";
     private static final String SQL_CREATE_ENTRIES =
