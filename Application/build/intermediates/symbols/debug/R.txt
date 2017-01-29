@@ -762,11 +762,10 @@ int id alertTitle 0x7f100056
 int id always 0x7f10003b
 int id amu_text 0x7f100004
 int id attraction_name 0x7f10008e
-int id attractions_list 0x7f10008c
+int id attractions_list 0x7f10008b
 int id auto 0x7f100032
 int id beginning 0x7f100034
 int id bottom 0x7f100022
-int id btnDisplayMap 0x7f10008b
 int id buttonPanel 0x7f100051
 int id cancel_action 0x7f100091
 int id center 0x7f100023
@@ -801,6 +800,7 @@ int id exitUntilCollapsed 0x7f100018
 int id expand_activities_button 0x7f10004b
 int id expandableListView_search 0x7f100078
 int id expanded_menu 0x7f10005e
+int id fab 0x7f10008c
 int id fill 0x7f100030
 int id fill_horizontal 0x7f100031
 int id fill_vertical 0x7f100027

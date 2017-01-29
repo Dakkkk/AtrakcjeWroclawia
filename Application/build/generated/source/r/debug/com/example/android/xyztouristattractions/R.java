@@ -2811,11 +2811,10 @@ containing a value of this type.
         public static final int always=0x7f10003b;
         public static final int amu_text=0x7f100004;
         public static final int attraction_name=0x7f10008e;
-        public static final int attractions_list=0x7f10008c;
+        public static final int attractions_list=0x7f10008b;
         public static final int auto=0x7f100032;
         public static final int beginning=0x7f100034;
         public static final int bottom=0x7f100022;
-        public static final int btnDisplayMap=0x7f10008b;
         public static final int buttonPanel=0x7f100051;
         public static final int cancel_action=0x7f100091;
         public static final int center=0x7f100023;
@@ -2850,6 +2849,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f10004b;
         public static final int expandableListView_search=0x7f100078;
         public static final int expanded_menu=0x7f10005e;
+        public static final int fab=0x7f10008c;
         public static final int fill=0x7f100030;
         public static final int fill_horizontal=0x7f100031;
         public static final int fill_vertical=0x7f100027;

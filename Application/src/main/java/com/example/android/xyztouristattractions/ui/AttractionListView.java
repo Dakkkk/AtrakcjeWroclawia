@@ -10,12 +10,11 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
@@ -38,14 +37,14 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         setContentView(R.layout.fragment_main);
 
         // Setup FAB to open EditorActivity
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(CatalogActivity.this, EditorActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AttractionListView.this, MapsMarkerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
 
@@ -62,34 +61,36 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
         attractionListView.setAdapter(mAttractionCursorAdapter);
 
-        //Set on pet click listener
+        //Set on attraction click listener
         attractionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(AttractionListView.this, DetailActivity.class);
 
+                System.out.println("List attraction clicked");
+
                 //Get the uri of a current pet, that was clicked on. F.e. when we click on pet with id=2, the uri="content://example.android.pets/pets/2
                 //It appends the id of that specific item that was clicked on to the URI
-                Uri currentPetUri = ContentUris.withAppendedId(AttractionContract.AttractionEntry.CONTENT_URI, id);
+                Uri currentAttractionUri = ContentUris.withAppendedId(AttractionContract.AttractionEntry.CONTENT_URI, id);
 
-                intent.setData(currentPetUri);
+                intent.setData(currentAttractionUri);
 
                 startActivity(intent);
             }
         });
 
-        final Button mapAll = (Button) findViewById(R.id.btnDisplayMap);
+       // final Button mapAll = (Button) findViewById(R.id.btnDisplayMap);
 
 
         //show map with all attractions
-        mapAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
-                startActivity(i);
-            }
-        });
+//        mapAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getApplicationContext(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
+//                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
         insertAttraction();
 

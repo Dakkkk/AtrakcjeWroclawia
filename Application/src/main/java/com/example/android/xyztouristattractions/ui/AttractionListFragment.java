@@ -169,7 +169,7 @@ public class AttractionListFragment extends Fragment {
 //        btnDisplay = (Button) view.findViewById(R.id.btnDisplay);
 
         //String attractionName = getArguments().getString(EXTRA_ATTRACTION);
-        final Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
+        //final Button mapAll = (Button) view.findViewById(R.id.btnDisplayMap);
 
         final List<Geofence> geofences = TouristAttractions.getGeofenceList();
 
@@ -207,14 +207,14 @@ public class AttractionListFragment extends Fragment {
 //        });
 
         //show map with all attractions
-        mapAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
-                startActivity(i);
-            }
-        });
+//        mapAll.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getActivity(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
+//                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
 
 
