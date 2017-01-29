@@ -123,9 +123,41 @@ public class AttractionProvider extends ContentProvider {
         }
     }
 
+    /**
+     * Delete the data at the given selection and selection arguments.
+     */
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        return 0;
+        // Get writeable database
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
+
+        // Track the number of rows that were deleted
+        int rowsDeleted;
+
+        final int match = sUriMatcher.match(uri);
+        switch (match) {
+            case ATTRACTIONS:
+                // Delete all rows that match the selection and selection args
+                rowsDeleted = database.delete(AttractionEntry.TABLE_NAME, selection, selectionArgs);
+                if (rowsDeleted != 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+                return rowsDeleted;
+            case ATTRACTION_ID:
+                // Delete a single row given by the ID in the URI
+                selection = AttractionEntry._ID + "=?";
+                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                // For case ATTRACTION_ID:
+                // Delete a single row given by the ID in the URI
+                rowsDeleted = database.delete(AttractionEntry.TABLE_NAME, selection, selectionArgs);
+                if (rowsDeleted != 0) {
+                    getContext().getContentResolver().notifyChange(uri, null);
+                }
+                return rowsDeleted;
+            default:
+                throw new IllegalArgumentException("Deletion is not supported for " + uri);
+
+        }
     }
 
     @Override
@@ -151,7 +183,7 @@ public class AttractionProvider extends ContentProvider {
         // Get writeable database
         SQLiteDatabase database = mDbHelper.getWritableDatabase();
 
-        // Insert the new pet with the given values
+        // Insert the new attraction with the given values
         long id = database.insert(AttractionEntry.TABLE_NAME, null, values);
         // If the ID is -1, then the insertion failed. Log an error and return null.
         if (id == -1) {

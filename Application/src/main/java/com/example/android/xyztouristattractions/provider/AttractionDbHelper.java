@@ -40,7 +40,7 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // Create a String that contains the SQL statement to create the pets table
+        // Create a String that contains the SQL statement to create the attractions table
         String SQL_CREATE_ATTRACTIONS_TABLE =  "CREATE TABLE " + AttractionEntry.TABLE_NAME + " ("
                 +  CRMDbAdapter.Attractions._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CRMDbAdapter.Attractions.COLUMN_NAME_NAME + " TEXT," +

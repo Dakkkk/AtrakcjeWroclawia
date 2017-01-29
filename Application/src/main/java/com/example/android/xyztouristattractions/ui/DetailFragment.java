@@ -44,13 +44,13 @@ public class DetailFragment extends Fragment {
     private static final String EXTRA_ATTRACTION = "attraction";
     private Attraction mAttraction;
 
-    /** Content URI for the existing attraction (null if it's a new pet) */
+    /** Content URI for the existing attraction (null if it's a new attraction) */
     private Uri mCurrentAttractionUri;
 
-    /** EditText field to enter the pet's name */
+    /** EditText field to enter the attraction's name */
     private TextView mNameText;
 
-    /** EditText field to enter the pet's breed */
+    /** EditText field to enter the attraction's breed */
     private TextView mDescritionText;
 
     public static DetailFragment createInstance(String attractionName) {

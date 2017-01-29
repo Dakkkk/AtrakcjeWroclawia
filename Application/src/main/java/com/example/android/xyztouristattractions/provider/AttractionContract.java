@@ -36,7 +36,7 @@ public final class AttractionContract {
     public static final String PATH_ATTRACTIONS = "attractions";
 
     /**
-     * Inner class that defines constant values for the pets database table.
+     * Inner class that defines constant values for the peattractionts database table.
      * Each entry in the table represents a single attraction.
      */
     public static final class AttractionEntry implements BaseColumns {
@@ -54,7 +54,7 @@ public final class AttractionContract {
 
 
 
-        /** The content URI to access the pet data in the provider */
+        /** The content URI to access the attraction data in the provider */
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_ATTRACTIONS);
 
         /** Name of database table for attractions */

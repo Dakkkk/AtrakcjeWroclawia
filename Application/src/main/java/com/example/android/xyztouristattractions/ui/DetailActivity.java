@@ -42,16 +42,16 @@ import com.example.android.xyztouristattractions.provider.AttractionContract;
  */
 public class DetailActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    /** Identifier for the pet data loader */
+    /** Identifier for the attraction data loader */
     private static final int EXISTING_ATTRACTION_LOADER = 0;
 
-    /** Content URI for the existing attraction (null if it's a new pet) */
+    /** Content URI for the existing attraction (null if it's a new attraction) */
     private Uri mCurrentAttractionUri;
 
-    /** EditText field to enter the pet's name */
+    /** EditText field to enter the attraction's name */
     private TextView mNameText;
 
-    /** EditText field to enter the pet's breed */
+    /** EditText field to enter the attraction's desc */
     private TextView mDescritionText;
 
     private static final String EXTRA_ATTRACTION = "attraction";
@@ -105,8 +105,8 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        // Since the editor shows all pet attributes, define a projection that contains
-        // all columns from the pet table
+        // Since the editor shows all attraction attributes, define a projection that contains
+        // all columns from the attractions table
         String[] projection = {
                 AttractionContract.AttractionEntry._ID,
                 AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
@@ -115,7 +115,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
         // This loader will execute the ContentProvider's query method on a background thread
         return new CursorLoader(this,   // Parent activity context
-                mCurrentAttractionUri,         // Query the content URI for the current pet
+                mCurrentAttractionUri,         // Query the content URI for the current attraction
                 projection,             // Columns to include in the resulting Cursor
                 null,                   // No selection clause
                 null,                   // No selection arguments
@@ -132,7 +132,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         // Proceed with moving to the first row of the cursor and reading data from it
         // (This should be the only row in the cursor)
         if (cursor.moveToFirst()) {
-            // Find the columns of pet attributes that we're interested in
+            // Find the columns of attraction attributes that we're interested in
             int nameColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME);
             int descriptionColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION);
 
