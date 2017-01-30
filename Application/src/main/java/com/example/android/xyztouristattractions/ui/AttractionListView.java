@@ -247,7 +247,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         Log.v("AttractionListView", rowsDeleted + " rows deleted from attractions database");
     }
 
-    //ToDo : Now the functions returns data only when there is an exact match. Need to return query data dynamically with oanly a few letters typed
     private Cursor searchForAttraction (String userQuery) {
         String selection;
         String[] whereArgs;
@@ -260,9 +259,9 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
             selection = null;
             whereArgs = null;
         } else {
-            selection = AttractionContract.AttractionEntry.COLUMN_NAME_NAME + "=?" + " OR " + AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION + "=?";
+            selection = AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " LIKE ? " + " OR " + AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION + " LIKE ? ";
             whereArgs = new String[] {
-                    userQuery, userQuery
+                    "%"+userQuery+"%", "%"+userQuery+"%"
             };
         }
 
