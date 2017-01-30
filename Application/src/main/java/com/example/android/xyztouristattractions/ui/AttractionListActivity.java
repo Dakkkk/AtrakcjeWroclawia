@@ -18,7 +18,6 @@ package com.example.android.xyztouristattractions.ui;
 
 import android.Manifest;
 import android.app.SearchManager;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -87,7 +86,7 @@ public class AttractionListActivity extends AppCompatActivity implements
             // Otherwise permission is granted (which is always the case on pre-M devices)
             fineLocationPermissionGranted();
         }
-        searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 
 //        dbHelper = new CRMDbAdapter(this);
 //        dbHelper.open();

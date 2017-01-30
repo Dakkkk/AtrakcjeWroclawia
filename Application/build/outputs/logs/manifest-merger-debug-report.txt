@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:1-129:12
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:1-136:12
 	package
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:20:5-56
 	android:versionName
@@ -46,7 +46,7 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android project
 	android:required
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:30:9-32
 application
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:32:5-127:19
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:32:5-134:19
 MERGED from [com.android.support:design:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
@@ -150,7 +150,7 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Applicat
 	android:name
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:102:13-50
 activity#com.example.android.xyztouristattractions.ui.AttractionListView
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:111:9-119:20
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:111:9-126:20
 	android:label
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:113:13-50
 	android:name
@@ -166,13 +166,13 @@ ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Applicat
 	android:name
 		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:117:27-74
 provider#com.example.android.xyztouristattractions.provider.AttractionProvider
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:121:9-125:20
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:128:9-132:20
 	android:authorities
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:122:13-76
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:129:13-76
 	android:exported
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:124:13-37
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:131:13-37
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:123:13-56
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:130:13-56
 uses-sdk
 INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\AndroidManifest.xml:20:5-43

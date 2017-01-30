@@ -27,6 +27,11 @@
         app:actionViewClass="android.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
 
+    <!--<item-->
+        <!--android:id="@+id/menu_refresh"-->
+        <!--android:showAsAction="always"-->
+        <!--android:title="@string/menu_refresh" android:icon="@drawable/ic"/>-->
+
     <item android:id="@+id/sort_by_distance_asc"
         android:title="@string/sort_by_distance_asc"
         android:orderInCategory="100"

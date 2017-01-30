@@ -192,7 +192,7 @@ public final class R {
 		public static final int common_signin_button_text_long = 0x7f09002f;
 		public static final int place_autocomplete_clear_button = 0x7f090030;
 		public static final int place_autocomplete_search_hint = 0x7f090031;
-		public static final int show_detail_capability_name = 0x7f090059;
+		public static final int show_detail_capability_name = 0x7f09005a;
 	}
 	public static final class style {
 	}

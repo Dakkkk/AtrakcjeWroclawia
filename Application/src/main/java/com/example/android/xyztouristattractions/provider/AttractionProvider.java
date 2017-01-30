@@ -105,6 +105,31 @@ public class AttractionProvider extends ContentProvider {
         return cursor;
     }
 
+
+//    public Cursor fetchAttractionsByNameOrDescriptions(String inputText) throws SQLException {
+//       // Log.w(TAG, "Szukamy: " + inputText);
+//
+//        Cursor mCursor = null;
+//
+//        if (inputText == null || inputText.length () == 0) {
+//            mCursor = mDb.query(Klienci.TABLE_NAME, new String[] {Klienci._ID, Klienci.COLUMN_NAME_NAZWA,
+//                    Klienci.COLUMN_NAME_ADRES, Klienci.COLUMN_NAME_TELEFON}, null, null, null, null, orderBy, null);
+//
+//        } else {
+//            mCursor = mDb.query(Klienci.TABLE_NAME, new String[] {Klienci._ID, Klienci.COLUMN_NAME_NAZWA,
+//                            Klienci.COLUMN_NAME_ADRES, Klienci.COLUMN_NAME_TELEFON},
+//                    "(" + Klienci.COLUMN_NAME_NAZWA + " like '%" + inputText + "%') OR (" + Klienci.COLUMN_NAME_ADRES + " like '%" + inputText + "%')" , null, null, null, orderBy, null);
+//        }
+//
+//        if (mCursor != null) {
+//            mCursor.moveToFirst();
+//        }
+//
+//        return mCursor;
+//    }
+
+
+
     @Nullable
     @Override
     public String getType(Uri uri) {

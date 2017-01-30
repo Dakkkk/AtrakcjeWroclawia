@@ -3143,20 +3143,21 @@ containing a value of this type.
         public static final int common_signin_button_text_long=0x7f09002f;
         public static final int empty_list=0x7f090050;
         public static final int intro_message=0x7f090051;
-        public static final int nearby_attraction=0x7f090052;
-        public static final int permission_explanation=0x7f090053;
-        public static final int permission_explanation_action=0x7f090054;
+        public static final int menu_refresh=0x7f090052;
+        public static final int nearby_attraction=0x7f090053;
+        public static final int permission_explanation=0x7f090054;
+        public static final int permission_explanation_action=0x7f090055;
         public static final int place_autocomplete_clear_button=0x7f090030;
         public static final int place_autocomplete_search_hint=0x7f090031;
-        public static final int radio_acs=0x7f090055;
-        public static final int radio_desc=0x7f090056;
-        public static final int search=0x7f090057;
-        public static final int search_hint=0x7f090058;
-        public static final int show_detail_capability_name=0x7f090059;
-        public static final int sort_by_distance_asc=0x7f09005a;
-        public static final int sort_by_distance_desc=0x7f09005b;
-        public static final int sort_by_name_asc=0x7f09005c;
-        public static final int sort_by_name_desc=0x7f09005d;
+        public static final int radio_acs=0x7f090056;
+        public static final int radio_desc=0x7f090057;
+        public static final int search=0x7f090058;
+        public static final int search_hint=0x7f090059;
+        public static final int show_detail_capability_name=0x7f09005a;
+        public static final int sort_by_distance_asc=0x7f09005b;
+        public static final int sort_by_distance_desc=0x7f09005c;
+        public static final int sort_by_name_asc=0x7f09005d;
+        public static final int sort_by_name_desc=0x7f09005e;
         public static final int status_bar_notification_info_overflow=0x7f090032;
     }
     public static final class style {

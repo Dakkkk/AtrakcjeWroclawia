@@ -1,6 +1,7 @@
 package com.example.android.xyztouristattractions.ui;
 
 import android.app.LoaderManager;
+import android.app.SearchManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.CursorLoader;
@@ -11,11 +12,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FilterQueryProvider;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
@@ -25,12 +31,19 @@ import com.example.android.xyztouristattractions.provider.AttractionDbHelper;
  * Created by Dawid on 2017-01-28.
  */
 
-public class AttractionListView extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class AttractionListView extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, SearchView.OnQueryTextListener {
     private static final int ATTLACTION_LOADER = 0;
     /** Database helper that will provide us access to the database */
     private AttractionDbHelper mDbHelper;
 
     private AttractionsCursorAdapter mAttractionCursorAdapter;
+
+    private Menu menu;
+
+    private SearchManager searchManager;
+    private android.widget.SearchView searchView;
+    private MenuItem searchItem;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,7 +73,18 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         //attractionListView.setEmptyView(emptyView);
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
+
+        mAttractionCursorAdapter.setFilterQueryProvider(new FilterQueryProvider() {
+            public Cursor runQuery(CharSequence constraint) {
+                return searchForAttraction(constraint.toString());
+
+            }
+        });
+
         attractionListView.setAdapter(mAttractionCursorAdapter);
+
+
+
 
         //Set on attraction click listener
         attractionListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -94,12 +118,78 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 //        });
 
 
+
+        // Get the intent, verify the action and get the query
+        Intent intent = getIntent();
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            doMySearch(query);
+        }
+
+
+
+
         dropDb();
         insertAttraction();
 
         //Kick off the loader
         getLoaderManager().initLoader(ATTLACTION_LOADER, null, this);
     }
+
+    public void doMySearch(String string){
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; this adds items to the action bar if it is present.
+
+
+        getMenuInflater().inflate(R.menu.main, menu);
+        searchItem = menu.findItem(R.id.action_search);
+        searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+//        searchView.setSearchableInfo
+//                (searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(this);
+        //searchView.setOnCloseListener(this);
+        searchView.requestFocus();
+        //getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+
+    //Search query listener
+//    private android.support.v7.widget.SearchView.OnQueryTextListener searchQueryListener = new android.support.v7.widget.SearchView.OnQueryTextListener() {
+//        @Override
+//        public boolean onQueryTextSubmit(String query) {
+//            search(query);
+//            System.out.println("Attraction search query SUBMIT");
+//
+//            return true;
+//        }
+//
+//        @Override
+//        public boolean onQueryTextChange(String newText) {
+////            if (searchView.isExpanded() && TextUtils.isEmpty(newText)) {
+////                search("");
+////            }
+//            System.out.println("Attraction search query...");
+//
+//
+//            return true;
+//        }
+//
+//        public void search(String query) {
+//            // reset loader, swap cursor, etc.
+//        }
+//
+//    };
+
+
+
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -130,7 +220,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     private void insertAttraction() {
         // Create a ContentValues object where column names are the keys,
-        // and Toto's attraction attributes are the values.
         ContentValues values = new ContentValues();
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_NAME, "Rynek Wrocławski");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION, "Fajna atrakcja");
@@ -147,23 +236,79 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION, "Wielkie Zoo");
 
 
-        // Insert a new row for Toto into the provider using the ContentResolver.
-        // Use the {@link AttractionEntry#CONTENT_URI} to indicate that we want to insert
-        // into the attractions database table.
-        // Receive the new content URI that will allow us to access Toto's data in the future.
+
         Uri newUri = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values);
         Uri newUri1 = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values1);
         Uri newUri2 = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values2);
     }
 
     private void dropDb() {
-        // Insert a new row for Toto into the provider using the ContentResolver.
-        // Use the {@link PetEntry#CONTENT_URI} to indicate that we want to insert
-        // into the pets database table.
-        // Receive the new content URI that will allow us to access Toto's data in the future.
         int rowsDeleted = getContentResolver().delete(AttractionContract.AttractionEntry.CONTENT_URI, null, null);
         Log.v("AttractionListView", rowsDeleted + " rows deleted from attractions database");
-        //Toast.makeText(this, "Just deleted " + rowsDeleted + "rows", Toast.LENGTH_SHORT );
     }
+
+    //ToDo : Now the functions returns data only when there is an exact match. Need to return query data dynamically with oanly a few letters typed
+    private Cursor searchForAttraction (String userQuery) {
+        String selection;
+        String[] whereArgs;
+        String[] tableColumns = new String[] {
+                AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
+                AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION,
+        };
+
+        if (userQuery == null || userQuery.length () == 0) {
+            selection = null;
+            whereArgs = null;
+        } else {
+            selection = AttractionContract.AttractionEntry.COLUMN_NAME_NAME + "=?" + " OR " + AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION + "=?";
+            whereArgs = new String[] {
+                    userQuery, userQuery
+            };
+        }
+
+        Log.v("AttractionListView", getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, selection, whereArgs, null).toString());
+
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, selection, whereArgs, null);
+
+        return cursor;
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        mAttractionCursorAdapter.getFilter().filter(query);
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        mAttractionCursorAdapter.getFilter().filter(newText);
+        return true;
+    }
+
+
+    //Przerobić
+//    public Cursor fetchClientsByNameOrAdress(String inputText) throws SQLException {
+//         SQLiteDatabase mDb = new SQLiteDatabase(AttractionListView.this));
+//
+//
+//        Cursor mCursor = null;
+//
+//        if (inputText == null || inputText.length () == 0) {
+//            mCursor = mDb.query(AttractionContract.AttractionEntry.TABLE_NAME, new String[] {AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
+//                    AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION}, null, null, null, null, null, null);
+//
+//        } else {
+//            mCursor = mDb.query(Klienci.TABLE_NAME, new String[] {Klienci._ID, Klienci.COLUMN_NAME_NAZWA,
+//                            Klienci.COLUMN_NAME_ADRES, Klienci.COLUMN_NAME_TELEFON},
+//                    "(" + Klienci.COLUMN_NAME_NAZWA + " like '%" + inputText + "%') OR (" + Klienci.COLUMN_NAME_ADRES + " like '%" + inputText + "%')" , null, null, null, orderBy, null);
+//        }
+//
+//        if (mCursor != null) {
+//            mCursor.moveToFirst();
+//        }
+//
+//        return mCursor;
+//    }
+
 
 }

@@ -60,5 +60,6 @@ appear further down your stream
     <string name="sort_by_name_asc">Sortuj wg nazwy - rosnąco</string>
     <string name="sort_by_name_desc">Sortuj wg nazwy - malejąco</string>
     <string name="attraction_doesnt_exist">No attraction</string>
+    <string name="menu_refresh">Odświerz</string>
 
 </resources>
