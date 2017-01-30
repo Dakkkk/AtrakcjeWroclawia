@@ -28,6 +28,8 @@ dependencies {
 
     compile 'com.google.maps.android:android-maps-utils:0.4+'
 
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
     compile project(':Shared')
     wearApp project(':Wearable')
 }

@@ -37,8 +37,15 @@
         <!--app:layoutManager="GridLayoutManager"-->
         <!--app:spanCount="@integer/list_columns" />-->
 
+
     <ListView android:id="@+id/attractions_list" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/main_app_image"
+        android:layout_alignParentLeft="true"
+        />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
