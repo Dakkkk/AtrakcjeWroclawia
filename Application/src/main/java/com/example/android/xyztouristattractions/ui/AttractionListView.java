@@ -43,6 +43,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private SearchManager searchManager;
     private android.widget.SearchView searchView;
     private MenuItem searchItem;
+    private ListView attractionListView;
 
 
     @Override
@@ -67,7 +68,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         mDbHelper = new AttractionDbHelper(this);
 
         // Find the ListView which will be populated with the attraction data
-        ListView attractionListView = (ListView) findViewById(R.id.attractions_list);
+        attractionListView = (ListView) findViewById(R.id.attractions_list);
         // Find and set empty view on the ListView, so that it only shows when the list has 0 items.
         //View emptyView = findViewById(R.id.empty_view);
         //attractionListView.setEmptyView(emptyView);
@@ -80,6 +81,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
             }
         });
+
+
 
         attractionListView.setAdapter(mAttractionCursorAdapter);
 
@@ -127,8 +130,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         }
 
 
-
-
         dropDb();
         insertAttraction();
 
@@ -140,6 +141,27 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.sort_by_distance_asc:
+
+                return true;
+            case R.id.sort_by_distance_desc:
+
+                return true;
+            case R.id.sort_by_name_asc:
+                mAttractionCursorAdapter.changeCursor(orderByNameASC());
+                attractionListView.invalidateViews();
+                return true;
+            case R.id.sort_by_name_desc:
+                mAttractionCursorAdapter.changeCursor(orderByNameDESC());
+                attractionListView.invalidateViews();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -159,36 +181,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
-
-    //Search query listener
-//    private android.support.v7.widget.SearchView.OnQueryTextListener searchQueryListener = new android.support.v7.widget.SearchView.OnQueryTextListener() {
-//        @Override
-//        public boolean onQueryTextSubmit(String query) {
-//            search(query);
-//            System.out.println("Attraction search query SUBMIT");
-//
-//            return true;
-//        }
-//
-//        @Override
-//        public boolean onQueryTextChange(String newText) {
-////            if (searchView.isExpanded() && TextUtils.isEmpty(newText)) {
-////                search("");
-////            }
-//            System.out.println("Attraction search query...");
-//
-//
-//            return true;
-//        }
-//
-//        public void search(String query) {
-//            // reset loader, swap cursor, etc.
-//        }
-//
-//    };
-
-
 
 
     @Override
@@ -247,6 +239,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         Log.v("AttractionListView", rowsDeleted + " rows deleted from attractions database");
     }
 
+
+    //Search attraction by name or description
     private Cursor searchForAttraction (String userQuery) {
         String selection;
         String[] whereArgs;
@@ -269,6 +263,16 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, selection, whereArgs, null);
 
+        return cursor;
+    }
+
+    private Cursor orderByNameASC() {
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " ASC");
+        return cursor;
+    }
+
+    private Cursor orderByNameDESC() {
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
         return cursor;
     }
 
