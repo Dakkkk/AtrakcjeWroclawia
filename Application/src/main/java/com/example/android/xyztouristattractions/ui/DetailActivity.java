@@ -27,6 +27,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.xyztouristattractions.R;
+import com.example.android.xyztouristattractions.common.Constants;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
 import com.squareup.picasso.Picasso;
 
@@ -107,6 +109,10 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 //                    .add(R.id.container, DetailFragment.createInstance(attraction))
 //                    .commit();
 //        }
+
+
+
+
     }
 
     @Override
@@ -117,8 +123,8 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                 AttractionContract.AttractionEntry._ID,
                 AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
                 AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION,
-                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL
-
+                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL,
+                AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION
         };
 
         // This loader will execute the ContentProvider's query method on a background thread
@@ -144,12 +150,16 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             int nameColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME);
             int descriptionColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION);
             int detailImgColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL);
+            int locationColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION);
+
 
 
 
             // Extract out the value from the Cursor for the given column index
-            String name = cursor.getString(nameColumnIndex);
+            final String name = cursor.getString(nameColumnIndex);
             String description = cursor.getString(descriptionColumnIndex);
+            final String city = cursor.getString(locationColumnIndex);
+
             //   int x = cursor.getInt(x);
 
             String attractionDetailImgUrl = cursor.getString(detailImgColumnIndex);
@@ -163,6 +173,20 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             // mWeightEditText.setText(Integer.toString(weight));
 
             Picasso.with(getApplicationContext()).load(attractionDetailImgUrl).placeholder(R.drawable.empty_photo).into(imgDetailViewSource);
+
+            FloatingActionButton mapFab = (FloatingActionButton) findViewById(R.id.mapFab);
+
+
+
+            mapFab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(Constants.MAPS_INTENT_URI +
+                            Uri.encode(name + ", " + city)));
+                    startActivity(intent);
+                }
+            });
 
 
         }

@@ -197,7 +197,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "http://mamygadzety.pl/wp-content/uploads/2016/01/dollarphotoclub_61018707.jpg");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1078852);
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.03853760000004);
-        values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
+        values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "Wrocław");
 
         ContentValues values1 = new ContentValues();
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_NAME, "Muzeum Narodowe");
@@ -219,7 +219,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/6/6d/Muzeum_Narodowe_noc%C4%85_fot_BMaliszewska.jpg");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1109061);
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0476092);
-        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
+        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "Wrocław");
 
         ContentValues values2 = new ContentValues();
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_NAME, "Zoo");
@@ -230,7 +230,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg/1024px-Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1041429);
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0742114);
-        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
+        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "Wrocław");
 
         ContentValues values3 = new ContentValues();
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_NAME, "Hala Stulecia");
@@ -244,7 +244,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL,"http://www.ltt.com.pl/sites/default/files/imagecache/mainpic/m_kulczynski_1.jpg");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1068577);
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0772959);
-        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
+        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "Wrocław");
 
         ContentValues values4 = new ContentValues();
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_NAME, "Hala Targowa");
@@ -258,7 +258,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/e/e1/Richard_Pl%C3%BCddemann_Market_Hall_photo_interior_1_Wroc%C5%82aw_Poland_2006-04-25.jpg");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1126439);
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0397772);
-        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
+        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "Wrocław");
 
         Uri newUri = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values);
         Uri newUri1 = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values1);
