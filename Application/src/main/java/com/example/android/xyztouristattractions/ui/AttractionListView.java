@@ -1,14 +1,12 @@
 package com.example.android.xyztouristattractions.ui;
 
 import android.app.LoaderManager;
-import android.app.SearchManager;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -27,7 +25,6 @@ import android.widget.SearchView;
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
 import com.example.android.xyztouristattractions.provider.AttractionDbHelper;
-//import com.example.android.xyztouristattractions.service.Base64CODEC;
 
 
 /**
@@ -41,14 +38,9 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     private AttractionsCursorAdapter mAttractionCursorAdapter;
 
-    private Menu menu;
-
-    private SearchManager searchManager;
     private android.widget.SearchView searchView;
     private MenuItem searchItem;
     private ListView attractionListView;
-   // private Base64CODEC base64;
-    private Bitmap bitmap = null;
 
 
 
@@ -62,24 +54,12 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
-//
-//
-//                Float longitudes = cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE));
-//                Float latitudes = cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE));
-
-
                 Intent intent = new Intent(AttractionListView.this, MapsMarkerActivity.class);
-//                intent.putExtra(Float.toString(latitude), "latitude");
-//                intent.putExtra(Float.toString(longitude), "longitude");
-
                 startActivity(intent);
             }
         });
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
-
-         //base64 = new Base64CODEC();
 
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
         // and pass the context, which is the current activity.
