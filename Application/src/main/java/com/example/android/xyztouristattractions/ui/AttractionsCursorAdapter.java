@@ -57,7 +57,8 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         // Find fields to populate in inflated template
         TextView attrName = (TextView) view.findViewById(R.id.attraction_name);
         TextView attrDescription = (TextView) view.findViewById(R.id.short_description);
-        ImageView imgViewSource = (ImageView) view.findViewById(R.id.attraction_image);
+        ImageView imgMainViewSource = (ImageView) view.findViewById(R.id.attraction_image);
+
 
 
         // Find the columns of attractions attributes that we're interested in
@@ -65,10 +66,12 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         int descriptionColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION);
         int mainImgColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN);
 
+
         //Read attractions attributes of the current pet from the cursor
         String attractionName = cursor.getString(nameColumnIndex);
         String attractionDesc = cursor.getString(descriptionColumnIndex);
         String attractionMainImgUrl = cursor.getString(mainImgColumnIndex);
+
 
         Log.v("AttrCursorAdapter", attractionMainImgUrl );
 
@@ -80,7 +83,10 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         attrName.setText(attractionName);
         attrDescription.setText(String.valueOf(attractionDesc));
 
-         Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgViewSource);
+        //ToDo Sometimes Img is slowly displaying on the screen - see if we can do it better
+
+         Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgMainViewSource);
+
 
     }
 }

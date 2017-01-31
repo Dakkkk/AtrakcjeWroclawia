@@ -181,7 +181,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 AttractionContract.AttractionEntry._ID,
                 AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
                 AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION,
-                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN
+                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN,
+                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL
         };
 
         return new CursorLoader(this,
@@ -213,7 +214,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION, "Po pierwsze każdy, kto przyjeżdża do Wrocławia, MUSI zaliczyć spacer po Starym Mieście — Rynek i jego okolice, spacer nad Odrą w stronę Ostrowa Tumskiego i sam Ostrów Tumski, a później przez most w stronę Muzeum Narodowego i przez park z powrotem w stronę Rynku. To takie minimum wrocławskiego turysty..");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION, "Wrocław znalazł sposób na to, żeby dzieci podczas takiego spaceru się nie nudziły. W całym Wrocławiu znajduje się prawie 300 niewielkich pomników różnych krasnali. Znajdują się one naprawdę w bardzo wielu miejscach, najwięcej jest ich właśnie w okolicach Rynku, więc kiedy wy spacerujecie i podziwiacie Wrocław, wasze dzieci z wypiekami na policzkach odnajdują kolejne krasnale. Wypróbowałam na Lili, która normalnie po 300 metrach spaceru krzyczy, że bolą ją nogi i, że chce na ręce. We Wrocławiu przez ponad 1 kilometr marszu ani razu nie powiedziała nic o sobie, bo była zbyt zajęta szukaniem i odnajdowaniem krasnali. Zresztą dorośli też krasnale bardzo lubią. Mój ulubiony to ten stojący przy bankomacie krasnoludzkiego oddziału Banku Zachodniego WBK :) Jeśli chcecie poczytać o krasnalach więcej, to zapraszam na krasnale.pl.");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN, "http://mamygadzety.pl/wp-content/uploads/2016/01/dollarphotoclub_61018707.jpg");
-        values.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "");
+        values.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "http://mamygadzety.pl/wp-content/uploads/2016/01/dollarphotoclub_61018707.jpg");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, "");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, "");
         values.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
@@ -235,7 +236,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "\n" +
                 "Sztuka europejska XV–XX w.[edytuj]\n");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN, "https://upload.wikimedia.org/wikipedia/commons/b/b2/Muzeum_Narodowe%2C_Wroc%C5%82aw.jpg");
-        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "");
+        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/6/6d/Muzeum_Narodowe_noc%C4%85_fot_BMaliszewska.jpg");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, "");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, "");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
@@ -246,7 +247,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION,  "Ogród Zoologiczny we Wrocławiu (Zoo Wrocław) – ogród zoologiczny znajdujący się przy ul. Wróblewskiego 1–5 we Wrocławiu, otwarty 10 lipca 1865. Jest najstarszym[1] na obecnych ziemiach polskich ogrodem zoologicznym w Polsce. Powierzchnia ogrodu to 33 hektary[2]. Oficjalną nazwą ogrodu jest Zoo Wrocław Sp. z o.o.[3]\n" +
                 "\n" + "Pod koniec 2015 wrocławskie Zoo prezentowało ponad 10 500 zwierząt (nie wliczając bezkręgowców) z 1132 gatunków[4]. Jest piątym najchętniej odwiedzanym ogrodem zoologicznym w Europie[5].");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN, "https://upload.wikimedia.org/wikipedia/commons/0/09/1935_Brama_g%C5%82%C3%B3wna_teren%C3%B3w_wystawowych.jpg");
-        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "");
+        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg/1024px-Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, "");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, "");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
@@ -260,7 +261,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "\n" +
                 "Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających nie tylko ze względu na samą halę, ale także na bliskość Pergoli z Fontanną Multimedialną, Ogrodem Japońskim oraz zoo.");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN,"https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wroc%C5%82aw_-_Jahrhunderthalle1.jpg/1280px-Wroc%C5%82aw_-_Jahrhunderthalle1.jpg");
-        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "");
+        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL,"http://www.ltt.com.pl/sites/default/files/imagecache/mainpic/m_kulczynski_1.jpg");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, "");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, "");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
@@ -274,7 +275,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "\n" +
                 "Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających nie tylko ze względu na samą halę, ale także na bliskość Pergoli z Fontanną Multimedialną, Ogrodem Japońskim oraz zoo.");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN,"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Wroclaw_Hala_Targowa_plNankera.jpg/800px-Wroclaw_Hala_Targowa_plNankera.jpg");
-        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "");
+        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/e/e1/Richard_Pl%C3%BCddemann_Market_Hall_photo_interior_1_Wroc%C5%82aw_Poland_2006-04-25.jpg");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, "");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, "");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");

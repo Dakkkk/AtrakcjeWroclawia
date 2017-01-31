@@ -31,10 +31,12 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
+import com.squareup.picasso.Picasso;
 
 /**
  * The tourist attraction detail activity screen which contains the details of
@@ -53,6 +55,8 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
     /** EditText field to enter the attraction's desc */
     private TextView mDescritionText;
+
+    private ImageView imgDetailViewSource;
 
     private static final String EXTRA_ATTRACTION = "attraction";
 
@@ -91,6 +95,8 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         // Find all relevant views that we will need to read input from
         mNameText = (TextView) findViewById(R.id.nameTextView);
         mDescritionText = (TextView) findViewById(R.id.descriptionTextView);
+        imgDetailViewSource = (ImageView) findViewById(R.id.imageView);
+
 
 
         String attraction = getIntent().getStringExtra(EXTRA_ATTRACTION);
@@ -110,7 +116,9 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         String[] projection = {
                 AttractionContract.AttractionEntry._ID,
                 AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
-                AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION
+                AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION,
+                AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL
+
         };
 
         // This loader will execute the ContentProvider's query method on a background thread
@@ -135,6 +143,8 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             // Find the columns of attraction attributes that we're interested in
             int nameColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME);
             int descriptionColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_DESCRIPTION);
+            int detailImgColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL);
+
 
 
             // Extract out the value from the Cursor for the given column index
@@ -142,12 +152,18 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             String description = cursor.getString(descriptionColumnIndex);
             //   int x = cursor.getInt(x);
 
+            String attractionDetailImgUrl = cursor.getString(detailImgColumnIndex);
+
+
             System.out.println("Attraction name: " + name);
 
             // Update the views on the screen with the values from the database
             mNameText.setText(name);
             mDescritionText.setText(description);
             // mWeightEditText.setText(Integer.toString(weight));
+
+            Picasso.with(getApplicationContext()).load(attractionDetailImgUrl).placeholder(R.drawable.empty_photo).into(imgDetailViewSource);
+
 
         }
 
