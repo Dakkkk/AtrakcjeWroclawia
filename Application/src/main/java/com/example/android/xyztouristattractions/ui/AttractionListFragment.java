@@ -19,7 +19,6 @@ package com.example.android.xyztouristattractions.ui;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -30,14 +29,11 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -45,7 +41,6 @@ import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.common.Attraction;
 import com.example.android.xyztouristattractions.common.Constants;
 import com.example.android.xyztouristattractions.common.Utils;
-import com.example.android.xyztouristattractions.provider.CRMDbAdapter;
 import com.example.android.xyztouristattractions.provider.TouristAttractions;
 import com.example.android.xyztouristattractions.service.UtilityService;
 import com.google.android.gms.location.FusedLocationProviderApi;
@@ -91,7 +86,7 @@ public class AttractionListFragment extends Fragment {
     private MarkerOptions options = new MarkerOptions();
     private ArrayList<LatLng> latlngs = new ArrayList<>();
 
-    private CRMDbAdapter dbHelper;
+   // private CRMDbAdapter dbHelper;
     private SimpleCursorAdapter dataAdapter;
 
     //private android.support.v4.widget.SimpleCursorAdapter dataAdapter;
@@ -116,17 +111,17 @@ public class AttractionListFragment extends Fragment {
         mAdapter = new AttractionAdapter(getActivity(), attractions);
 
         //database, show list related ------DB
-        dbHelper = new CRMDbAdapter(getActivity());
-        dbHelper.open();
+        //dbHelper = new CRMDbAdapter(getActivity());
+       // dbHelper.open();
 
         // Czyścimy dane
-        dbHelper.deleteAllAttractions();
+        //dbHelper.deleteAllAttractions();
 
         // Dodajemy przykladowe dane
-        dbHelper.insertAttractions();
+        //dbHelper.insertAttractions();
 
         // Tworzymy listę na podstawie danych w bazie SQLite
-        displayListView();
+       // displayListView();
 
 
 
@@ -232,93 +227,93 @@ public class AttractionListFragment extends Fragment {
     }
 
     //Database related------DB
-    private void displayListView() {
-        Cursor cursor = dbHelper.fetchAllAttractions();
-
-        // Kolumny do podpięcia
-        String[] columns = new String[] {
-                //CRMDbAdapter.Attractions._ID,
-                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN,
-                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
-                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
-                CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION,
-        };
-
-        System.out.println("AttListFr, columns: " + columns);
-
-        // ID zasobów z pliku list_row.xml
-        int[] to = new int[] {
-                R.id.icon,
-                R.id.overlaytext,
-                R.id.attraction_name,
-                R.id.short_description
-        };
-
-        // Tworzymy adapter z kursorem wskazującym na nasze dane
-        dataAdapter = new SimpleCursorAdapter(
-                getActivity(), R.layout.list_item,
-                cursor,
-                columns,
-                to,
-                0);
-
-        // Podpinamy adapter do listy
-        ListView listView = (ListView) getActivity().findViewById(R.id.attractions_list);
-//        // Assign adapter to ListView
-        listView.setAdapter(dataAdapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> listView, View view,
-                                    int position, long id) {
-                // Pobierz dane z wybranej pozycji
-                Cursor cursor = (Cursor) listView.getItemAtPosition(position);
-
-                // Pobieramy numer ID i wyświetlamy widok kontaktu
-                Integer userId = cursor.getInt(cursor.getColumnIndex("_id"));
-
-                String userPhone = cursor.getString(cursor.getColumnIndex("telefon"));
-
-                String userAddress = cursor.getString(cursor.getColumnIndex("adres"));
-
-                String userName = cursor.getString(cursor.getColumnIndex("nazwa"));
-
-                Toast.makeText(getActivity(),"Szczegóły kontaktu o ID: " + userId.toString() + ", nazwa: " + userName , Toast.LENGTH_LONG).show();
-
-                Intent myIntent = new Intent(getContext(), DetailActivity.class);
-
-                myIntent.putExtra("idContact", userId);
-                myIntent.putExtra("phoneContact", userPhone);
-                myIntent.putExtra("nameContact", userName);
-
-                myIntent.putExtra("addressContact", userAddress);
-
-                startActivity(myIntent);
-            }
-        });
-
-
-//        EditText myFilter = (EditText) findViewById(R.id.filter);
-//        myFilter.addTextChangedListener(new TextWatcher() {
-//            public void afterTextChanged(Editable s) {
-//            }
+//    private void displayListView() {
+//        Cursor cursor = dbHelper.fetchAllAttractions();
 //
-//            public void beforeTextChanged(CharSequence s, int start,
-//                                          int count, int after) {
-//            }
+//        // Kolumny do podpięcia
+//        String[] columns = new String[] {
+//                //CRMDbAdapter.Attractions._ID,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_NAME,
+//                CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION,
+//        };
 //
-//            public void onTextChanged(CharSequence s, int start,
-//                                      int before, int count) {
-//                dataAdapter.getFilter().filter(s.toString());
+//        System.out.println("AttListFr, columns: " + columns);
+//
+//        // ID zasobów z pliku list_row.xml
+//        int[] to = new int[] {
+//                R.id.icon,
+//                R.id.overlaytext,
+//                R.id.attraction_name,
+//                R.id.short_description
+//        };
+//
+//        // Tworzymy adapter z kursorem wskazującym na nasze dane
+//        dataAdapter = new SimpleCursorAdapter(
+//                getActivity(), R.layout.list_item,
+//                cursor,
+//                columns,
+//                to,
+//                0);
+//
+//        // Podpinamy adapter do listy
+//        ListView listView = (ListView) getActivity().findViewById(R.id.attractions_list);
+////        // Assign adapter to ListView
+//        listView.setAdapter(dataAdapter);
+//
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> listView, View view,
+//                                    int position, long id) {
+//                // Pobierz dane z wybranej pozycji
+//                Cursor cursor = (Cursor) listView.getItemAtPosition(position);
+//
+//                // Pobieramy numer ID i wyświetlamy widok kontaktu
+//                Integer userId = cursor.getInt(cursor.getColumnIndex("_id"));
+//
+//                String userPhone = cursor.getString(cursor.getColumnIndex("telefon"));
+//
+//                String userAddress = cursor.getString(cursor.getColumnIndex("adres"));
+//
+//                String userName = cursor.getString(cursor.getColumnIndex("nazwa"));
+//
+//                Toast.makeText(getActivity(),"Szczegóły kontaktu o ID: " + userId.toString() + ", nazwa: " + userName , Toast.LENGTH_LONG).show();
+//
+//                Intent myIntent = new Intent(getContext(), DetailActivity.class);
+//
+//                myIntent.putExtra("idContact", userId);
+//                myIntent.putExtra("phoneContact", userPhone);
+//                myIntent.putExtra("nameContact", userName);
+//
+//                myIntent.putExtra("addressContact", userAddress);
+//
+//                startActivity(myIntent);
 //            }
 //        });
-
-//        dataAdapter.setFilterQueryProvider(new FilterQueryProvider() {
-//            public Cursor runQuery(CharSequence constraint) {
-//                return dbHelper.fetchClientsByNameOrAdress(constraint.toString());
-//            }
-//        });
-    }
+//
+//
+////        EditText myFilter = (EditText) findViewById(R.id.filter);
+////        myFilter.addTextChangedListener(new TextWatcher() {
+////            public void afterTextChanged(Editable s) {
+////            }
+////
+////            public void beforeTextChanged(CharSequence s, int start,
+////                                          int count, int after) {
+////            }
+////
+////            public void onTextChanged(CharSequence s, int start,
+////                                      int before, int count) {
+////                dataAdapter.getFilter().filter(s.toString());
+////            }
+////        });
+//
+////        dataAdapter.setFilterQueryProvider(new FilterQueryProvider() {
+////            public Cursor runQuery(CharSequence constraint) {
+////                return dbHelper.fetchClientsByNameOrAdress(constraint.toString());
+////            }
+////        });
+//    }
 
 
 

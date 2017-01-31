@@ -57,59 +57,6 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
 
     }
 
-
-//    public void insertAttractions() {
-//        String fot_rynek = ("http://mamygadzety.pl/wp-content/uploads/2016/01/dollarphotoclub_61018707.jpg");
-//        //String fot_rynek_bitmap = encodeTobase64(fot_rynek);
-//
-//        createAttraction("Rynek wrocławski",
-//                "Po pierwsze każdy, kto przyjeżdża do Wrocławia, MUSI zaliczyć spacer po Starym Mieście — Rynek i jego okolice, spacer nad Odrą w stronę Ostrowa Tumskiego i sam Ostrów Tumski, a później przez most w stronę Muzeum Narodowego i przez park z powrotem w stronę Rynku. To takie minimum wrocławskiego turysty..",
-//                "Wrocław znalazł sposób na to, żeby dzieci podczas takiego spaceru się nie nudziły. W całym Wrocławiu znajduje się prawie 300 niewielkich pomników różnych krasnali. Znajdują się one naprawdę w bardzo wielu miejscach, najwięcej jest ich właśnie w okolicach Rynku, więc kiedy wy spacerujecie i podziwiacie Wrocław, wasze dzieci z wypiekami na policzkach odnajdują kolejne krasnale. Wypróbowałam na Lili, która normalnie po 300 metrach spaceru krzyczy, że bolą ją nogi i, że chce na ręce. We Wrocławiu przez ponad 1 kilometr marszu ani razu nie powiedziała nic o sobie, bo była zbyt zajęta szukaniem i odnajdowaniem krasnali. Zresztą dorośli też krasnale bardzo lubią. Mój ulubiony to ten stojący przy bankomacie krasnoludzkiego oddziału Banku Zachodniego WBK :) Jeśli chcecie poczytać o krasnalach więcej, to zapraszam na krasnale.pl.",
-//                fot_rynek,
-//                fot_rynek,
-//                51.1078852,
-//                17.03853760000004,
-//                "Wrocław"
-//        );
-//        createAttraction("Rynek wrocławski",
-//                "Po pierwsze każdy, kto przyjeżdża do Wrocławia, MUSI zaliczyć spacer po Starym Mieście — Rynek i jego okolice, spacer nad Odrą w stronę Ostrowa Tumskiego i sam Ostrów Tumski, a później przez most w stronę Muzeum Narodowego i przez park z powrotem w stronę Rynku. To takie minimum wrocławskiego turysty..",
-//                "Wrocław znalazł sposób na to, żeby dzieci podczas takiego spaceru się nie nudziły. W całym Wrocławiu znajduje się prawie 300 niewielkich pomników różnych krasnali. Znajdują się one naprawdę w bardzo wielu miejscach, najwięcej jest ich właśnie w okolicach Rynku, więc kiedy wy spacerujecie i podziwiacie Wrocław, wasze dzieci z wypiekami na policzkach odnajdują kolejne krasnale. Wypróbowałam na Lili, która normalnie po 300 metrach spaceru krzyczy, że bolą ją nogi i, że chce na ręce. We Wrocławiu przez ponad 1 kilometr marszu ani razu nie powiedziała nic o sobie, bo była zbyt zajęta szukaniem i odnajdowaniem krasnali. Zresztą dorośli też krasnale bardzo lubią. Mój ulubiony to ten stojący przy bankomacie krasnoludzkiego oddziału Banku Zachodniego WBK :) Jeśli chcecie poczytać o krasnalach więcej, to zapraszam na krasnale.pl.",
-//                fot_rynek,
-//                fot_rynek,
-//                51.1078852,
-//                17.03853760000004,
-//                "Wrocław"
-//        );
-//        createAttraction("Rynek wrocławski",
-//                "Po pierwsze każdy, kto przyjeżdża do Wrocławia, MUSI zaliczyć spacer po Starym Mieście — Rynek i jego okolice, spacer nad Odrą w stronę Ostrowa Tumskiego i sam Ostrów Tumski, a później przez most w stronę Muzeum Narodowego i przez park z powrotem w stronę Rynku. To takie minimum wrocławskiego turysty..",
-//                "Wrocław znalazł sposób na to, żeby dzieci podczas takiego spaceru się nie nudziły. W całym Wrocławiu znajduje się prawie 300 niewielkich pomników różnych krasnali. Znajdują się one naprawdę w bardzo wielu miejscach, najwięcej jest ich właśnie w okolicach Rynku, więc kiedy wy spacerujecie i podziwiacie Wrocław, wasze dzieci z wypiekami na policzkach odnajdują kolejne krasnale. Wypróbowałam na Lili, która normalnie po 300 metrach spaceru krzyczy, że bolą ją nogi i, że chce na ręce. We Wrocławiu przez ponad 1 kilometr marszu ani razu nie powiedziała nic o sobie, bo była zbyt zajęta szukaniem i odnajdowaniem krasnali. Zresztą dorośli też krasnale bardzo lubią. Mój ulubiony to ten stojący przy bankomacie krasnoludzkiego oddziału Banku Zachodniego WBK :) Jeśli chcecie poczytać o krasnalach więcej, to zapraszam na krasnale.pl.",
-//                fot_rynek,
-//                fot_rynek,
-//                51.1078852,
-//                17.03853760000004,
-//                "Wrocław"
-//        );
-//    }
-
-//    public long createAttraction(String name, String short_description, String description, String foto_main,
-//                                 String foto_detail, double latitude, double longitude, String location) {
-//        ContentValues initialValues = new ContentValues();
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_NAME, name);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION, short_description);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_DESCRIPTION, description);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN, foto_main);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_DETAIL, foto_detail);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE, latitude);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE, latitude);
-//        initialValues.put(CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION, location);
-//
-//        return db.insert(CRMDbAdapter.Attractions.TABLE_NAME, null, initialValues);
-//        SQLiteDatabase database = mDbHelper.getWritableDatabase();
-//
-//
-//    }
-
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

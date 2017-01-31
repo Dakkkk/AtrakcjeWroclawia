@@ -106,11 +106,8 @@ public class AttractionsCursorAdapter extends CursorAdapter {
             double distance = Math.floor(attrLocation.distanceTo(userLoaction));
 
             distanceValue.setText(String.valueOf(distance));
+
         }
-
-
-
-
 
 
         System.out.println("Lat, Long " + attractionLat.toString() + " " + attractionLong.toString());
@@ -130,7 +127,5 @@ public class AttractionsCursorAdapter extends CursorAdapter {
 
          Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgMainViewSource);
 
-
     }
-
 }

@@ -1,9 +1,13 @@
 package com.example.android.xyztouristattractions.ui;
 
+import android.app.LoaderManager;
+import android.content.Loader;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.android.xyztouristattractions.R;
+import com.example.android.xyztouristattractions.provider.AttractionContract;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -11,11 +15,15 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+
 /**
  * Created by Dawid on 2017-01-03.
  */
 public class MapsMarkerActivity extends AppCompatActivity
-        implements OnMapReadyCallback {
+        implements OnMapReadyCallback,  LoaderManager.LoaderCallbacks<Cursor> {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,23 +50,58 @@ public class MapsMarkerActivity extends AppCompatActivity
     //TODO get geolacation parameters from TouristAttractions instead of hardcoding it
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        // Add a marker in Sydney, Australia,
-        // and move the map's camera to the same location.
-        LatLng rynek = new LatLng(51.1078852, 17.03853760000004);
-        LatLng muzeum = new LatLng(51.1109061,17.0476092);
-        LatLng hala_targowa = new LatLng(51.1126439,17.0397772);
-        LatLng zoo = new LatLng(51.1041429,17.0742114);
+
+        Float [] latitudes = getMapAllCoordinates(true);
+        Float [] longitudes = getMapAllCoordinates(false);
+        ArrayList<LatLng> attractionsLatLngs = new ArrayList<LatLng>();
+
+        for(int i = 0; i < latitudes.length; i++ ) {
+            attractionsLatLngs.add(new LatLng(latitudes[i], longitudes[i]));
+            googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                    .title("Atrakcja"));
+        }
+
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(attractionsLatLngs.get(1), 12.0f));
+    }
+
+    //Get coordinates (longitude or latitude) for Google map
+    private Float[] getMapAllCoordinates (boolean isLatitude) {
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+
+        cursor.moveToFirst();
+        ArrayList<Float> coords = new ArrayList<Float>();
+        if (isLatitude) {
+            while (!cursor.isAfterLast()) {
+                coords.add(cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE)));
+                cursor.moveToNext();
+            }
+
+        } else {
+            while (!cursor.isAfterLast()) {
+                coords.add(cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE)));
+                cursor.moveToNext();
+            }
+
+        }
+        cursor.close();
+        return coords.toArray(new Float[coords.size()]);
+    }
 
 
-        googleMap.addMarker(new MarkerOptions().position(rynek)
-                .title("Rynek Wrocławski"));
-        googleMap.addMarker(new MarkerOptions().position(muzeum)
-                .title("Muzeum Narodowe"));
-        googleMap.addMarker(new MarkerOptions().position(hala_targowa)
-                .title("Hala Targowa"));
-        googleMap.addMarker(new MarkerOptions().position(zoo)
-                .title("Zoo"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(hala_targowa, 12.0f));
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        return null;
+    }
+
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
     }
 }
 

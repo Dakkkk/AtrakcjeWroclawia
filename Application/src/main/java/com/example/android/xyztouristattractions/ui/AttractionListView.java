@@ -62,7 +62,17 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+//
+//
+//                Float longitudes = cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE));
+//                Float latitudes = cursor.getFloat(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE));
+
+
                 Intent intent = new Intent(AttractionListView.this, MapsMarkerActivity.class);
+//                intent.putExtra(Float.toString(latitude), "latitude");
+//                intent.putExtra(Float.toString(longitude), "longitude");
+
                 startActivity(intent);
             }
         });
@@ -110,19 +120,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 startActivity(intent);
             }
         });
-
-       // final Button mapAll = (Button) findViewById(R.id.btnDisplayMap);
-
-
-        //show map with all attractions
-//        mapAll.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getApplicationContext(),"Wszystkie atrakcje na mapie", Toast.LENGTH_LONG).show();
-//                Intent i = new Intent(v.getContext(),MapsMarkerActivity.class);
-//                startActivity(i);
-//            }
-//        });
 
         dropDb();
         insertAttraction();
@@ -343,31 +340,4 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         mAttractionCursorAdapter.getFilter().filter(newText);
         return true;
     }
-
-
-    //Przerobić
-//    public Cursor fetchClientsByNameOrAdress(String inputText) throws SQLException {
-//         SQLiteDatabase mDb = new SQLiteDatabase(AttractionListView.this));
-//
-//
-//        Cursor mCursor = null;
-//
-//        if (inputText == null || inputText.length () == 0) {
-//            mCursor = mDb.query(AttractionContract.AttractionEntry.TABLE_NAME, new String[] {AttractionContract.AttractionEntry.COLUMN_NAME_NAME,
-//                    AttractionContract.AttractionEntry.COLUMN_NAME_SHORT_DESCRIPTION}, null, null, null, null, null, null);
-//
-//        } else {
-//            mCursor = mDb.query(Klienci.TABLE_NAME, new String[] {Klienci._ID, Klienci.COLUMN_NAME_NAZWA,
-//                            Klienci.COLUMN_NAME_ADRES, Klienci.COLUMN_NAME_TELEFON},
-//                    "(" + Klienci.COLUMN_NAME_NAZWA + " like '%" + inputText + "%') OR (" + Klienci.COLUMN_NAME_ADRES + " like '%" + inputText + "%')" , null, null, null, orderBy, null);
-//        }
-//
-//        if (mCursor != null) {
-//            mCursor.moveToFirst();
-//        }
-//
-//        return mCursor;
-//    }
-
-
 }
