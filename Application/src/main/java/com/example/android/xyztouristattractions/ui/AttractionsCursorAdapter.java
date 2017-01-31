@@ -98,8 +98,8 @@ public class AttractionsCursorAdapter extends CursorAdapter {
 
             //Count the distance between atttraction and current user location
             Location attrLocation = new Location("attrLocation");
-            attrLocation.setLatitude(51.1078852);
-            attrLocation.setLongitude(17.03853760000004);
+            attrLocation.setLatitude(attractionLat);
+            attrLocation.setLongitude(attractionLong);
             Location userLoaction= new Location("userLocation");
             userLoaction.setLatitude(userLat);
             userLoaction.setLongitude(userLong);

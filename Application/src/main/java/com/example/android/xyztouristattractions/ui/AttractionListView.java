@@ -240,8 +240,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "Sztuka europejska XV–XX w.[edytuj]\n");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN, "https://upload.wikimedia.org/wikipedia/commons/b/b2/Muzeum_Narodowe%2C_Wroc%C5%82aw.jpg");
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/6/6d/Muzeum_Narodowe_noc%C4%85_fot_BMaliszewska.jpg");
-        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1078852);
-        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.03853760000004);
+        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1109061);
+        values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0476092);
         values1.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
 
         ContentValues values2 = new ContentValues();
@@ -251,8 +251,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "\n" + "Pod koniec 2015 wrocławskie Zoo prezentowało ponad 10 500 zwierząt (nie wliczając bezkręgowców) z 1132 gatunków[4]. Jest piątym najchętniej odwiedzanym ogrodem zoologicznym w Europie[5].");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN, "https://upload.wikimedia.org/wikipedia/commons/0/09/1935_Brama_g%C5%82%C3%B3wna_teren%C3%B3w_wystawowych.jpg");
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg/1024px-Wroc%C5%82aw%2C_Miejski_Ogr%C3%B3d_Zoologiczny_-_fotopolska.eu_%28259320%29.jpg");
-        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1078852);
-        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.03853760000004);
+        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1041429);
+        values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0742114);
         values2.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
 
         ContentValues values3 = new ContentValues();
@@ -265,8 +265,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających nie tylko ze względu na samą halę, ale także na bliskość Pergoli z Fontanną Multimedialną, Ogrodem Japońskim oraz zoo.");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN,"https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wroc%C5%82aw_-_Jahrhunderthalle1.jpg/1280px-Wroc%C5%82aw_-_Jahrhunderthalle1.jpg");
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL,"http://www.ltt.com.pl/sites/default/files/imagecache/mainpic/m_kulczynski_1.jpg");
-        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1078852);
-        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.03853760000004);
+        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1068577);
+        values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0772959);
         values3.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
 
         ContentValues values4 = new ContentValues();
@@ -279,8 +279,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 "Obecnie hala i jej okolice są bardzo licznie odwiedzane przez zwiedzających nie tylko ze względu na samą halę, ale także na bliskość Pergoli z Fontanną Multimedialną, Ogrodem Japońskim oraz zoo.");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN,"https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Wroclaw_Hala_Targowa_plNankera.jpg/800px-Wroclaw_Hala_Targowa_plNankera.jpg");
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_DETAIL, "https://upload.wikimedia.org/wikipedia/commons/e/e1/Richard_Pl%C3%BCddemann_Market_Hall_photo_interior_1_Wroc%C5%82aw_Poland_2006-04-25.jpg");
-        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1078852);
-        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.03853760000004);
+        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE, 51.1126439);
+        values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE, 17.0397772);
         values4.put(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION, "");
 
         Uri newUri = getContentResolver().insert(AttractionContract.AttractionEntry.CONTENT_URI, values);
