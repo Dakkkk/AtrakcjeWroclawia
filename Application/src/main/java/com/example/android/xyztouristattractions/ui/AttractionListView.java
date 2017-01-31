@@ -27,7 +27,7 @@ import android.widget.SearchView;
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
 import com.example.android.xyztouristattractions.provider.AttractionDbHelper;
-import com.example.android.xyztouristattractions.service.Base64CODEC;
+//import com.example.android.xyztouristattractions.service.Base64CODEC;
 
 
 /**
@@ -47,7 +47,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private android.widget.SearchView searchView;
     private MenuItem searchItem;
     private ListView attractionListView;
-    private Base64CODEC base64;
+   // private Base64CODEC base64;
     private Bitmap bitmap = null;
 
 
@@ -79,7 +79,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
 
-         base64 = new Base64CODEC();
+         //base64 = new Base64CODEC();
 
         // To access our database, we instantiate our subclass of SQLiteOpenHelper
         // and pass the context, which is the current activity.
