@@ -46,10 +46,10 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
                 CRMDbAdapter.Attractions.COLUMN_NAME_NAME + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN  + " BLOB," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN  + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_DETAIL + " TEXT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE + " TEXT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_LONGITUDE+ " TEXT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE + " FLOAT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_LONGITUDE+ " FLOAT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION+  " TEXT)";
 
         // Execute the SQL statement
