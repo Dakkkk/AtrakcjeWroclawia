@@ -6,9 +6,7 @@ package com.example.android.xyztouristattractions.ui;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.location.Location;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +16,10 @@ import android.widget.TextView;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
-import com.example.android.xyztouristattractions.service.GPSTracker;
-import com.google.android.gms.maps.model.LatLng;
 import com.squareup.picasso.Picasso;
 
 
 public class AttractionsCursorAdapter extends CursorAdapter {
-
 
     public AttractionsCursorAdapter(Context context, Cursor c) {
         super(context, c, 0 /* flags */);
@@ -61,7 +56,8 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         TextView attrName = (TextView) view.findViewById(R.id.attraction_name);
         TextView attrDescription = (TextView) view.findViewById(R.id.short_description);
         ImageView imgMainViewSource = (ImageView) view.findViewById(R.id.attraction_image);
-        TextView distanceValue = (TextView) view.findViewById(R.id.overlaytext);
+       // TextView distanceValue = (TextView) view.findViewById(R.id.overlaytext);
+        TextView txtDistance = (TextView) view.findViewById(R.id.overlaytext);
 
 
 
@@ -71,7 +67,7 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         int mainImgColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_FOTO_MAIN);
         int attractionLatitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE);
         int attractionLongitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE);
-
+        int attractionDistance = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE);
 
 
 
@@ -80,52 +76,38 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         String attractionDesc = cursor.getString(descriptionColumnIndex);
         String attractionMainImgUrl = cursor.getString(mainImgColumnIndex);
 
+        double attractionDistanceM = cursor.getDouble(attractionDistance);
+
+
+
+
         Float attractionLat = cursor.getFloat(attractionLatitude);
         Float attractionLong = cursor.getFloat(attractionLongitude);
 
-        double userLat;
-        double userLong;
+        double attractionLatDouble = attractionLat.doubleValue();
+        double attractionLongDouble = attractionLong.doubleValue();
 
-        LatLng rynekLatLang = new LatLng(51.1078852, 17.03853760000004);
+        System.out.println("Distance attraction parameters: " + attractionLatDouble + " " + attractionLongDouble);
 
-        //Get current user Location
-        GPSTracker tracker = new GPSTracker(view.getContext());
-        if (!tracker.canGetLocation()) {
-            tracker.showSettingsAlert();
-        } else {
-            userLat = tracker.getLatitude();
-            userLong = tracker.getLongitude();
-
-            //Count the distance between atttraction and current user location
-            Location attrLocation = new Location("attrLocation");
-            attrLocation.setLatitude(attractionLat);
-            attrLocation.setLongitude(attractionLong);
-            Location userLoaction= new Location("userLocation");
-            userLoaction.setLatitude(userLat);
-            userLoaction.setLongitude(userLong);
-            double distance = Math.floor(attrLocation.distanceTo(userLoaction));
-
-            distanceValue.setText(String.valueOf(distance));
-
-        }
-
-
-        System.out.println("Lat, Long " + attractionLat.toString() + " " + attractionLong.toString());
-
-
-        Log.v("AttrCursorAdapter", attractionMainImgUrl );
 
         if (TextUtils.isEmpty(attractionDesc)) {
             attractionDesc = context.getString(R.string.attraction_doesnt_exist);
         }
-
+        
         // Populate fields with extracted properties
         attrName.setText(attractionName);
         attrDescription.setText(String.valueOf(attractionDesc));
+
+        if(attractionDistanceM == 0) {
+            txtDistance.setText("Brak danych");
+        } else {
+            txtDistance.setText(String.valueOf(Math.floor(attractionDistanceM)));
+        }
 
         //ToDo Sometimes Img is slowly displaying on the screen - see if we can do it better
 
          Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgMainViewSource);
 
     }
+
 }

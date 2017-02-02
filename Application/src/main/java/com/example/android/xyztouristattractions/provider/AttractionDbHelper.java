@@ -50,7 +50,8 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
                 CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_DETAIL + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE + " FLOAT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_LONGITUDE+ " FLOAT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION+  " TEXT)";
+                CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION+  " TEXT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_ATTRACTION_DISTANCE+  " FLOAT)";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_ATTRACTIONS_TABLE);

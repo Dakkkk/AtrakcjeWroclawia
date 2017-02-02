@@ -67,6 +67,7 @@ public final class AttractionContract {
         public static final String COLUMN_NAME_LATITUDE = "latitude";
         public static final String COLUMN_NAME_LONGITUDE = "longitude";
         public static final String COLUMN_NAME_LOCATION = "location";
+        public static final String COLUMN_NAME_ATTRACTION_DISTANCE = "attraction_distance";
         public static final String COLUMN_NAME_ID = "_id";
 
 

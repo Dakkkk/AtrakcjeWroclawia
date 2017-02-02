@@ -20,7 +20,8 @@ public class CRMDbAdapter  {
                     Attractions.COLUMN_NAME_FOTO_DETAIL + " TEXT," +
                     Attractions.COLUMN_NAME_LATITUDE + " TEXT," +
                     Attractions.COLUMN_NAME_LONGITUDE+ " TEXT," +
-                    Attractions.COLUMN_NAME_LOCATION+  " TEXT)";
+                    Attractions.COLUMN_NAME_LOCATION+ " TEXT," +
+                    Attractions.COLUMN_NAME_ATTRACTION_DISTANCE+  " TEXT)";
 
     /* Definiujemy nazwy kolumn i tabeli */
     public static class Attractions implements BaseColumns {
@@ -33,6 +34,7 @@ public class CRMDbAdapter  {
         public static final String COLUMN_NAME_LATITUDE = "latitude";
         public static final String COLUMN_NAME_LONGITUDE = "longitude";
         public static final String COLUMN_NAME_LOCATION = "location";
+        public static final String COLUMN_NAME_ATTRACTION_DISTANCE = "attraction_distance";
         public static final String COLUMN_NAME_ID = "_id";
     }
 

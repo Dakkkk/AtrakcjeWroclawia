@@ -34,16 +34,16 @@
             android:scaleType="centerCrop"
             android:transitionName="image" />
 
-        <TextView
-            android:id="@+id/overlaytext"
-            android:layout_width="@dimen/image_size"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@android:id/icon"
-            android:gravity="center"
-            android:padding="@dimen/tiny_margin"
-            style="?android:textAppearanceSmallInverse"
-            android:background="@color/text_background"
-            tools:text="Overlay"/>
+        <!--<TextView-->
+            <!--android:id="@+id/overlaytext"-->
+            <!--android:layout_width="@dimen/image_size"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@android:id/icon"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/tiny_margin"-->
+            <!--style="?android:textAppearanceSmallInverse"-->
+            <!--android:background="@color/text_background"-->
+            <!--tools:text="Overlay"/>-->
 
         <TextView
             android:id="@android:id/text1"
