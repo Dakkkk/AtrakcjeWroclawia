@@ -257,7 +257,7 @@
     <style name="Widget.Design.AppBarLayout" parent="Base.Widget.Design.AppBarLayout">
         <item name="android:stateListAnimator">@anim/design_appbar_state_list_animator</item>
     </style>
-    <style name="XYZAppTheme" parent="XYZAppTheme.Base">
+    <style name="WroAppTheme" parent="WroAppTheme.Base">
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowExitTransition">@transition/fade</item>

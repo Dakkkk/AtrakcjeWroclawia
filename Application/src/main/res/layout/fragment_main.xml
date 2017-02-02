@@ -22,13 +22,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AttractionListFragment">
-    <!--<Button-->
-        <!--android:id="@+id/btnDisplayMap"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="56dp"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:text="@string/button_map"-->
-        <!--/>-->
+
 
     <!--<com.example.android.xyztouristattractions.ui.AttractionsRecyclerView-->
         <!--android:id="@android:id/list"-->
@@ -37,10 +31,25 @@
         <!--android:scrollbars="vertical"-->
         <!--app:layoutManager="GridLayoutManager"-->
         <!--app:spanCount="@integer/list_columns" />-->
-
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/lighter_gray"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:background="@color/emphasizeColor"
+        android:text="@string/button_refresh"
+        />
 
     <ListView android:id="@+id/attractions_list" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        />
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -48,15 +57,28 @@
         android:layout_alignParentLeft="true"
         />
 
-    <android.support.design.widget.FloatingActionButton
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@mipmap/ic_map"/>-->
+
+    <ImageButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:background="@color/emphasizeColor"
         android:layout_gravity="right"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_map"
+        />
+
 
     <!--<TextView-->
         <!--android:id="@android:id/empty"-->

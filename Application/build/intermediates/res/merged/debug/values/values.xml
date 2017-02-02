@@ -67,13 +67,16 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="emphasizeColor">#0097A7</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="lightColor">#4DD0E1</color>
     <color name="lighter_gray">#ddd</color>
+    <color name="mainColor">#00BCD4</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -607,7 +610,7 @@ transferred).
     </string>
     <string name="action_test_toggle_geofence">Toggle Geofence Trigger</string>
     <string name="app_label">Szukaj</string>
-    <string name="app_name">XYZTouristAttractions</string>
+    <string name="app_name">Atrakcje Wrocławia</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="attraction_doesnt_exist">No attraction</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
@@ -615,6 +618,7 @@ transferred).
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="btn_display">Pokaż</string>
     <string name="button_map">Wszystkie atrakcje na mapie</string>
+    <string name="button_refresh">Odświerz</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="common_google_play_services_api_unavailable_text"><ns1:g id="app_name">%1$s</ns1:g> requires one or more Google Play services that are not currently available. Please contact the developer for assistance.</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable Google Play services</string>
@@ -2156,14 +2160,14 @@ attractions in a GridViewPager UI component.
         <item name="android:shadowDy">-3.5</item>
         <item name="android:shadowRadius">2</item>
     </style>
-    <style name="XYZAppTheme" parent="XYZAppTheme.Base"/>
-    <style name="XYZAppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="WroAppTheme" parent="WroAppTheme.Base"/>
+    <style name="WroAppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="colorPrimaryDark">@color/emphasizeColor</item>
+        <item name="colorAccent">@color/lightColor</item>
         <item name="colorControlHighlight">?colorAccent</item>
     </style>
-    <style name="XYZAppTheme.Detail">
+    <style name="WroAppTheme.Detail">
         <item name="windowActionBarOverlay">true</item>
         <item name="actionBarStyle">@style/ActionBar.Detail</item>
     </style>

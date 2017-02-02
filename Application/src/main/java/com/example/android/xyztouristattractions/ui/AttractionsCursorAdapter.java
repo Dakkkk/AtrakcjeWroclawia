@@ -78,9 +78,6 @@ public class AttractionsCursorAdapter extends CursorAdapter {
 
         double attractionDistanceM = cursor.getDouble(attractionDistance);
 
-
-
-
         Float attractionLat = cursor.getFloat(attractionLatitude);
         Float attractionLong = cursor.getFloat(attractionLongitude);
 
@@ -93,7 +90,7 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         if (TextUtils.isEmpty(attractionDesc)) {
             attractionDesc = context.getString(R.string.attraction_doesnt_exist);
         }
-        
+
         // Populate fields with extracted properties
         attrName.setText(attractionName);
         attrDescription.setText(String.valueOf(attractionDesc));

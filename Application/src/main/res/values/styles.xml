@@ -17,16 +17,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="XYZAppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="WroAppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="colorPrimaryDark">@color/emphasizeColor</item>
+        <item name="colorAccent">@color/lightColor</item>
         <item name="colorControlHighlight">?colorAccent</item>
     </style>
 
-    <style name="XYZAppTheme" parent="XYZAppTheme.Base" />
+    <style name="WroAppTheme" parent="WroAppTheme.Base" />
 
-    <style name="XYZAppTheme.Detail">
+    <style name="WroAppTheme.Detail">
         <item name="windowActionBarOverlay">true</item>
         <item name="actionBarStyle">@style/ActionBar.Detail</item>
     </style>
