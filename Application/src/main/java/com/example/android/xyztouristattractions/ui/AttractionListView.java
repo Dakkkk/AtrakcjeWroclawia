@@ -94,7 +94,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         });
 
 
-        allAttractionsCursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
 
@@ -319,8 +318,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                     }
                     locationManager.requestLocationUpdates(
                             LocationManager.NETWORK_PROVIDER,
-                            500,
-                            5, this);
+                            5000,
+                            30, this);
                     Log.d("Network", "Network Enabled");
                     if (locationManager != null) {
                         location = locationManager
@@ -336,8 +335,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                     if (location == null) {
                         locationManager.requestLocationUpdates(
                                 LocationManager.GPS_PROVIDER,
-                                500,
-                                5, this);
+                                5000,
+                                30, this);
                         Log.d("GPS", "GPS Enabled");
                         if (locationManager != null) {
                             location = locationManager
@@ -515,6 +514,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     }
 
     private Cursor refreshCursor() {
+        allAttractionsCursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
         return allAttractionsCursor;
     }
 
@@ -539,8 +539,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     @Override
     public void onLocationChanged(Location location) {
 
-        checkLocationPermission();
-        updateDbWithDistances(allAttractionsCursor, location);
+//        checkLocationPermission();
+//        updateDbWithDistances(allAttractionsCursor, location);
 
     }
 
