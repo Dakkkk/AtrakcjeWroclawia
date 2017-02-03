@@ -282,7 +282,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         checkLocationPermission();
         updateDbWithDistances(cursor, userLocation);
 
-        mAttractionCursorAdapter.swapCursor(cursor);
+        attractionListView.invalidateViews();
+
     }
 
     //    //Get the user GPS location
@@ -514,8 +515,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     }
 
     private Cursor refreshCursor() {
-        allAttractionsCursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
-        return allAttractionsCursor;
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+        return cursor;
     }
 
     @Override
@@ -538,9 +539,16 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     // ToDo Call this or not?
     @Override
     public void onLocationChanged(Location location) {
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
 
-//        checkLocationPermission();
-//        updateDbWithDistances(allAttractionsCursor, location);
+        //checkLocationPermission();
+        updateDbWithDistances(cursor, location);
+
+
+        //ToDo Consider if calling this is necessary, if so than call refreshCursor
+        //refresh cursor and views after the change of lacation
+        mAttractionCursorAdapter.changeCursor(refreshCursor());
+        attractionListView.invalidateViews();
 
     }
 
@@ -577,6 +585,11 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
         if (cursor == null || cursor.getCount() < 1) {
             return;
+        }
+
+
+        if(cursor.isClosed()) {
+            Log.e("AttractionListView", "Cursor is closed!");
         }
 
         // Proceed with moving to the next row of the cursor and reading data from it
@@ -642,7 +655,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                     // Otherwise, the update was successful and we can display a toast.
                     Toast.makeText(this, "Update successful, id: " + attractionID,
                             Toast.LENGTH_SHORT).show();
-                    cursor.moveToNext();
                 }
             } else {
                 Toast.makeText(this, "User location is null!",
