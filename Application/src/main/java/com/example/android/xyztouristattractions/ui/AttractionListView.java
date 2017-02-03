@@ -25,9 +25,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.FilterQueryProvider;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -56,20 +59,15 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private MenuItem searchItem;
     private ListView attractionListView;
 
-    LocationListener locationListener;
-
     private static float distance;
 
     private TextView txtDistance;
     private boolean canGetLocation;
 
-    public static float getDistance() {
-        return distance;
-    }
+    private Cursor allAttractionsCursor;
 
-    public void setDistance(float distance) {
-        this.distance = distance;
-    }
+    private Location userLocation;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,10 +88,13 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         refreshBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mAttractionCursorAdapter.changeCursor(refreshCursor());
                 attractionListView.invalidateViews();
             }
         });
 
+
+        allAttractionsCursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
 
@@ -145,8 +146,12 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         //Kick off the loader
         getLoaderManager().initLoader(ATTLACTION_LOADER, null, this);
 
+        //Animate the map ImageButton
+        ImageButton ibMap = (ImageButton) findViewById(R.id.fab);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.clockwise);
+        ibMap.startAnimation(animation);
 
-        //txtDistance = (TextView) findViewById(R.id.overlaytext);
 
     }
 
@@ -246,8 +251,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 null);
     }
 
-    @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+    //Check if user allowed location GPS
+    public void checkLocationPermission() {
         final int REQUEST_PERMISSION_ACCESS_FINE_LOCATION = 1;
 
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -265,92 +270,23 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
             } else {
                 requestPermission(Manifest.permission.ACCESS_FINE_LOCATION, REQUEST_PERMISSION_ACCESS_FINE_LOCATION);
             }
-            Log.d("Location", "ERROR!!!");
+            Log.d("Location", "No permission");
 
             return;
         }
+    }
 
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+        userLocation = getLocation();
 
-        if (cursor == null || cursor.getCount() < 1) {
-            return;
-        }
-
-        // Proceed with moving to the next row of the cursor and reading data from it
-        while (cursor.moveToNext()) {
-
-            int attractionLatitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE);
-            int attractionLongitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE);
-            int nameColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME);
-
-
-            int attractionIdCol = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_ID);
-            String attractionName = cursor.getString(nameColumnIndex);
-
-
-            Float attractionLat = cursor.getFloat(attractionLatitude);
-            Float attractionLong = cursor.getFloat(attractionLongitude);
-            int attractionID = cursor.getInt(attractionIdCol);
-
-
-            double attractionLatDouble = attractionLat.doubleValue();
-            double attractionLongDouble = attractionLong.doubleValue();
-
-            if (getLocation() != null) {
-
-                double longitude = getLocation().getLongitude();
-                double latitude = getLocation().getLatitude();
-                distance = countDistance(attractionLatDouble, attractionLongDouble, latitude, longitude);
-
-                System.out.println("User location: " + getLocation().toString());
-                System.out.println("Current attraction distance: " + distance + " Name " + attractionName);
-
-                ContentValues values = new ContentValues();
-
-                values.put(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE, distance);
-
-
-                Uri currentAttractionUri =
-                        ContentUris
-                                .withAppendedId(AttractionContract.AttractionEntry.CONTENT_URI,
-                                        attractionID);
-
-                System.out.println("Current attraction URI: " + currentAttractionUri);
-
-                if (currentAttractionUri == null) {
-                    // Since no fields were modified, we can return early without creating a new pet.
-                    // No need to create ContentValues and no need to do any ContentProvider operations.
-                    Toast.makeText(this, "No URI", Toast.LENGTH_SHORT);
-                    return;
-                }
-
-                //Update One attraction at a time
-                    int rowsAffected = getContentResolver().update(currentAttractionUri, values, null, null);
-
-                //Update all attractions at a time
-               // int rowsAffected = getContentResolver().update(AttractionContract.AttractionEntry.CONTENT_URI, values, null, null);
-
-                    // Show a toast message depending on whether or not the update was successful.
-                    if (rowsAffected == 0) {
-                        // If no rows were affected, then there was an error with the update.
-                        Toast.makeText(this, "Update failed",
-                                Toast.LENGTH_SHORT).show();
-                    } else {
-                        // Otherwise, the update was successful and we can display a toast.
-                        Toast.makeText(this, "Update successful, id: " + attractionID,
-                                Toast.LENGTH_SHORT).show();
-                        cursor.moveToNext();
-                    }
-            } else {
-                Toast.makeText(this, "User location is null!",
-                        Toast.LENGTH_SHORT).show();
-            }
-
-        }
+        checkLocationPermission();
+        updateDbWithDistances(cursor, userLocation);
 
         mAttractionCursorAdapter.swapCursor(cursor);
     }
 
-    //Get the user GPS location
+    //    //Get the user GPS location
     public Location getLocation() {
         Location location = null;
 
@@ -553,8 +489,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
             };
         }
 
-        Log.v("AttractionListView", getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, selection, whereArgs, null).toString());
-
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, selection, whereArgs, null);
 
         return cursor;
@@ -580,6 +514,10 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         return cursor;
     }
 
+    private Cursor refreshCursor() {
+        return allAttractionsCursor;
+    }
+
     @Override
     public boolean onQueryTextSubmit(String query) {
         mAttractionCursorAdapter.getFilter().filter(query);
@@ -597,29 +535,13 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
      * using the Metric system
      */
 
-
+    // ToDo Call this or not?
     @Override
     public void onLocationChanged(Location location) {
 
-//        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
-//        int attractionLatitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE);
-//        int attractionLongitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE);
-//
-//        Float attractionLat = cursor.getFloat(attractionLatitude);
-//        Float attractionLong = cursor.getFloat(attractionLongitude);
-//
-//        double attractionLatDouble = attractionLat.doubleValue();
-//        double attractionLongDouble = attractionLong.doubleValue();
-//
-//        double userLatitude = location.getLatitude();
-//        double userLongitude = location.getLongitude();
-//
-//        float distance = getDistance(userLatitude, userLongitude, attractionLatDouble, attractionLongDouble);
-//
-//        setDistance(distance);
-//
-//        TextView txtLat = (TextView) findViewById(R.id.overlaytext);
-//        txtLat.setText(String.valueOf(distance) + " m");
+        checkLocationPermission();
+        updateDbWithDistances(allAttractionsCursor, location);
+
     }
 
     @Override
@@ -643,10 +565,92 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     }
 
+    //Count the distance between user and attraction - used in updateDbWithDistances
     public float countDistance(double startLati, double startLongi, double goalLati, double goalLongi) {
         float[] resultArray = new float[99];
         Location.distanceBetween(startLati, startLongi, goalLati, goalLongi, resultArray);
         return resultArray[0];
+    }
+
+    //Update the database with distances
+    public void updateDbWithDistances(Cursor cursor, Location location) {
+
+        if (cursor == null || cursor.getCount() < 1) {
+            return;
+        }
+
+        // Proceed with moving to the next row of the cursor and reading data from it
+        while (cursor.moveToNext()) {
+
+            int attractionLatitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE);
+            int attractionLongitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE);
+            int nameColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME);
+
+
+            int attractionIdCol = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_ID);
+            String attractionName = cursor.getString(nameColumnIndex);
+
+
+            Float attractionLat = cursor.getFloat(attractionLatitude);
+            Float attractionLong = cursor.getFloat(attractionLongitude);
+            int attractionID = cursor.getInt(attractionIdCol);
+
+
+            double attractionLatDouble = attractionLat.doubleValue();
+            double attractionLongDouble = attractionLong.doubleValue();
+
+            if (location != null) {
+
+                double longitude = location.getLongitude();
+                double latitude = location.getLatitude();
+                distance = countDistance(attractionLatDouble, attractionLongDouble, latitude, longitude);
+
+                System.out.println("User location: " + location.toString());
+                System.out.println("Current attraction distance: " + distance + " Name " + attractionName);
+
+                ContentValues values = new ContentValues();
+
+                values.put(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE, distance);
+
+
+                Uri currentAttractionUri =
+                        ContentUris
+                                .withAppendedId(AttractionContract.AttractionEntry.CONTENT_URI,
+                                        attractionID);
+
+                System.out.println("Current attraction URI: " + currentAttractionUri);
+
+                if (currentAttractionUri == null) {
+                    // Since no fields were modified, we can return early without creating a new pet.
+                    // No need to create ContentValues and no need to do any ContentProvider operations.
+                    Toast.makeText(this, "No URI", Toast.LENGTH_SHORT);
+                    return;
+                }
+
+                //Update One attraction at a time
+                int rowsAffected = getContentResolver().update(currentAttractionUri, values, null, null);
+
+                //Update all attractions at a time
+                // int rowsAffected = getContentResolver().update(AttractionContract.AttractionEntry.CONTENT_URI, values, null, null);
+
+                // Show a toast message depending on whether or not the update was successful.
+                if (rowsAffected == 0) {
+                    // If no rows were affected, then there was an error with the update.
+                    Toast.makeText(this, "Update failed",
+                            Toast.LENGTH_SHORT).show();
+                } else {
+                    // Otherwise, the update was successful and we can display a toast.
+                    Toast.makeText(this, "Update successful, id: " + attractionID,
+                            Toast.LENGTH_SHORT).show();
+                    cursor.moveToNext();
+                }
+            } else {
+                Toast.makeText(this, "User location is null!",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
     }
 
 }

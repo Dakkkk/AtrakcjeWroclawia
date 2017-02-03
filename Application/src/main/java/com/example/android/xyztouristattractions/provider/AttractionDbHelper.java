@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.android.xyztouristattractions.provider.AttractionContract.AttractionEntry;
 
 
-
 /**
  * Created by Dawid on 2017-01-28.
  */
@@ -17,7 +16,9 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
 
     public static final String LOG_TAG = AttractionDbHelper.class.getSimpleName();
 
-    /** Name of the database file */
+    /**
+     * Name of the database file
+     */
     private static final String DATABASE_NAME = "attractions.db";
 
     /**
@@ -41,17 +42,17 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the attractions table
-        String SQL_CREATE_ATTRACTIONS_TABLE =  "CREATE TABLE " + AttractionEntry.TABLE_NAME + " ("
-                +  CRMDbAdapter.Attractions._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String SQL_CREATE_ATTRACTIONS_TABLE = "CREATE TABLE " + AttractionEntry.TABLE_NAME + " ("
+                + CRMDbAdapter.Attractions._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CRMDbAdapter.Attractions.COLUMN_NAME_NAME + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_SHORT_DESCRIPTION + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_DESCRIPTION + " TEXT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN  + " TEXT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_MAIN + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_FOTO_DETAIL + " TEXT," +
                 CRMDbAdapter.Attractions.COLUMN_NAME_LATITUDE + " FLOAT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_LONGITUDE+ " FLOAT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION+  " TEXT," +
-                CRMDbAdapter.Attractions.COLUMN_NAME_ATTRACTION_DISTANCE+  " FLOAT)";
+                CRMDbAdapter.Attractions.COLUMN_NAME_LONGITUDE + " FLOAT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_LOCATION + " TEXT," +
+                CRMDbAdapter.Attractions.COLUMN_NAME_ATTRACTION_DISTANCE + " FLOAT)";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_ATTRACTIONS_TABLE);

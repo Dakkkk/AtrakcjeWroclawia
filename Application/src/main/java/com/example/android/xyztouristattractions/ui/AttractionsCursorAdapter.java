@@ -56,9 +56,8 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         TextView attrName = (TextView) view.findViewById(R.id.attraction_name);
         TextView attrDescription = (TextView) view.findViewById(R.id.short_description);
         ImageView imgMainViewSource = (ImageView) view.findViewById(R.id.attraction_image);
-       // TextView distanceValue = (TextView) view.findViewById(R.id.overlaytext);
+        // TextView distanceValue = (TextView) view.findViewById(R.id.overlaytext);
         TextView txtDistance = (TextView) view.findViewById(R.id.overlaytext);
-
 
 
         // Find the columns of attractions attributes that we're interested in
@@ -68,7 +67,6 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         int attractionLatitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LATITUDE);
         int attractionLongitude = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LONGITUDE);
         int attractionDistance = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE);
-
 
 
         //Read attractions attributes of the current pet from the cursor
@@ -95,15 +93,15 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         attrName.setText(attractionName);
         attrDescription.setText(String.valueOf(attractionDesc));
 
-        if(attractionDistanceM == 0) {
+        if (attractionDistanceM == 0) {
             txtDistance.setText("Brak danych");
         } else {
-            txtDistance.setText(String.valueOf(Math.floor(attractionDistanceM)));
+            txtDistance.setText(String.valueOf(Math.round(attractionDistanceM) + " m"));
         }
 
         //ToDo Sometimes Img is slowly displaying on the screen - see if we can do it better
 
-         Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgMainViewSource);
+        Picasso.with(view.getContext()).load(attractionMainImgUrl).placeholder(R.drawable.empty_photo).into(imgMainViewSource);
 
     }
 

@@ -46,16 +46,24 @@ import com.squareup.picasso.Picasso;
  */
 public class DetailActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-    /** Identifier for the attraction data loader */
+    /**
+     * Identifier for the attraction data loader
+     */
     private static final int EXISTING_ATTRACTION_LOADER = 0;
 
-    /** Content URI for the existing attraction (null if it's a new attraction) */
+    /**
+     * Content URI for the existing attraction (null if it's a new attraction)
+     */
     private Uri mCurrentAttractionUri;
 
-    /** EditText field to enter the attraction's name */
+    /**
+     * EditText field to enter the attraction's name
+     */
     private TextView mNameText;
 
-    /** EditText field to enter the attraction's desc */
+    /**
+     * EditText field to enter the attraction's desc
+     */
     private TextView mDescritionText;
 
     private ImageView imgDetailViewSource;
@@ -100,7 +108,6 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         imgDetailViewSource = (ImageView) findViewById(R.id.imageView);
 
 
-
         String attraction = getIntent().getStringExtra(EXTRA_ATTRACTION);
 
         //This launches DetailFragment
@@ -109,8 +116,6 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 //                    .add(R.id.container, DetailFragment.createInstance(attraction))
 //                    .commit();
 //        }
-
-
 
 
     }
@@ -153,8 +158,6 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             int locationColumnIndex = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_LOCATION);
 
 
-
-
             // Extract out the value from the Cursor for the given column index
             final String name = cursor.getString(nameColumnIndex);
             String description = cursor.getString(descriptionColumnIndex);
@@ -175,7 +178,6 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             Picasso.with(getApplicationContext()).load(attractionDetailImgUrl).placeholder(R.drawable.empty_photo).into(imgDetailViewSource);
 
             FloatingActionButton mapFab = (FloatingActionButton) findViewById(R.id.mapFab);
-
 
 
             mapFab.setOnClickListener(new View.OnClickListener() {

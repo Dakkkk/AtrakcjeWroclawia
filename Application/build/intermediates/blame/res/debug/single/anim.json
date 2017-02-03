@@ -62,5 +62,9 @@
     {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\anim\\clockwise.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\src\\main\\res\\anim\\clockwise.xml"
     }
 ]

@@ -21,8 +21,7 @@ import java.util.ArrayList;
  * Created by Dawid on 2017-01-03.
  */
 public class MapsMarkerActivity extends AppCompatActivity
-        implements OnMapReadyCallback,  LoaderManager.LoaderCallbacks<Cursor> {
-
+        implements OnMapReadyCallback, LoaderManager.LoaderCallbacks<Cursor> {
 
 
     @Override
@@ -51,11 +50,11 @@ public class MapsMarkerActivity extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        Float [] latitudes = getMapAllCoordinates(true);
-        Float [] longitudes = getMapAllCoordinates(false);
+        Float[] latitudes = getMapAllCoordinates(true);
+        Float[] longitudes = getMapAllCoordinates(false);
         ArrayList<LatLng> attractionsLatLngs = new ArrayList<LatLng>();
 
-        for(int i = 0; i < latitudes.length; i++ ) {
+        for (int i = 0; i < latitudes.length; i++) {
             attractionsLatLngs.add(new LatLng(latitudes[i], longitudes[i]));
             googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
                     .title("Atrakcja"));
@@ -65,7 +64,7 @@ public class MapsMarkerActivity extends AppCompatActivity
     }
 
     //Get coordinates (longitude or latitude) for Google map
-    private Float[] getMapAllCoordinates (boolean isLatitude) {
+    private Float[] getMapAllCoordinates(boolean isLatitude) {
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
 
         cursor.moveToFirst();
