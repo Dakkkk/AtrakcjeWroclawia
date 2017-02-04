@@ -653,7 +653,9 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                             Toast.LENGTH_SHORT).show();
                 } else {
                     // Otherwise, the update was successful and we can display a toast.
-                    Toast.makeText(this, "Update successful, id: " + attractionID,
+//                    Toast.makeText(this, "Update successful, id: " + attractionID,
+//                            Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Lokalizacja: " + attractionName + ", zaktualizowana",
                             Toast.LENGTH_SHORT).show();
                 }
             } else {

@@ -1,52 +1,52 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:1-137:12
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:3:1-89:12
 	package
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:20:5-56
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:5:5-56
 	android:versionName
 		INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:19:5-51
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:4:5-51
 	xmlns:android
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:11-69
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:3:11-69
 	android:versionCode
 		INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml
 		INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:22:5-67
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:22:22-64
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:7:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:23:5-79
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:23:22-76
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:24:5-68
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:9:5-68
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:24:22-65
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:9:22-65
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:25:5-100
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:10:5-100
 	tools:node
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:25:78-97
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:10:78-97
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:25:22-77
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:10:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:26:5-101
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:11:5-101
 	tools:node
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:26:79-98
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:11:79-98
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:26:22-78
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:11:22-78
 uses-feature#0x00020000
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:29:5-31:34
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:14:5-16:34
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 	android:glEsVersion
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:30:9-41
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:15:9-41
 	android:required
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:31:9-32
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:16:9-32
 application
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:33:5-135:19
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:18:5-87:19
 MERGED from [com.android.support:design:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\AndroidManifest.xml:22:5-20
@@ -60,119 +60,87 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android pro
 MERGED from [com.android.support:support-v4:24.1.1] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.1\AndroidManifest.xml:25:5-20
 MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:7:5-11:19
 	android:label
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:36:9-41
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:21:9-41
 	android:fullBackupContent
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:38:9-41
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:23:9-41
 	android:allowBackup
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:34:9-35
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:35:9-47
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:20:9-47
 	android:theme
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:37:9-43
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:22:9-43
 intent-filter#android.intent.action.SEARCH
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:39:9-41:25
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:24:9-26:25
 action#android.intent.action.SEARCH
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:40:13-67
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:25:13-67
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:40:21-64
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:25:21-64
 meta-data#android.app.searchable
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:42:9-43:49
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:27:9-28:49
 	android:resource
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:43:13-47
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:28:13-47
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:42:20-57
-activity#com.example.android.xyztouristattractions.ui.AttractionListActivity
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:45:9-60:20
-	android:label
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:47:13-47
-	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:46:13-54
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:27:20-57
 activity#com.example.android.xyztouristattractions.ui.DetailActivity
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:62:9-66:71
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:31:9-35:67
 	android:label
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:64:13-45
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:33:13-45
 	android:parentActivityName
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:66:13-68
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:35:13-64
 	android:theme
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:65:13-54
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:34:13-54
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:63:13-46
-receiver#com.example.android.xyztouristattractions.service.UtilityReceiver
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:68:9-61
-	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:68:19-58
-service#com.example.android.xyztouristattractions.service.UtilityService
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:70:9-59
-	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:70:18-56
-service#com.example.android.xyztouristattractions.service.ListenerService
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:72:9-85:19
-	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:72:18-57
-intent-filter#com.google.android.gms.wearable.MESSAGE_RECEIVED
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:73:13-84:29
-action#com.google.android.gms.wearable.MESSAGE_RECEIVED
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:75:17-91
-	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:75:25-88
-data
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:78:17-91
-	android:host
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:78:45-61
-	android:scheme
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:78:23-44
-	android:pathPrefix
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:78:62-89
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:32:13-46
 meta-data#com.google.android.gms.version
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:87:9-88:69
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:39:9-40:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.maps.android:android-maps-utils:0.4.4] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.google.maps.android\android-maps-utils\0.4.4\AndroidManifest.xml:8:9-10:69
 	android:value
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:88:13-66
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:40:13-66
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:87:20-65
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:39:20-65
 meta-data#com.example.android.xyztouristattractions.config.GlideConfiguration
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:90:9-92:42
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:42:9-44:42
 	android:value
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:92:13-40
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:44:13-40
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:91:13-95
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:43:13-95
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:98:9-100:70
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:50:9-52:70
 	android:value
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:100:13-68
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:52:13-68
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:99:13-58
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:51:13-58
 activity#com.example.android.xyztouristattractions.ui.MapsMarkerActivity
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:102:9-110:20
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:54:9-62:20
 	android:label
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:104:13-46
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:56:13-46
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:103:13-50
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:55:13-50
 activity#com.example.android.xyztouristattractions.ui.AttractionListView
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:112:9-127:20
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:64:9-79:20
 	android:label
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:114:13-47
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:66:13-47
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:113:13-50
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:65:13-50
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:115:13-119:29
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:67:13-71:29
 action#android.intent.action.MAIN
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:116:17-69
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:68:17-69
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:116:25-66
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:68:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:118:17-77
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:70:17-77
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:118:27-74
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:70:27-74
 provider#com.example.android.xyztouristattractions.provider.AttractionProvider
-ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:129:9-133:20
+ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:81:9-85:20
 	android:authorities
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:130:13-76
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:82:13-76
 	android:exported
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:132:13-37
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:84:13-37
 	android:name
-		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:131:13-56
+		ADDED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml:83:13-56
 uses-sdk
 INJECTED from C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:24.0.0] C:\android projects\dyplomowa\projekt-janusze-programowania2\Application\build\intermediates\exploded-aar\com.android.support\design\24.0.0\AndroidManifest.xml:20:5-43

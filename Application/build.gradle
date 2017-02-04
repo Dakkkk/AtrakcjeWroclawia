@@ -31,7 +31,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
 
     compile project(':Shared')
-    wearApp project(':Wearable')
+//    wearApp project(':Wearable')
 }
 
 // The sample build uses multiple directories to
