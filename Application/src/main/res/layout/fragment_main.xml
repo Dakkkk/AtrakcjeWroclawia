@@ -40,7 +40,7 @@
         android:textColor="@color/lighter_gray"
         android:textSize="18sp"
         android:textStyle="italic"
-        android:background="@color/emphasizeColor"
+        android:background="@color/lightColor"
         android:text="@string/button_refresh"
         />
 

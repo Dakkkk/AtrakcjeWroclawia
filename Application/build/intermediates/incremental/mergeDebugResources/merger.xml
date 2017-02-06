@@ -1821,7 +1821,7 @@ be triggered after the data was transferred)\n\n
 • The notification priority is set to the recommended default value so it may
 appear further down your stream
 
-    </string><string name="action_test_toggle_geofence">Toggle Geofence Trigger</string><string name="btn_display">Pokaż</string><string name="app_label">Szukaj</string><string name="action_map">Show on Map</string><string name="permission_explanation_action">Let\'s do it!</string><string name="search_hint">Wyszukaj Atrakcję</string><string name="button_refresh">Odświerz</string><string name="action_test_notification_dialog">
+    </string><string name="action_test_toggle_geofence">Toggle Geofence Trigger</string><string name="btn_display">Pokaż</string><string name="app_label">Szukaj</string><string name="action_map">Show on Map</string><string name="permission_explanation_action">Let\'s do it!</string><string name="search_hint">Wyszukaj Atrakcję</string><string name="button_refresh">Odśwież</string><string name="action_test_notification_dialog">
 
 This will trigger a rich notification that is bridged over to the Wear device.
 \n\nNote that the first time this runs it can take 20-30 seconds to transfer

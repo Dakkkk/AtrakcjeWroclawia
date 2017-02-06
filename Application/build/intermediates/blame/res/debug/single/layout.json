@@ -12,12 +12,12 @@
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
@@ -28,12 +28,12 @@
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\activity_maps.xml",
-        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\src\\main\\res\\layout\\activity_maps.xml"
-    },
-    {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\activity_maps.xml",
+        "source": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
         "merged": "C:\\android projects\\dyplomowa\\projekt-janusze-programowania2\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\amu_text_bubble.xml",
