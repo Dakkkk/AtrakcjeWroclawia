@@ -304,6 +304,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
             if (!isGPSEnabled && !isNetworkEnabled) {
                 // no network provider is enabled
+                System.out.print("UserLocation No GPS/Network" );
+
             } else {
                 this.canGetLocation = true;
                 if (isNetworkEnabled) {
@@ -315,6 +317,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                         //                                          int[] grantResults)
                         // to handle the case where the user grants the permission. See the documentation
                         // for ActivityCompat#requestPermissions for more details.
+                        System.out.print("UserLocation, permission problem");
+
                         return null;
                     }
                     locationManager.requestLocationUpdates(
@@ -555,14 +559,14 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     @Override
     public void onProviderDisabled(String provider) {
         Log.d("Latitude", "disable");
-        Toast.makeText(getApplicationContext(), "Loaction DISABLED", Toast.LENGTH_LONG);
+        Toast.makeText(getApplicationContext(), "Location DISABLED", Toast.LENGTH_LONG);
 
     }
 
     @Override
     public void onProviderEnabled(String provider) {
         Log.d("Latitude", "enable");
-        Toast.makeText(getApplicationContext(), "Loaction ENABLED", Toast.LENGTH_LONG);
+        Toast.makeText(getApplicationContext(), "Location ENABLED", Toast.LENGTH_LONG);
 
     }
 
@@ -649,14 +653,13 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 // Show a toast message depending on whether or not the update was successful.
                 if (rowsAffected == 0) {
                     // If no rows were affected, then there was an error with the update.
-                    Toast.makeText(this, "Update failed",
-                            Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(this, "Update failed",
+//                            Toast.LENGTH_SHORT).show();
                 } else {
                     // Otherwise, the update was successful and we can display a toast.
-//                    Toast.makeText(this, "Update successful, id: " + attractionID,
+
+//                    Toast.makeText(this, "Lokalizacja: " + attractionName + ", zaktualizowana",
 //                            Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, "Lokalizacja: " + attractionName + ", zaktualizowana",
-                            Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(this, "User location is null!",
