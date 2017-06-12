@@ -69,7 +69,7 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         int attractionDistance = cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE);
 
 
-        //Read attractions attributes of the current pet from the cursor
+        //Read attractions attributes of the current attraction from the cursor
         String attractionName = cursor.getString(nameColumnIndex);
         String attractionDesc = cursor.getString(descriptionColumnIndex);
         String attractionMainImgUrl = cursor.getString(mainImgColumnIndex);

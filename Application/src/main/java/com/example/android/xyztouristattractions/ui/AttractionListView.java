@@ -64,6 +64,11 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private TextView txtDistance;
     private boolean canGetLocation;
 
+    private boolean isOrderedByNameASC = false;
+    private boolean isOrderedByNameDESC = false;
+    private boolean isOrderedByDistanceASC = false;
+    private boolean isOrderedByDistanceDESC = false;
+
     private Cursor allAttractionsCursor;
 
     private Location userLocation;
@@ -499,27 +504,50 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     }
 
     private Cursor orderByNameASC() {
+        isOrderedByNameASC = true;
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " ASC");
         return cursor;
     }
 
     private Cursor orderByNameDESC() {
+        isOrderedByNameDESC = true;
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
         return cursor;
     }
 
     private Cursor orderByDistanceDESC() {
+        isOrderedByDistanceDESC = true;
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
         return cursor;
     }
 
     private Cursor orderByDistanceASC() {
+        isOrderedByNameASC = true;
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " ASC");
         return cursor;
     }
 
-    private Cursor refreshCursor() {
+    private Cursor orderByChoosenProperty() {
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+
+        if (!isOrderedByNameASC && !isOrderedByNameDESC && !isOrderedByDistanceASC && !isOrderedByDistanceDESC) {
+            return cursor;
+        }
+        if (isOrderedByNameASC) {
+            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
+        } else if (isOrderedByDistanceDESC) {
+            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
+        } else if (isOrderedByDistanceASC) {
+            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " ASC");
+        } else if (isOrderedByDistanceDESC) {
+            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
+        }
+        return cursor;
+    }
+
+    private Cursor refreshCursor() {
+//        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+        Cursor cursor = orderByChoosenProperty();
         return cursor;
     }
 
@@ -540,7 +568,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
      * using the Metric system
      */
 
-    // ToDo Call this or not?
     @Override
     public void onLocationChanged(Location location) {
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
