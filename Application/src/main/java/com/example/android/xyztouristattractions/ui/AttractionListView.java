@@ -9,6 +9,7 @@ import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.location.Location;
@@ -16,6 +17,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.MenuItemCompat;
@@ -64,20 +66,17 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private TextView txtDistance;
     private boolean canGetLocation;
 
-    private boolean isOrderedByNameASC = false;
-    private boolean isOrderedByNameDESC = false;
-    private boolean isOrderedByDistanceASC = false;
-    private boolean isOrderedByDistanceDESC = false;
-
     private Cursor allAttractionsCursor;
 
     private Location userLocation;
-
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_main);
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         // Setup FAB to open EditorActivity
         ImageView fab = (ImageView) findViewById(R.id.fab);
@@ -97,7 +96,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
                 attractionListView.invalidateViews();
             }
         });
-
 
 
         mAttractionCursorAdapter = new AttractionsCursorAdapter(this, null);
@@ -309,7 +307,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
             if (!isGPSEnabled && !isNetworkEnabled) {
                 // no network provider is enabled
-                System.out.print("UserLocation No GPS/Network" );
+                System.out.print("UserLocation No GPS/Network");
 
             } else {
                 this.canGetLocation = true;
@@ -504,25 +502,25 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     }
 
     private Cursor orderByNameASC() {
-        isOrderedByNameASC = true;
+        preferences.edit().putString("orderBy", "orderByNameASC").apply();
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " ASC");
         return cursor;
     }
 
     private Cursor orderByNameDESC() {
-        isOrderedByNameDESC = true;
+        preferences.edit().putString("orderBy", "orderByNameDESC").apply();
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
         return cursor;
     }
 
     private Cursor orderByDistanceDESC() {
-        isOrderedByDistanceDESC = true;
+        preferences.edit().putString("orderBy", "orderByDistanceDESC").apply();
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
         return cursor;
     }
 
     private Cursor orderByDistanceASC() {
-        isOrderedByNameASC = true;
+        preferences.edit().putString("orderBy", "orderByDistanceASC").apply();
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " ASC");
         return cursor;
     }
@@ -530,16 +528,28 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     private Cursor orderByChoosenProperty() {
         Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
 
-        if (!isOrderedByNameASC && !isOrderedByNameDESC && !isOrderedByDistanceASC && !isOrderedByDistanceDESC) {
+        SharedPreferences getPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String orderBy;
+        orderBy = getPreferences.getString("orderBy", "");
+        Log.d("orderBy", orderBy);
+
+        if (orderBy.isEmpty()) {
             return cursor;
         }
-        if (isOrderedByNameASC) {
+        if (orderBy == "orderByNameASC") {
+            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " ASC");
+        }
+
+        else if (orderBy == "orderByNameDESC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
-        } else if (isOrderedByDistanceDESC) {
-            cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
-        } else if (isOrderedByDistanceASC) {
+        }
+
+        else if  (orderBy == "orderByDistanceASC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " ASC");
-        } else if (isOrderedByDistanceDESC) {
+        }
+
+        else if (orderBy == "orderByDistanceDESC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
         }
         return cursor;
@@ -547,7 +557,8 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     private Cursor refreshCursor() {
 //        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
-        Cursor cursor = orderByChoosenProperty();
+        Cursor cursor;
+        cursor = orderByChoosenProperty();
         return cursor;
     }
 
@@ -619,7 +630,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         }
 
 
-        if(cursor.isClosed()) {
+        if (cursor.isClosed()) {
             Log.e("AttractionListView", "Cursor is closed!");
         }
 
