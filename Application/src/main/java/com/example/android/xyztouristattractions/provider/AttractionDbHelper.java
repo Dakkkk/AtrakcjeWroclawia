@@ -1,7 +1,6 @@
 package com.example.android.xyztouristattractions.provider;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -14,8 +13,6 @@ import com.example.android.xyztouristattractions.provider.AttractionContract.Att
 
 public class AttractionDbHelper extends SQLiteOpenHelper {
 
-    public static final String LOG_TAG = AttractionDbHelper.class.getSimpleName();
-
     /**
      * Name of the database file
      */
@@ -26,14 +23,6 @@ public class AttractionDbHelper extends SQLiteOpenHelper {
      */
     private static final int DATABASE_VERSION = 1;
 
-
-    public AttractionDbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-    }
-
-    public AttractionDbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
-        super(context, name, factory, version, errorHandler);
-    }
 
     public AttractionDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);

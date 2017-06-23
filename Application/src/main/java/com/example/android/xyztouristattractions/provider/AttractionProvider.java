@@ -19,16 +19,22 @@ import com.example.android.xyztouristattractions.provider.AttractionContract.Att
 
 public class AttractionProvider extends ContentProvider {
 
-    /** Tag for the log messages */
+    /**
+     * Tag for the log messages
+     */
     public static final String LOG_TAG = AttractionProvider.class.getSimpleName();
 
     //Database helper object
     private AttractionDbHelper mDbHelper;
 
-    /** URI matcher code for the content URI for the ATTRACTIONS table */
+    /**
+     * URI matcher code for the content URI for the ATTRACTIONS table
+     */
     private static final int ATTRACTIONS = 100;
 
-    /** URI matcher code for the content URI for a single attraction in the attractions table */
+    /**
+     * URI matcher code for the content URI for a single attraction in the attractions table
+     */
     private static final int ATTRACTION_ID = 101;
 
     /**
@@ -88,7 +94,7 @@ public class AttractionProvider extends ContentProvider {
                 // arguments that will fill in the "?". Since we have 1 question mark in the
                 // selection, we have 1 String in the selection arguments' String array.
                 selection = AttractionEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
 
                 // This will perform a query on the attractions table where the _id equals 3 to return a
                 // Cursor containing that row of the table.
@@ -147,7 +153,7 @@ public class AttractionProvider extends ContentProvider {
             case ATTRACTION_ID:
                 // Delete a single row given by the ID in the URI
                 selection = AttractionEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 // For case ATTRACTION_ID:
                 // Delete a single row given by the ID in the URI
                 rowsDeleted = database.delete(AttractionEntry.TABLE_NAME, selection, selectionArgs);
@@ -172,7 +178,7 @@ public class AttractionProvider extends ContentProvider {
                 // so we know which row to update. Selection will be "_id=?" and selection
                 // arguments will be a String array containing the actual ID.
                 selection = AttractionEntry._ID + "=?";
-                selectionArgs = new String[] { String.valueOf(ContentUris.parseId(uri)) };
+                selectionArgs = new String[]{String.valueOf(ContentUris.parseId(uri))};
                 return updateAttraction(uri, values, selection, selectionArgs);
             default:
                 throw new IllegalArgumentException("Update is not supported for " + uri);
@@ -196,7 +202,7 @@ public class AttractionProvider extends ContentProvider {
         // If 1 or more rows were updated, then notify all listeners that the data at the
         // given URI has changed
         if (rowsUpdated != 0) {
-           // getContext().getContentResolver().notifyChange(uri, null);
+            // getContext().getContentResolver().notifyChange(uri, null);
             Log.v("AttractionProvider", String.valueOf(rowsUpdated));
         }
 

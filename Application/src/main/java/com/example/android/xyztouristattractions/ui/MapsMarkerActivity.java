@@ -52,7 +52,7 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         Float[] latitudes = getMapAllCoordinates(true);
         Float[] longitudes = getMapAllCoordinates(false);
-        String [] names = getAttractionNames();
+        String[] names = getAttractionNames();
         ArrayList<LatLng> attractionsLatLngs = new ArrayList<LatLng>();
 
         for (int i = 0; i < latitudes.length; i++) {
@@ -60,10 +60,10 @@ public class MapsMarkerActivity extends AppCompatActivity
             Log.d("latitudes" + i, latitudes[i].toString());
             Log.d("name" + i, names[i]);
 
-            if(names[i].equals("Rynek wrocławski")) {
+            if (names[i].equals("Rynek wrocławski")) {
                 googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
                         .title("Rynek Wrocławski"));
-            } else if(names[i].equals("Muzeum Narodowe")) {
+            } else if (names[i].equals("Muzeum Narodowe")) {
                 googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
                         .title("Muzeum Narodowe"));
             } else if (names[i].equals("Zoo")) {
@@ -111,10 +111,10 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         cursor.moveToFirst();
         ArrayList<String> names = new ArrayList<String>();
-            while (!cursor.isAfterLast()) {
-                names.add(cursor.getString(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME)));
-                cursor.moveToNext();
-            }
+        while (!cursor.isAfterLast()) {
+            names.add(cursor.getString(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME)));
+            cursor.moveToNext();
+        }
 
         cursor.close();
         return names.toArray(new String[names.size()]);

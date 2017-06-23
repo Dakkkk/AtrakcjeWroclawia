@@ -74,13 +74,9 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_detail);
 
-
-        //Nowy kod - przetestować
         Intent intent = getIntent();
         mCurrentAttractionUri = intent.getData();
 
@@ -90,17 +86,6 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         mNameText = (TextView) findViewById(R.id.nameTextView);
         mDescritionText = (TextView) findViewById(R.id.descriptionTextView);
         imgDetailViewSource = (ImageView) findViewById(R.id.imageView);
-
-
-        String attraction = getIntent().getStringExtra(EXTRA_ATTRACTION);
-
-        //This launches DetailFragment
-//        if (savedInstanceState == null) {
-//            getSupportFragmentManager().beginTransaction()
-//                    .add(R.id.container, DetailFragment.createInstance(attraction))
-//                    .commit();
-//        }
-
 
     }
 
@@ -147,23 +132,16 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
             String description = cursor.getString(descriptionColumnIndex);
             final String city = cursor.getString(locationColumnIndex);
 
-            //   int x = cursor.getInt(x);
-
             String attractionDetailImgUrl = cursor.getString(detailImgColumnIndex);
-
-
             System.out.println("Attraction name: " + name);
 
             // Update the views on the screen with the values from the database
             mNameText.setText(name);
             mDescritionText.setText(description);
-            // mWeightEditText.setText(Integer.toString(weight));
 
             Picasso.with(getApplicationContext()).load(attractionDetailImgUrl).placeholder(R.drawable.empty_photo).into(imgDetailViewSource);
 
             FloatingActionButton mapFab = (FloatingActionButton) findViewById(R.id.mapFab);
-
-
             mapFab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -173,10 +151,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                     startActivity(intent);
                 }
             });
-
-
         }
-
     }
 
     @Override

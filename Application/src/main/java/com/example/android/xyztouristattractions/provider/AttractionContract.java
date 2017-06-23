@@ -11,7 +11,8 @@ public final class AttractionContract {
 
     // To prevent someone from accidentally instantiating the contract class,
     // give it an empty constructor.
-    private AttractionContract() {}
+    private AttractionContract() {
+    }
 
     /**
      * The "Content authority" is a name for the entire content provider, similar to the
@@ -53,14 +54,17 @@ public final class AttractionContract {
                 ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_ATTRACTIONS;
 
 
-
-        /** The content URI to access the attraction data in the provider */
+        /**
+         * The content URI to access the attraction data in the provider
+         */
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_ATTRACTIONS);
 
-        /** Name of database table for attractions */
+        /**
+         * Name of database table for attractions
+         */
         public final static String TABLE_NAME = "attractions";
         public static final String COLUMN_NAME_NAME = "name";
-        public static final String COLUMN_NAME_SHORT_DESCRIPTION= "short_description";
+        public static final String COLUMN_NAME_SHORT_DESCRIPTION = "short_description";
         public static final String COLUMN_NAME_DESCRIPTION = "description";
         public static final String COLUMN_NAME_FOTO_MAIN = "foto_main";
         public static final String COLUMN_NAME_FOTO_DETAIL = "foto_detail";
@@ -73,7 +77,7 @@ public final class AttractionContract {
 
         /**
          * Unique ID number for the aTTRACTION (only for use in the database table).
-         *
+         * <p>
          * Type: INTEGER
          */
         public final static String _ID = BaseColumns._ID;

@@ -36,7 +36,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.xyztouristattractions.R;
@@ -63,10 +62,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     private static float distance;
 
-    private TextView txtDistance;
     private boolean canGetLocation;
-
-    private Cursor allAttractionsCursor;
 
     private Location userLocation;
     SharedPreferences preferences;
@@ -214,19 +210,13 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        // Inflate the menu; this adds items to the action bar if it is present.
-
 
         getMenuInflater().inflate(R.menu.main, menu);
         searchItem = menu.findItem(R.id.action_search);
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-//        searchView.setSearchableInfo
-//                (searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);
         searchView.setOnQueryTextListener(this);
-        //searchView.setOnCloseListener(this);
         searchView.requestFocus();
-        //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -289,7 +279,7 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
 
     }
 
-    //    //Get the user GPS location
+    //Get the user GPS location
     public Location getLocation() {
         Location location = null;
 
@@ -363,14 +353,6 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         }
 
         return location;
-    }
-
-    private void insertDistanceToDb(double distance) {
-        // Create a ContentValues object where column names are the keys,
-        // and pet attributes from the editor are the values.
-        ContentValues values = new ContentValues();
-
-        values.put(AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE, distance);
     }
 
 
@@ -539,17 +521,11 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         }
         if (orderBy == "orderByNameASC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " ASC");
-        }
-
-        else if (orderBy == "orderByNameDESC") {
+        } else if (orderBy == "orderByNameDESC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_NAME + " DESC");
-        }
-
-        else if  (orderBy == "orderByDistanceASC") {
+        } else if (orderBy == "orderByDistanceASC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " ASC");
-        }
-
-        else if (orderBy == "orderByDistanceDESC") {
+        } else if (orderBy == "orderByDistanceDESC") {
             cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, AttractionContract.AttractionEntry.COLUMN_NAME_ATTRACTION_DISTANCE + " DESC");
         }
         return cursor;

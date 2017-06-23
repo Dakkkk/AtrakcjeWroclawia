@@ -56,7 +56,6 @@ public class AttractionsCursorAdapter extends CursorAdapter {
         TextView attrName = (TextView) view.findViewById(R.id.attraction_name);
         TextView attrDescription = (TextView) view.findViewById(R.id.short_description);
         ImageView imgMainViewSource = (ImageView) view.findViewById(R.id.attraction_image);
-        // TextView distanceValue = (TextView) view.findViewById(R.id.overlaytext);
         TextView txtDistance = (TextView) view.findViewById(R.id.overlaytext);
 
 
