@@ -5,6 +5,7 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
@@ -46,18 +47,35 @@ public class MapsMarkerActivity extends AppCompatActivity
      * installed Google Play services and returned to the app.
      */
 
-    //TODO get geolacation parameters from TouristAttractions instead of hardcoding it
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
         Float[] latitudes = getMapAllCoordinates(true);
         Float[] longitudes = getMapAllCoordinates(false);
+        String [] names = getAttractionNames();
         ArrayList<LatLng> attractionsLatLngs = new ArrayList<LatLng>();
 
         for (int i = 0; i < latitudes.length; i++) {
             attractionsLatLngs.add(new LatLng(latitudes[i], longitudes[i]));
-            googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
-                    .title("Atrakcja"));
+            Log.d("latitudes" + i, latitudes[i].toString());
+            Log.d("name" + i, names[i]);
+
+            if(names[i].equals("Rynek wrocławski")) {
+                googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                        .title("Rynek Wrocławski"));
+            } else if(names[i].equals("Muzeum Narodowe")) {
+                googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                        .title("Muzeum Narodowe"));
+            } else if (names[i].equals("Zoo")) {
+                googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                        .title("Zoo"));
+            } else if (names[i].equals("Hala Stulecia")) {
+                googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                        .title("Hala Stulecia"));
+            } else if (names[i].equals("Hala Targowa")) {
+                googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
+                        .title("Hala Targowa"));
+            }
         }
 
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(attractionsLatLngs.get(1), 12.0f));
@@ -84,6 +102,22 @@ public class MapsMarkerActivity extends AppCompatActivity
         }
         cursor.close();
         return coords.toArray(new Float[coords.size()]);
+    }
+
+
+    //Get attraction names
+    private String[] getAttractionNames() {
+        Cursor cursor = getContentResolver().query(AttractionContract.AttractionEntry.CONTENT_URI, null, null, null, null);
+
+        cursor.moveToFirst();
+        ArrayList<String> names = new ArrayList<String>();
+            while (!cursor.isAfterLast()) {
+                names.add(cursor.getString(cursor.getColumnIndex(AttractionContract.AttractionEntry.COLUMN_NAME_NAME)));
+                cursor.moveToNext();
+            }
+
+        cursor.close();
+        return names.toArray(new String[names.size()]);
     }
 
 
