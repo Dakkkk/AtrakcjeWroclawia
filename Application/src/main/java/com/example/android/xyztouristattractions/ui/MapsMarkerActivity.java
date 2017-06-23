@@ -5,7 +5,6 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.example.android.xyztouristattractions.R;
 import com.example.android.xyztouristattractions.provider.AttractionContract;
@@ -57,8 +56,6 @@ public class MapsMarkerActivity extends AppCompatActivity
 
         for (int i = 0; i < latitudes.length; i++) {
             attractionsLatLngs.add(new LatLng(latitudes[i], longitudes[i]));
-            Log.d("latitudes" + i, latitudes[i].toString());
-            Log.d("name" + i, names[i]);
 
             if (names[i].equals("Rynek wrocławski")) {
                 googleMap.addMarker(new MarkerOptions().position(attractionsLatLngs.get(i))
