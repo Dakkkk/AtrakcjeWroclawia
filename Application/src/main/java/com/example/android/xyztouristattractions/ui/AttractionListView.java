@@ -79,7 +79,13 @@ public class AttractionListView extends AppCompatActivity implements LoaderManag
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Location userLocation = getLocation();
+                double userLatitude = userLocation.getLatitude();
+                double userLongitude = userLocation.getLongitude();
+                String userLocationString = userLocation.toString();
                 Intent intent = new Intent(AttractionListView.this, MapsMarkerActivity.class);
+                intent.putExtra("userLatitude", userLatitude);
+                intent.putExtra("userLongitude", userLongitude);
                 startActivity(intent);
             }
         });

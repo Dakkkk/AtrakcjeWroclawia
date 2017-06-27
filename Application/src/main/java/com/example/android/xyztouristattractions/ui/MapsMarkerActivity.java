@@ -1,6 +1,7 @@
 package com.example.android.xyztouristattractions.ui;
 
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -49,10 +51,18 @@ public class MapsMarkerActivity extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
+        Intent intent = getIntent();
+        double userLocationLatitude = intent.getDoubleExtra("userLatitude", 0);
+        double userLocationLongitude = intent.getDoubleExtra("userLongitude", 0);
+
         Float[] latitudes = getMapAllCoordinates(true);
         Float[] longitudes = getMapAllCoordinates(false);
         String[] names = getAttractionNames();
         ArrayList<LatLng> attractionsLatLngs = new ArrayList<LatLng>();
+
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(userLocationLatitude, userLocationLongitude))
+                .title("Tu jesteś")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
         for (int i = 0; i < latitudes.length; i++) {
             attractionsLatLngs.add(new LatLng(latitudes[i], longitudes[i]));
